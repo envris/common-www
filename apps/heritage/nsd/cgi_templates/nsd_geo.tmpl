@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<title>Search the National Shipwrecks database</title>
+<meta name="DC.Title" lang="en" content="National Shipwrecks database" xml:lang="en" />
+<meta name="DC.Identifier" scheme="ISBN" content="" />
+<meta name="DC.Identifier" scheme="ISSN" content="" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporatename=Department of the Environment and Water Resources" />
+<meta name="DC.Subject" scheme="Department of the Environment and Water Resources Thesaurus http://www.environment.gov.au/about/environment-thesaurus.html" content="National Shipwrecks database - Australia" />
+<meta name="DC.Subject" scheme="Keywords" content="" />
+<meta name="DC.Description" lang="en" content="Information from the National Shipwrecks database in Australia." xml:lang="en" />
+<meta name="DC.Publisher" lang="en" content="jurisdiction=Commonwealth of Australia; corporatename=Department of the Environment and Water Resources" xml:lang="en" />
+<meta name="DC.Date.created" scheme="ISO8601" content="2001-09-01" />
+<meta name="DC.Date.modified" scheme="ISO8601" content="" />
+<meta name="DC.Type.documentType" scheme="deh-document" content="Web Page" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Relation.isPartOf" scheme="URI" content="/heritage/shipwrecks/index.html" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="DC.Coverage.periodname" lang="en" content="1900/2000" xml:lang="en" />
+<meta name="DC.coverage.x.min" scheme="DD" content="105.1" />
+<meta name="DC.coverage.x.max" scheme="DD" content="168" />
+<meta name="DC.coverage.y.min" scheme="DD" content="-57.3" />
+<meta name="DC.coverage.y.max" scheme="DD" content="-9" />
+<meta name="DC.Rights" scheme="URI" lang="en" content="/about/copyright.html" xml:lang="en" />
+<meta name="Description" content="Australia's historic shipwrecks form an invaluable, limited and irreplaceable resource. The Historic Shipwrecks Act 1976 , which is administered by this Department, protects historic wrecks and relics in Commonwealth waters, extending from below the low water mark to the edge of the continental shelf." />
+<meta name="Keywords" content="" />
+<meta name="DC.Date.valid" scheme="DCMIPeriod" content="start=2001-09-01; end=2004-09-01" />
+<link rel="stylesheet" href="/includes/default/css/default-xmlnav.css" media="screen" type="text/css" /> 
+<link rel="stylesheet" href="/includes/heritage/css/heritage.css" media="screen" type="text/css" /> 
+<link rel="alternate stylesheet" href="/includes/default/css/default-wide.css" title="default-wide" type="text/css" /> 
+<link rel="stylesheet" href="/includes/default/css/default-print.css" media="print" type="text/css" /> 
+<script type="text/javascript" src="/includes/default/scripts/common-functions.js"></script>
+<! this template file is prepared by JWang in Feb2007 -->
+<!-- Formatting updated by Rowan Ferguson March2007 -->
+<! The entry of double quote for text search is not allowed in this version. The 0 entry does not redisplay on search screen. This will considered in the future version.-->
+
+<script language="javascript">
+  
+  function ClearEntry(myForm){
+  //this function sets up empty for all text boxes empty and sets up the first value (normally null value) for all radio buttons
+    myForm.myLatMin.value = ""; 
+    myForm.posLatMin.selectedIndex=0;
+    myForm.myLonMin.value = "";
+    myForm.posLonMin.selectedIndex=0;
+    myForm.myLatMax.value = "";
+    myForm.posLatMax.selectedIndex=0;
+    myForm.myLonMax.value = "";
+    myForm.posLonMax.selectedIndex=0;
+    myForm.myLat.value = "";
+    myForm.posLat.selectedIndex=0;
+    myForm.myLon.value = "";
+    myForm.posLon.selectedIndex=0;
+    myForm.Distance.value = "";
+    
+    myForm.sortby.selectedIndex=0;
+    myForm.updown.selectedIndex=0;
+  }
+  
+  function submitform()
+  {
+    var errMessage = "";
+    if (document.mySubmit.geoOption[0].checked)
+    {
+      //read all values in 4 text boxes 
+      var latMax0 = document.mySubmit.myLatMax.value;
+      var latMin0 = document.mySubmit.myLatMin.value;
+      var lonMax0 = document.mySubmit.myLonMax.value;
+      var lonMin0 = document.mySubmit.myLonMin.value;
+      //check all values in 4 text boxes are  numeric or null
+      if (checkNumber(latMax0) )
+      {
+       if (checkNumber(latMin0) )
+       {
+        if (checkNumber(lonMax0) )
+        {
+          if (checkNumber(lonMin0) )
+          {
+            document.mySubmit.submit();
+          }
+          else
+          {
+            errMessage="The entry data in From Longitude text box is not numeric such as including space or letter";
+          }// end of lonMin0
+        }
+        else
+        {
+          errMessage="The entry data in To Longitude text box is not numeric such as including space or letter";
+        }//end of lonMax0
+      }
+      else
+      {
+        errMessage="The entry data in From Latitude text box is not numeric such as including space or letter";
+      }// end of latmin
+     }
+     else
+      {
+        errMessage="The entry data in To Latitude text box is not numeric such as including space or letter";
+      }//end of latMax
+    }// end search by position
+    if (document.mySubmit.geoOption[1].checked)
+    {
+    //read three entry values
+      var latMax1 = document.mySubmit.myLat.value;
+      var lonMax1 = document.mySubmit.myLon.value;
+      var distance1 = document.mySubmit.Distance.value;
+      //check the value is numeric or null
+      if (checkNumber(latMax1) )
+      {
+        if (checkNumber(lonMax1) )
+        {
+          if (checkNumber(distance1) )
+          {
+            document.mySubmit.submit();
+          }
+          else
+          {
+            errMessage="The entry data in distance text box is not numeric such as including space or letter";
+          }//end of distance
+        }
+        else
+        {
+          errMessage="The entry data in  Longitude text box is not numeric such as including space or letter";
+        }// end of lonmax1
+      }
+      else
+      {
+        errMessage="The entry data in  Latitude text box is not numeric such as including space or letter";
+      }// end of latmax1 
+    }// end search by distance
+    
+    // if found problem, display the information windows
+    if(errMessage.length>0) 
+    { 
+      errMessage=errMessage + ". Check the value, then click on Search button again";
+      alert(errMessage);
+    }
+    
+  }
+  
+  function checkNumber(object_value)
+  {
+    //Returns true if value is a number or is NULL
+    //otherwise returns false 
+    // adopted and modified from CFm coding JWANG Feb2007
+    if (object_value.length == 0)
+        return true;
+
+    //Returns true if value is a number defined as
+    //   having an optional leading + or -.
+    //   having at most 1 decimal point.
+    //   otherwise containing only the characters 0-9.
+    var start_format = ".+-0123456789";
+    var number_format = ".0123456789";
+    var check_char;
+    var decimal = false;
+    var trailing_blank = false;
+    var digits = false;
+  
+      //The first character can be + - .  blank or a digit.
+    check_char = start_format.indexOf(object_value.charAt(0))
+      //Was it a decimal?
+    if (check_char == 0)
+        decimal = true;
+    else if (check_char < 1)
+      return false;
+          
+    //Remaining characters can be only . or a digit, but only one decimal.
+    for (var i = 1; i < object_value.length; i++)
+    {
+      check_char = number_format.indexOf(object_value.charAt(i))
+      if (check_char < 0)
+        return false;
+      else if (check_char == 0)
+      {
+        if (decimal)    // Second decimal.
+          return false;
+        else
+          decimal = true;
+      }
+      //else if (trailing_blank)
+      //  return false;
+      else
+        digits = true;
+    } 
+    //All tests passed, so...
+    return true
+   }
+
+</script>
+</head>
+<body>
+<TMPL_INCLUDE name="/includes/heritage/header/header-shipwrecks.html">
+<TMPL_INCLUDE name="/includes/heritage/header/header-nav.html">
+<div id="maincontent">
+  <div id="breadcrumb"><p><TMPL_INCLUDE NAME="/includes/environment/cpn/heritage-shipwrecks-database-search.html"></p></div>
+  <!-- endnoindex -->
+
+  <h1><a name="top" id="top">Geographic Search for National Shipwrecks Database</a></h1>
+  <p>To begin a new search, click on either <strong>Search by Position</strong> or <strong>Search by Distance </strong> then <strong>enter the values or select options</strong> on the search form. Alternatively, you can perform a <a href="nsd_list.pl"><strong>general shipwrecks search</strong></a>.</p>
+  <form method="get" action="/cgi-bin/heritage/nsd/nsd_geo.pl" name="mySubmit">
+  <table>
+    <col width="10%" />
+    <col width="10%" />
+    <col width="40%" />
+    <col width="40%" />
+    <caption>Geographic coordinate search details</caption>
+    <tr>
+      <td colspan="4">
+        <TMPL_IF T_SearchbyPos>
+        <input type="radio" name="geoOption" id="position" value="0"><label for="position"><strong>Search by Position</strong></label>
+        <TMPL_ELSE>
+        <input type="radio" checked name="geoOption" id="position" value="0"><label for="position"><strong>Search by Position</strong></label>
+        </TMPL_IF>
+        <p>Enter the corners of the area that you wish to search. Please use decimal latitude (e.g. 12.051) and longitude (e.g. 143.763) not degrees and minutes (see <a href="http://www.environment.gov.au/erin/tools/index.html" target="_blank" title="Click here to open a web tool for help ">Conversion tool</a> for help). There is no requirement to indicate southern latitude as a negative number</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="border-bottom: 1px dashed #817b51" rowspan="3"><img src="/apps/heritage/nsd/images/searchbox.gif" alt="Diagram of bounding box search type" width="128" height="87"></td>
+      <th>&nbsp;</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+    </tr>
+   <tr>
+    <th>From:</th>
+    <td>
+      <TMPL_IF T_myLatMin>
+        <TMPL_IF T_posLatMin>
+          <input type="text" name="myLatMin" value="<TMPL_VAR name=T_myLatMin>">&nbsp;
+            <select name="posLatMin">
+              <option value="0">South</option>
+              <option selected value="1">North</option>
+            </select>
+        <TMPL_ELSE>
+          <input type="text" name="myLatMin" value="<TMPL_VAR name=T_myLatMin>">&nbsp;
+            <select name="posLatMin">
+              <option selected value="0">South</option>
+              <option value="1">North</option>
+            </select>
+        </TMPL_IF>
+      <TMPL_ELSE>
+        <TMPL_IF T_posLatMin>
+            <input type="text" name="myLatMin">&nbsp;<select name="posLatMin">
+              <option value="0">South</option>
+              <option selected value="1">North</option>
+            </select>
+          <TMPL_ELSE>
+            <input type="text" name="myLatMin">&nbsp;<select name="posLatMin">
+              <option selected value="0">South</option>
+              <option value="1">North</option>
+            </select>
+        </TMPL_IF>
+      </TMPL_IF>
+    </td>
+    <td>
+      <TMPL_IF T_myLonMin>
+        <TMPL_IF T_posLonMin>
+          <input type="text" name="myLonMin" value="<TMPL_VAR name=T_myLonMin>">&nbsp;<select name="posLonMin">
+            <option value="0">East</option>
+            <option selected value="1">West</option>
+          </select>
+        <TMPL_ELSE>
+          <input type="text" name="myLonMin" value="<TMPL_VAR name=T_myLonMin>">&nbsp;<select name="posLonMin">
+            <option selected value="0">East</option>
+            <option value="1">West</option>
+          </select>
+        </TMPL_IF>
+      <TMPL_ELSE>
+        <TMPL_IF T_posLonMin>
+            <input type="text" name="myLonMin">&nbsp;<select name="posLonMin">
+              <option value="0">East</option>
+              <option selected value="1">West</option>
+            </select>
+          <TMPL_ELSE>
+            <input type="text" name="myLonMin">&nbsp;<select name="posLonMin">
+              <option selected value="0">East</option>
+              <option value="1">West</option>
+            </select>
+        </TMPL_IF>
+      </TMPL_IF>
+    </td>
+   </tr>
+   <tr>
+    <th style="border-bottom: 1px dashed #817b51">To:</th>
+    <td style="border-bottom: 1px dashed #817b51">
+      <TMPL_IF T_myLatMax>
+        <TMPL_IF T_posLatMax>
+          <input type="text" name="myLatMax" value="<TMPL_VAR name=T_myLatMax>">&nbsp;<select name="posLatMax" >
+            <option value="0">South</option>
+            <option selected value="1">North</option>
+          </select>
+        <TMPL_ELSE>
+          <input type="text" name="myLatMax" value="<TMPL_VAR name=T_myLatMax>">&nbsp;<select name="posLatMax" >
+            <option selected value="0">South</option>
+            <option value="1">North</option>
+          </select>
+        </TMPL_IF>
+      <TMPL_ELSE>
+        <TMPL_IF T_posLatMax>
+          <input type="text" name="myLatMax">&nbsp;<select name="posLatMax">
+            <option value="0">South</option>
+            <option selected value="1">North</option>
+          </select>
+        <TMPL_ELSE>
+          <input type="text" name="myLatMax">&nbsp;<select name="posLatMax">
+            <option selected value="0">South</option>
+            <option value="1">North</option>
+          </select>
+        </TMPL_IF>
+      </TMPL_IF>
+    </td>
+    <td style="border-bottom: 1px dashed #817b51">
+    <TMPL_IF T_myLonMax>
+      <TMPL_IF T_posLonMax>
+        <input type="text" name="myLonMax" value="<TMPL_VAR name=T_myLonMax>">&nbsp;<select name="posLonMax">
+          <option value="0">East</option>
+          <option selected value="1">West</option>
+        </select>
+      <TMPL_ELSE>
+        <input type="text" name="myLonMax" value="<TMPL_VAR name=T_myLonMax>">&nbsp;<select name="posLonMax">
+          <option selected value="0">East</option>
+          <option value="1">West</option>
+        </select>
+      </TMPL_IF>
+      <TMPL_ELSE>
+        <TMPL_IF T_posLonMax>
+          <input type="text" name="myLonMax">&nbsp;<select name="posLonMax">
+            <option value="0">East</option>
+            <option selected value="1">West</option>
+          </select>
+        <TMPL_ELSE>
+          <input type="text" name="myLonMax">&nbsp;<select name="posLonMax">
+            <option selected value="0">East</option>
+            <option value="1">West</option>
+          </select>
+        </TMPL_IF>
+      </TMPL_IF>
+     </td>
+   </tr>
+   <tr>
+    <td colspan="4">
+      <TMPL_IF T_SearchbyDist>
+        <input type="radio" checked name="geoOption" id="distance" value="1"><label for="distance"><strong>Search by Distance</strong></label>
+      <TMPL_ELSE>
+          <input type="radio" name="geoOption" id="distance" value="1"><label for="distance"><strong>Search by Distance</strong></label>
+      </TMPL_IF>
+      <p>Enter the location of the centre of the area you wish to search and the distance from the centre. Please use decimal latitude and longitude not degrees and minutes.</p>
+    </td>
+   </tr>
+   <tr>
+    <td rowspan="4">
+      <img src="/apps/heritage/nsd/images/searchcircle.gif" alt="Diagram of circle search type" width="179" height="148">
+    </td>
+    <th>&nbsp;</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+   </tr>
+   <tr>
+    <th>Centre:</th>
+    <td>
+     <TMPL_IF T_myLat>
+        <TMPL_IF T_posLat>
+          <INPUT type="text" name="myLat" value="<TMPL_VAR name=T_myLat>">&nbsp;<select name="posLat"><option value="0">South<option selected value="1">North</select>
+        <TMPL_ELSE>
+          <INPUT type="text" name="myLat" value="<TMPL_VAR name=T_myLat>">&nbsp;<select name="posLat"><option selected value="0">South<option value="1">North</select>
+        </TMPL_IF>
+      <TMPL_ELSE>
+        <TMPL_IF T_posLat>
+            <INPUT type="text" name="myLat">&nbsp;<select name="posLat">
+              <option value="0">South</option>
+              <option selected value="1">North</option>
+            </select>
+        <TMPL_ELSE>
+            <INPUT type="text" name="myLat">&nbsp;<select name="posLat">
+              <option selected value="0">South</option>
+              <option value="1">North</option>
+            </select>
+        </TMPL_IF>
+      </TMPL_IF>
+    </td>
+    <td>
+      <TMPL_IF T_myLon>
+       <TMPL_IF T_posLon>
+         <INPUT type="text" name="myLon" value="<TMPL_VAR name=T_myLon>">&nbsp;<select name="posLon">
+           <option value="0">East</option>
+           <option selected value="1">West</option>
+         </select>
+       <TMPL_ELSE>
+         <INPUT  type="text" name="myLon" value="<TMPL_VAR name=T_myLon>">&nbsp;<select name="posLon">
+           <option selected value="0">East</option>
+           <option value="1">West</option>
+         </select>
+       </TMPL_IF>
+      <TMPL_ELSE>
+        <TMPL_IF T_posLon>
+          <INPUT type="text" name="myLon">&nbsp;<select name="posLon">
+            <option value="0">East</option>
+            <option selected value="1">West</option>
+          </select>
+        <TMPL_ELSE>
+          <INPUT  type="text" name="myLon">&nbsp;<select name="posLon">
+            <option selected value="0">East</option>
+            <option value="1">West</option>
+          </select>
+        </TMPL_IF>
+      </TMPL_IF>
+    </td>
+   </tr>
+   <tr>
+    <th style="border-bottom: 1px solid #c9cac0;">Distance:</th>
+    <td colspan="3">
+      <TMPL_IF T_Distance>
+        <INPUT  type="text" name="Distance" value="<TMPL_VAR name=T_Distance>"> nautical miles</td>
+      <TMPL_ELSE>
+        <INPUT  type="text" name="Distance"> nautical miles</td>
+      </TMPL_IF>
+   </tr>
+   <tr>
+     <td colspan="4">&nbsp;</td>
+   </tr>
+   </table>
+   <table>
+     <col width="10%" />
+     <col width="90%" />
+     <caption>Order results</caption>
+     <tr>
+      <th style="border-bottom: 1px solid #c9cac0;">Order by:</th>
+      <td>
+        <select name="sortby">
+        <TMPL_IF T_sortby0>
+          <option selected value="0">name
+        <TMPL_ELSE>
+            <option value="0">name
+        </TMPL_IF>
+        <TMPL_IF T_sortby1>
+          <option selected value="1">Date Wrecked</option>
+         <TMPL_ELSE>
+            <option value="1">Date Wrecked</option>
+        </TMPL_IF>
+        <TMPL_IF T_sortby2>
+            <option selected value="2">Type</option>
+        <TMPL_ELSE>
+            <option value="2">Type</option>
+        </TMPL_IF>
+        </select>
+        <select name="updown">
+        <TMPL_IF T_updownASC>
+           <option selected value="ASC">Ascending</option>
+           <option value="DESC">Descending</option>
+        <TMPL_ELSE>
+           <option value="ASC">Ascending</option>
+           <option selected value="DESC">Descending</option>
+        </TMPL_IF>
+        </select>&nbsp;
+        <input type="hidden" name="do" value="y">
+        <input style="font-size: 120%" type="button" onClick="submitform()" value="Search" name="action" title="Search Shipwrecks using geographic coordinates">
+        <input style="font-size: 120%" type="button" value="Clear" onClick="ClearEntry(this.form)">
+       </td>
+     </tr>
+    </table>
+  </form>
+  
+  <TMPL_IF name=DATA_LOOP>
+    <p>Click on the Shipwreck Id link to see the Shipwreck details (<strong><TMPL_VAR NAME=T_totalFoundRec></strong> records found)</p>
+    <table>
+    <caption>Search results</caption>
+    <col width="10%" />
+    <col width="20%" />
+    <col width="20%" />
+    <col width="10%" />
+    <col width="30%" />
+    <col width="10%" />
+    <tr>
+      <th>Shipwreck Id</th>
+      <th>name</th>
+      <th>Type</th>
+      <th>Date wrecked</th>
+      <th>Where wrecked</th>
+      <th>State</th>
+    </tr>
+    <TMPL_IF name=T_totalFoundRec>
+      <TMPL_IF T_no_previous>
+        <TMPL_IF T_no_next>
+        <TMPL_ELSE>
+          <a href="#\ onClick="history.go(-1)">Back</a> | <a href=nsd_geo.pl?<TMPL_VAR name=T_txtpars>&start_record=<TMPL_VAR name=T_start_record>> Next <TMPL_VAR name=T_remaining> </a>
+        </TMPL_IF>
+      <TMPL_ELSE>
+        <TMPL_IF T_no_next>
+          <a href="#" onClick="history.go(-1)">Back</a> 
+        <TMPL_ELSE>
+          <a href="#" onClick="history.go(-1)">Back</a> | <a href=nsd_geo.pl?<TMPL_VAR name=T_txtpars>&start_record=<TMPL_VAR name=T_start_record>> Next <TMPL_VAR name=T_remaining> </a>
+        </TMPL_IF>
+    </TMPL_IF>
+    <TMPL_LOOP name=DATA_LOOP>
+        <tr>
+          <td><a href=nsd_form.pl?search_id=<TMPL_VAR name=T_ID>><TMPL_VAR name=T_ID></a></td><td><TMPL_VAR name=T_name></td><td><TMPL_VAR name=T_Type></td><td><TMPL_VAR name=T_Date></td><td><TMPL_VAR name=T_Wherelost></td><td><TMPL_VAR name=T_State></td>
+        </tr>
+      </TMPL_LOOP>
+    <TMPL_ELSE>
+      <p>No (or 0) records found please search again</p>
+    </TMPL_IF>
+    </table>
+    <TMPL_IF T_no_previous>
+      <TMPL_IF T_no_next>
+      <TMPL_ELSE>
+        <a href="#\ onClick="history.go(-1)">Back</a> | <a href=nsd_geo.pl?<TMPL_VAR name=T_txtpars>&start_record=<TMPL_VAR name=T_start_record>> Next <TMPL_VAR name=T_remaining> </a>
+      </TMPL_IF>
+    <TMPL_ELSE>
+      <TMPL_IF T_no_next>
+        <a href="#" onClick="history.go(-1)">Back</a> 
+      <TMPL_ELSE>
+        <a href="#" onClick="history.go(-1)">Back</a> | <a href=nsd_geo.pl?<TMPL_VAR name=T_txtpars>&start_record=<TMPL_VAR name=T_start_record>> Next <TMPL_VAR name=T_remaining> </a>
+      </TMPL_IF>
+    </TMPL_IF>
+
+  <TMPL_ELSE>
+   <TMPL_IF name=T_mySearch>
+      <p>No (or 0) records found please search again</p>
+    <TMPL_ELSE>
+
+    </TMPL_IF>
+  </TMPL_IF>
+  <TMPL_IF name=ERROR>
+    <p><TMPL_VAR name=ERROR></p>
+  </TMPL_IF>
+  
+  <div id="sidepanel">
+    <TMPL_INCLUDE name="/includes/heritage/sidepanel/historic-shipwrecks.html">
+    <TMPL_INCLUDE name="/includes/default/sidepanel/key.html">
+  </div>
+  <div id="footer">
+    <TMPL_INCLUDE name="/includes/heritage/footer/footer-data.html">
+  </div>
+
+</div>
+<div id="navigation">
+  <TMPL_INCLUDE name="/includes/environment/nav/heritage-shipwrecks-database-search.html">
+  <div id="navigation-image"></div>
+</div>
+</body>
+</html>

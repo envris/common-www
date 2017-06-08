@@ -1,0 +1,179 @@
+/* ----------------------------------------------------------------------
+|   Application template for chemicals application. 
+|   Inherits from /apps/environment/includes/css/application-master.css  |
+|   Author: DEWHA                                                        |
+-----------------------------------------------------------------------*/
+
+body {
+  background: white url(../images/bg-body.gif) repeat-x 0 0;
+  color: black;
+}
+form fieldset {
+  background: #fff /*eaf2fc url(../images/bg-fieldset.gif) repeat-x repeat-y 0 0*/;
+}
+table caption {
+  background-color: #b9d0eb;
+  border-bottom: 1px solid #6690c0;
+  border-top: 1px solid #6690c0;
+  color: #333;
+  font-size: 110%;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  padding: 5px 3px;
+  text-align: left;
+}
+th {
+  background-color: #e4e9ee;
+  border-bottom: 1px solid #cfcfcf;
+  font-weight: normal;
+  padding: 3px;
+  text-align: left;
+  vertical-align: top;
+}
+td {
+  background-color: #f7f9fc;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 3px;
+  vertical-align: top;
+}
+td.subheading {
+  background-color: #e4e9ee;
+}
+td.subsubheading {
+  background-color: #f1f1f1;
+}
+
+
+/* HEADER
+--------------------------------------------------------- */
+#header h1 {
+  color: white;
+  font-size: 160%;
+  font-weight: normal;
+  margin: 0 145px 2px 0;
+}
+#header h2 {
+  color: #d2e1ed /*e5dfc6*/;
+  font-size: 110%;
+  font-weight: bold;
+  margin-right: 145px;
+}
+
+/* use singleline if there is no H2 */
+#title-doubleline,
+#title-singleline {
+  background: transparent url(../images/bg-header.gif) no-repeat right 13px;
+}
+
+
+/* Application area styles
+--------------------------------------------------------- */
+#application-area {
+  width: 77%;
+}
+#application-area h1 {
+  color: #2a597b;
+  font-size: 140%;
+  margin: 0.25em 0 1em 0;
+}
+#application-area h2 {
+  color: #3473c3;
+  font-size: 120%;
+  margin: 1em 0;
+}
+#application-area h3 {
+  color: #333;
+  font-size: 110%;
+  margin: 1em 0 0.5em 0;
+}
+
+
+/* ---------------------------------------------------------
+| APPLICAION SPECIFIC STYLES                               |
+--------------------------------------------------------- */
+
+div.row-dark {
+  background: #e4e9ee !important;
+}
+
+
+/*sets cursor,color,font and padding properties for elements with class="expandableDivControl"*/
+
+.expandableDivControl {
+/*	cursor: pointer;*/
+	background-color: #6b8da6 !important; 
+	/*width: 97%;*/
+	color: white;
+/*	font-weight: bold;*/
+	padding-left: 0.5em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+ /*sets cursor,color,font and padding properties for elements with class="expandableDivControlRollOver"*/
+
+.expandableDivControlRollOver {
+/*	cursor: pointer;*/
+	background-color: #567185 !important; 
+	/*width: 97%;*/
+	color: white;
+/*	font-weight: bold;*/
+	padding-left: 0.5em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+
+
+
+/* SIDEPANEL box
+--------------------------------------------------------- */
+#sidepanel .sidebox {
+  background: #f9f9f9; 
+}
+.sidebox h3 {
+  color: #525252;
+}
+.sidebox h4 {
+  color: #525252;
+}
+.sidebox li {
+  color: #525252;
+}
+.sidebox ul li a,
+.sidebox ul li a:visited {
+  color: #525252; 
+}
+.sidebox ul li a:hover {
+  color: #424242; 
+}
+.print-login p {
+  font-size: 90%;
+	text-decoration:none;
+	margin-right:5px;
+}
+.print-login img {
+	vertical-align:middle;
+}
+.print-login a {
+	text-decoration:none;
+}
+
+
+
+/* other styles */
+.spacer {
+	height: 0.4em;
+	/*line-height: 4px;  */
+	line-height: 0.4em;          
+	width: 97%;
+}
+
+
+
+

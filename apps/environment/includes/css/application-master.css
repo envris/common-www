@@ -1,0 +1,407 @@
+/* ----------------------------------------------------------------------
+|   Master application template. 
+|   Apps may require 1 additional CSS to cascade branding and specifics  |
+|   Author: DEWHA                                                        |
+-----------------------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a:link {
+  color: #039;
+}
+a:visited {
+  color: #660066;
+}
+a:hover, a:active {
+  color: black;
+}
+acronym {
+  cursor: help;
+}
+body {
+  background: white url(/apps/environment/includes/images/bg-body.gif) repeat-x 0 0;
+  font: 80%/1.4em normal Arial, Verdana, Geneva, sans-serif;
+  color: #333;
+}
+body.fullwidth #application-area {
+  width: auto;
+}
+fieldset {
+  /*background: #f4f7fa url(http://www.environment.gov.au/apps/environment/includes/images/bg-fieldset.gif) repeat-x 0 0;*/
+  border: 1px solid #aca899;
+  margin: 1em 0;
+  padding: 0 0.5em 1em 0.5em;
+}
+legend {
+  background-color: white;
+  border-left: 1px solid #aca899;
+  border-right: 1px solid #aca899;
+  border-top: 1px solid #aca899;
+  font-weight: bold;
+  padding: 3px 1em 3px 1em;
+  margin-bottom: 10px;
+}
+form p {
+  font-size: 90%;
+}
+form label {
+  font-size: 100%;
+}
+form input,
+form textarea,
+form select {
+  font-size: 100%;
+  font-family: Arial, Verdana, Geneva, sans-serif;
+  margin-bottom: 2px;
+}
+form input.submit {
+  margin: 1em 0 0 0;
+}
+form p {
+  font-size: 85%;
+}
+input.submit {
+  background: transparent url(/apps/environment/includes/images/bg-input-submit.gif) repeat-x 0 0;
+  border-left-color: #ccc; 
+  border-top-color: #ccc; 
+  border: 3px double #b4b4b4; 
+  color: #333; 
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  padding: 0.25em; 
+  width: auto; 
+} 
+input.clear {
+  background: transparent url(/apps/environment/includes/images/bg-input-clear.gif) repeat-x 0 0;
+  color: #666;
+}
+input.submit:active {
+  border: 3px double #d8d8d8;
+  border-top-color: #8a8a8a;
+  border-left-color: #8a8a8a;
+} 
+
+img {
+  border: 0;
+}
+ul {
+  padding: 0 0 0 1em;
+}
+li {
+  list-style-type: square;
+  font-size: 95%;
+  margin-left: 1.5em;
+}
+p {
+  padding-bottom: 0.75em;
+}
+table {
+  border-collapse: collapse;
+  border: 0;
+  font-size: 95%;
+  margin-bottom: 15px;
+  margin-top: 1em;
+  width: 100%;
+}
+table caption {
+  background-color: #d1e1ef;
+  border-bottom: 1px solid #a4b2c8;
+  border-top: 1px solid #a4b2c8;
+  color: #333;
+  font-size: 110%;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  padding: 5px 3px;
+  text-align: left;
+}
+th {
+  background-color: #e7eef5;
+  border-bottom: 1px solid #cfcfcf;
+  font-weight: normal;
+  padding: 3px;
+  margin: 0;
+  text-align: left;
+  vertical-align: top;
+}
+td {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 3px;
+  vertical-align: top;
+}
+td.subheading {
+  background-color: #eff4f8;
+}
+td.subsubheading {
+  background-color: #f1f1f1;
+}
+
+
+/* HEADER
+--------------------------------------------------------- */
+#header {
+  height: 70px;
+  text-align: right;
+}
+#header img {
+  padding: 5px 0 0 5px;
+  float: left;
+}
+#header h1 {
+  color: #758397;
+  font-size: 160%;
+  font-weight: normal;
+  margin: 0 115px 2px 0;
+  padding: 0;
+}
+#header h2 {
+  color: #506179;
+  font-size: 110%;
+  font-weight: bold;
+  margin-right: 115px;
+  padding: 0;
+}
+
+/* use singleline if there is no H2 */
+#title-doubleline,
+#title-singleline {
+  background: transparent url(/apps/environment/includes/images/bg-header.gif) no-repeat right 13px;
+  height: 59px;
+  margin: -5px 5px 0 0;
+  float: right;
+}
+#title-singleline h1 {
+  padding-top: 26px;
+}
+/* use doubleline if there is H1 and H2 */
+#title-doubleline {
+  padding-top: 17px;
+}
+
+
+/* BREADCRUMB and FOOTER
+--------------------------------------------------------- */
+#breadcrumb {
+  clear: both;
+  color: #666;
+  font-size: 85%;
+  padding: 0 0 0 5px;
+  line-height: 1em;
+}
+#breadcrumb a, #footer a,
+#breadcrumb a:link, #footer a:link,
+#breadcrumb a:visited, #footer a:visited {
+  background-color: transparent;
+  color: #666;
+}
+#breadcrumb a:hover, #footer a:hover {
+  background-color: inherit;
+  color: black;
+}
+#footer {
+  border-top: 1px solid #ccc;
+  clear: both;
+  color: #666;
+  font-size: 85%;
+  margin: 2em 5px ;
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+/* SIDEPANEL box
+--------------------------------------------------------- */
+#sidepanel {
+  position: absolute;
+  right: 10px;
+  width: 20%;
+  padding-left: 1em;
+  top: 100px;
+}
+#sidepanel .sidebox {
+  background: #f7f7f7 /*url(http://www.environment.gov.au/apps/environment/includes/images/bg-sidepanel.gif) repeat-x 0 0*/; 
+  border: 1px solid #dadada;
+  padding: 0.5em;
+  margin: 0 0 1em 0;
+}
+#sidepanel ul.logout {
+  padding-left: 13px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+#sidepanel ul.logout li {
+  background: transparent url(/apps/environment/includes/images/ico-logout.gif) no-repeat 100% 7px;
+  list-style-type: none;
+  padding-right: 15px;
+  font-size: 85%;
+}
+.sidebox h3 {
+  color: #727272;
+  font-size: 110%;
+  padding: 0.25em 0;
+}
+.sidebox h4 {
+  font-size: 90%;
+  font-weight: bold;
+  line-height: 1.2em;
+  color: #444;
+  margin: 10px 0 4px 0;
+}
+.sidebox p {
+  font-size: 85%;
+}
+.sidebox ul {
+  margin: 0.5em 0 1em 0.25em;
+}
+.sidebox li {
+  color: #444;
+  list-style-type: square;
+  font-size: 85%;
+  line-height: 1.4em;
+  padding: 0 0 2px 0.1em;
+  margin: 0 0 0 1.5em;
+}
+.sidebox ul li a,
+.sidebox ul li a:visited {
+  color: #444; 
+  font-weight: normal;
+}
+.sidebox ul li a:hover {
+  color: #933; 
+}
+span.external {
+  background: url(/includes/default/images/ico-external.gif) 100% 65% no-repeat;
+  padding-right: 10px;
+}
+span.popup {
+  background: url(/includes/default/images/ico-popup.gif) 100% 65% no-repeat;
+  padding-right: 10px;
+}
+
+
+/* Application area styles
+--------------------------------------------------------- */
+#application-area {
+  font-size: 90%;
+  margin: 1em;
+  width: 77%;
+}
+#application-area h1 {
+  color: #758397;
+  font-size: 150%;
+  margin: 1em 0;
+}
+#application-area h2 {
+  color: #506179;
+  font-size: 130%;
+  margin: 1em 0;
+}
+#application-area h3 {
+  color: #333;
+  font-size: 110%;
+  margin: 1em 0 0.5em 0;
+}
+#application-area ul {
+  margin: 0.25em 0 0.25em 1em;
+}
+#application-area p {
+  font-size: 100%;
+}
+
+div.float50 {
+  float: left;
+  width: 50%;
+}
+div.float40 {
+  float: left;
+  width: 40%;
+}
+div.float30 {
+  float: left;
+  width: 30%;
+}
+
+div.row-light {
+  float: left;
+  padding: 4px;
+  width: 99%;
+}
+div.row-dark {
+  background: #ebebeb;
+  float: left;
+  padding: 4px;
+  width: 99%;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.footnote {
+  text-style: italic;
+  color: #666;
+}
+.floatleft {
+  float: left;
+}
+.floatright {
+  float: right;
+}
+.required {
+  color: red;
+  font-weight: bold;
+}
+.errormsg {
+  color: red;
+  padding: 0 0 2px 0;
+  width: 90%;
+}
+.successmsg {
+  color: blue;
+  /*float: left;*/
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0 0 2px 0;
+  width: 90%;
+}
+
+/* Tabs - set the current page tab in body tag as id
+--------------------------------------------------------- */
+#navtabs ul {
+  border-bottom: 1px solid #666;
+  list-style-type: none;
+  margin: 1em 0 1em 0;
+  padding: 3px 10px 4px 10px;
+  text-align: left;
+}
+#navtabs ul li {
+  background-color: white;
+  background-image: none;
+  border-bottom: 1px solid white;
+  display: inline;
+  font-family: tahoma, verdana, sans-serif;
+  margin: 0 -1px 0 0;
+  padding: 0;
+}
+#navtabs ul li a {
+  background-color: #fff3c4;
+  border: 1px solid #666;
+  color: #444;
+  margin-right: 0;
+  padding: 5px 12px;
+  position: relative;
+  text-decoration: none;
+  top: 1px;
+}
+#navtabs ul li a:hover {
+  background-color: #fae1a5;
+}
+.activetab a { /* selected tab */
+  background-color: white !important;
+  border-bottom: 2px solid white !important;
+  color: black !important;
+  padding-top: 6px !important;
+}

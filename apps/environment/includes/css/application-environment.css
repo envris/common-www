@@ -1,0 +1,64 @@
+/* ----------------------------------------------------------------------
+|   Application template for chemicals application. 
+|   Inherits from /apps/environment/includes/css/application-master.css  |
+|   Author: DEWHA                                                        |
+-----------------------------------------------------------------------*/
+
+body {
+  background: white url(../images/bg-body.gif) repeat-x 0 0;
+}
+
+
+/* HEADER
+--------------------------------------------------------- */
+#header h1 {
+  color: white;
+  font-size: 160%;
+  font-weight: normal;
+  margin: 0 115px 2px 0;
+}
+#header h2 {
+  color: #f2f5cd;
+  font-size: 110%;
+  font-weight: bold;
+  margin-right: 115px;
+}
+
+/* use singleline if there is no H2 */
+#title-doubleline,
+#title-singleline {
+  background: transparent url(../images/bg-header.gif) no-repeat right 13px;
+  height: 60px;
+  margin-right: 6px;
+}
+
+
+/* Application area styles
+--------------------------------------------------------- */
+#application-area {
+  width: 77%;
+}
+#application-area h1 {
+  color: #315477;
+  font-size: 140%;
+  margin: 0.25em 0 1em 0;
+}
+#application-area h2 {
+  color: #666;
+  font-size: 120%;
+  margin: 1em 0;
+}
+#application-area h3 {
+  color: #333;
+  font-size: 110%;
+  margin: 1em 0 0.5em 0;
+}
+
+
+/* ---------------------------------------------------------
+| APPLICATION SPECIFIC STYLES                              |
+--------------------------------------------------------- */
+
+div.row-dark {
+  background: #e8eff6 !important;
+}

@@ -1,0 +1,92 @@
+/* ----------------------------------------------------------------------
+|   Application template for chemicals application. 
+|   Inherits from /apps/environment/includes/css/application-master.css  |
+|   Author: DEWHA                                                        |
+-----------------------------------------------------------------------*/
+
+body {
+  background:none;
+}
+
+
+/* HEADER
+--------------------------------------------------------- */
+#header {
+	height:95px;
+  border-bottom: 1px dotted #CCC;
+  margin-bottom:10px;
+}
+#header h1 {
+  color: black;
+  font-size: 160%;
+  font-weight: normal;
+  margin: 20px 115px 10px 0;
+}
+#header h2 {
+  color: #666;
+  font-size: 110%;
+  font-weight: bold;
+  margin-right: 115px;
+}
+
+/* use singleline if there is no H2 */
+#title-doubleline,
+#title-singleline {
+  background: none;
+  height: 60px;
+  margin-right: 6px;
+}
+
+
+/* Application area styles
+--------------------------------------------------------- */
+#application-area {
+  width: 77%;
+}
+#application-area h1 {
+  color: #000;
+  font-size: 140%;
+  margin: 0.25em 0 1em 0;
+}
+#application-area h2 {
+  color: #666;
+  font-size: 120%;
+  margin: 1em 0;
+}
+#application-area h3 {
+  color: #333;
+  font-size: 110%;
+  margin: 1em 0 0.5em 0;
+}
+
+
+/* ---------------------------------------------------------
+| APPLICATION SPECIFIC STYLES                              |
+--------------------------------------------------------- */
+
+div.row-dark {
+  background: #ddd !important;
+}
+table caption {
+  background-color: #666;
+  border-bottom: 1px solid #b4a992;
+  border-top: 1px solid #b4a992;
+  color: #fff;
+  font-size: 110%;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  padding: 5px 3px;
+  text-align: left;
+}
+th {
+  background-color: #ddd;
+  border-bottom: 1px solid #cfcfcf;
+  font-weight: normal;
+  padding: 3px;
+  margin: 0;
+  text-align: left;
+  vertical-align: top;
+}
+td.subheading {
+  background-color: #eff4f8;
+}

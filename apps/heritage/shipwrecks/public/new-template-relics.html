@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Australian National Shipwreck Database</title>
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<meta name="DC.Date.created" scheme="ISO 8601" content="2009-04-28" />
+<meta name="DC.Rights" scheme="URI" content="http://www.environment.gov.au/about/copyright.html" />
+<meta name="DC.Date.modified" scheme="ISO 8601" content="2009-05-01" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Identifier" scheme="URI" content="http://www.environment.gov.au/apps/heritage/shipwrecks/public/new-template-relics.html" />
+<meta name="DC.Date.valid" scheme="DCMIPeriod" content="start=2009-05-01; end=2009-11-01" />
+<link href="/apps/environment/includes/css/application-master.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://sombrero.ris.deh.gov.au:8080/shipwreck/common/style/shwrd.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/apps/heritage/shipwrecks/public/includes/css/application-shipwrecks.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/apps/heritage/shipwrecks/public/includes/css/application-shipwrecks-details.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- BEGIN header - may be included -->
+<div id="header"> <a href="index.html"><img src="/apps/heritage/shipwrecks/public/includes/images/logo-environment.gif" width="336" height="47" alt="Logo" /></a>
+  <div id="title-doubleline">
+    <h1>Heritage</h1>
+    <h2>Australian National Shipwreck Database</h2>
+  </div>
+</div>
+<div id="breadcrumb">
+  <p>You are here: <a href="http://www.environment.gov.au/index.html">Environment home</a> &raquo; <a href="http://www.environment.gov.au/heritage/index.html">Heritage</a> &raquo; Australian National Shipwreck Database</p>
+</div>
+<!-- END header -->
+<!-- BEGIN application area - all application code goes inside this div, including main headings -->
+<div id="application-area">
+  <h1>View relic - Brass </h1>
+  <div id="map"><img src="/apps/heritage/shipwrecks/public/includes/images/image-example2.jpg" alt="name of image" width="200" height="250" /></div>
+  <div id="generalDetails" style="display:block">
+    <form name="wreckGeneralDetailsForm" action="" method="post">
+      <input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="4692dd86dc34fb1dfd97dd2f6957d5b4">
+      <fieldset>
+      <div id="generalDetailsView">
+        <div class="detail-rows">
+          <div class="wreck2col">Relic ID number:</div>
+          <div class="wreck2dataCol">1</div>
+          <input type="hidden" name="shipwreckId" value="1">
+        </div>
+        <div class="detail-rows">
+          <div class="wreck2col"> Relic type:</div>
+          <div class="wreck2dataCol">Brass</div>
+        </div>
+        <div class="detail-rows">
+          <div class="wreck2col"> Relic description:</div>
+          <div class="wreck2dataCol">Ships bell</div>
+        </div>
+        <div class="detail-rows">
+          <div class="prompt25"> State in which relic is located: </div>
+          <div class="field20">New South Wales</div>
+				</div>
+        <div class="detail-rows">
+          <div class="wreck2col"> General history: </div>
+          <div class="wreck2dataCol">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique rutrum ipsum. Aenean ut elit quis sem venenatis pretium. Nam sed lorem. Nulla facilisi. Sed quis eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit mi non mi. Nam rutrum nulla et est. Aenean ut dui. Maecenas fermentum purus ac quam facilisis malesuada. Donec placerat, mauris quis ornare vestibulum, erat nunc convallis nulla, ac pellentesque lacus ligula ut elit. Nullam quis elit. Phasellus interdum facilisis libero. In augue nisl, vehicula tempus, viverra eu, gravida nec, arcu.</div>
+        </div>
+      </div>
+      </fieldset>
+    </form>
+  </div>
+	
+	
+  <div class="clear">
+    <div class="sectionToggles"> <a onclick="expandAll(sectionData, 1, false);">[+] Expand All</a> | <a onclick="colapseAll(sectionData);">[-] Collapse All</a> </div>
+		<div class="clear"></div>
+  </div>
+	
+		
+	<div class="expandableDivControl" id="imagesHeader"
+						 onmouseover="setClass(this,'expandableDivControlRollOver');focusOnMouseOver(this);"
+						 onmouseout="setClass(this,'expandableDivControl');blurOnMouseOver(this);"
+						 onclick="toggleSection('images', this, sectionData.images.retrieved);
+							requestSection('images', sectionData, 1, LOAD_ACTION, false, false);">[+] &nbsp;Images </div>
+	<div id="images" style="display:none"></div>
+	<div class="spacer"></div>
+	<div class="expandableDivControl" id="relicDimensionsHeader"
+						 onmouseover="setClass(this,'expandableDivControlRollOver');focusOnMouseOver(this);"
+						 onmouseout="setClass(this,'expandableDivControl');blurOnMouseOver(this);"
+						 onclick="toggleSection('relicDimensions', this, sectionData.relicDimensions.retrieved);
+							requestSection('relicDimensions', sectionData, 1, LOAD_ACTION, false, false);">[+] &nbsp;Relic Dimensions </div>
+	<div id="vesselDimensions" style="display:none"></div>
+	<div class="spacer"></div>
+
+</div>
+<!-- BEGIN right hand side nav - if not needed, add fullwidth class to body tag -->
+<div id="sidepanel">
+  <div class="print-login">
+    <p class="floatright"><img src="/apps/heritage/shipwrecks/public/includes/images/ico-key.gif" width="16" height="16" style="padding-right:4px;" /><a href="#">Login</a></p>
+    <p><img src="/apps/heritage/shipwrecks/public/includes/images/ico-print.gif" width="24" height="20" /><a href="#">Print version</a></p>
+  </div>
+	<div class="sidebox">
+		<h3>Australian National Shipwreck Database</h3>
+		<ul>
+			<!--<li><a href="/shwrd/userProfile.do">User Profile</a></li>-->
+			<li> <a href="/shipwreck/public/home.do">Home</a> </li>
+			<li> <a href="/shipwreck/public/wreck/search.do">Search Shipwrecks</a> </li>
+			<li> <a href="/shipwreck/public/relic/search.do">Search Relics</a> </li>
+		</ul>
+	</div>
+	<div class="sidebox">
+		<h3>Forms & Documents</h3>
+		<ul>
+			<li> <a href="/shipwreck/public/forms/disturbanceAndZone.do?mode=add">Application for disturbance and zone entry permit</a> </li>
+			<li> <a href="/shipwreck/public/forms/transferExportPermit.do?mode=add">Application for transfer and export permit</a> </li>
+			<li> <a href="/shipwreck/public/forms/notification.do?mode=add">Notification of discovery of historic shipwreck or relic</a> </li>
+			<li> <a href="/shipwreck/public/forms/notificationPossession.do?mode=add">Notification of possession</a> </li>
+			<li> <a href="/shipwreck/public/forms/incidentReport.do?mode=add">Incident report</a> </li>
+		</ul>
+	</div>
+	<div class="sidebox">
+		<h3>Links</h3>
+		<ul>
+			<li> <a href="http://www.environment.gov.au/">Environment</a> </li>
+			<li> <a href="http://www.environment.gov.au/heritage/index.html">Heritage</a> </li>
+			<li> <a href="http://www.environment.gov.au/heritage/shipwrecks/index.html">Historic Shipwrecks</a> </li>
+		</ul>
+	</div>
+	<div class="sidebox">
+		<h3>Key</h3>
+		<ul>
+			<li> <span class="externalLink" title="External link">&nbsp;</span>&nbsp; Links to another web site<br />
+			</li>
+			<li> <span class="popUpLink" title="Opens in a new browser window">&nbsp;</span>&nbsp; Opens a pop-up window </li>
+		</ul>
+	</div>
+</div>
+<!-- END right hand side nav -->
+<!-- BEGIN footer -->
+<div id="footer">
+  <p><a href="http://www.environment.gov.au/about/accessibility.html">Accessibility</a> | <a href="http://www.environment.gov.au/about/disclaimer.html">Disclaimer</a> | <a href="http://www.environment.gov.au/about/privacy-overview.html">Privacy</a> | <a href="http://www.environment.gov.au/about/copyright.html">&copy; Commonwealth of Australia</a></p>
+</div>
+<!-- END footer -->
+</body>
+</html>

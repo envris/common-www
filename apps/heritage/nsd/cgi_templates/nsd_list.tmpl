@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<title>Search the National Shipwrecks database</title>
+<meta name="DC.Title" lang="en" content="National Shipwrecks database" xml:lang="en" />
+<meta name="DC.Identifier" scheme="ISBN" content="" />
+<meta name="DC.Identifier" scheme="ISSN" content="" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Subject" scheme="Department of the Environment and Water Resources Thesaurus http://www.environment.gov.au/about/environment-thesaurus.html" content="National Shipwrecks database - Australia" />
+<meta name="DC.Subject" scheme="Keywords" content="" />
+<meta name="DC.Description" lang="en" content="Information from the National Shipwrecks database in Australia." xml:lang="en" />
+<meta name="DC.Publisher" lang="en" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" xml:lang="en" />
+<meta name="DC.Date.created" scheme="ISO8601" content="2001-09-01" />
+<meta name="DC.Date.modified" scheme="ISO8601" content="" />
+<meta name="DC.Type.documentType" scheme="deh-document" content="Web Page" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Relation.isPartOf" scheme="URI" content="/heritage/shipwrecks/index.html" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="DC.Coverage.periodName" lang="en" content="1900/2000" xml:lang="en" />
+<meta name="DC.coverage.x.min" scheme="DD" content="105.1" />
+<meta name="DC.coverage.x.max" scheme="DD" content="168" />
+<meta name="DC.coverage.y.min" scheme="DD" content="-57.3" />
+<meta name="DC.coverage.y.max" scheme="DD" content="-9" />
+<meta name="DC.Rights" scheme="URI" lang="en" content="/about/copyright.html" xml:lang="en" />
+<meta name="Description" content="Australia's historic shipwrecks form an invaluable, limited and irreplaceable resource. The Historic Shipwrecks Act 1976 , which is administered by this Department, protects historic wrecks and relics in Commonwealth waters, extending from below the low water mark to the edge of the continental shelf." />
+<meta name="Keywords" content="" />
+<meta name="DC.Date.valid" scheme="DCMIPeriod" content="start=2001-09-01; end=2004-09-01" />
+<link rel="stylesheet" href="/includes/default/css/default-xmlnav.css" media="screen" type="text/css" /> 
+<link rel="stylesheet" href="/includes/heritage/css/heritage.css" media="screen" type="text/css" /> 
+<link rel="alternate stylesheet" href="/includes/default/css/default-wide.css" title="default-wide" type="text/css" /> 
+<link rel="stylesheet" href="/includes/default/css/default-print.css" media="print" type="text/css" /> 
+<script type="text/javascript" src="/includes/default/scripts/common-functions.js"></script>
+<! this template file is prepared by JWang in Feb2007 -->
+<!-- Formatting updated by Rowan Ferguson March2007 -->
+<! The entry of double quote for text search is not allowed in this version. The 0 entry does not redisplay on search screen. This will considered in the future version.-->
+
+<script language="javascript">
+  
+  function ClearEntry(thisform){
+    //clear text boxes
+    thisform.text.value = ""; 
+    thisform.fromyear.value = "";
+    thisform.toyear.value = "";
+    //set up the first value for all radio buttons
+    thisform.state.selectedIndex=0;
+    thisform.status.selectedIndex=0;
+    thisform.type.selectedIndex=0;
+    //thisform.hist.selectedIndex=0;
+  }
+  function submitform()
+  {
+    var errMessage = "";
+    
+      var fromyear0 = document.mySubmit.fromyear.value;
+      var toyear0 = document.mySubmit.toyear.value;
+      if (checkNumber(fromyear0))
+      {
+        if (checkNumber(toyear0) )
+        {
+          if ( (toyear0.length !=4 && toyear0.length !=0) || (fromyear0.length !=4  && fromyear0.length !=0))
+          {
+              errMessage="The Year wrecked range must be a 4 digit year number e.g. 1960.";
+          }
+          else
+          {
+            document.mySubmit.submit(); // do submit the form
+          }
+        }
+        else
+        {
+          // do NOT submit the form
+          errMessage="The entry data in To Year text box is not numeric such as including space or letter";
+        }// end of toyear0
+      }
+      else
+      {
+        // do NOT submit the form
+        errMessage="The entry data in From Year text box is not numeric such as including space or letter";
+      }//end of fromyear0
+    
+    if(errMessage.length>0) 
+    { 
+      errMessage=errMessage + ". Please check the value, then click on Search button again";
+      alert(errMessage);
+    }
+    
+  }
+  
+  function checkNumber(object_value)
+  {
+    //Returns true if value is a number or is NULL
+    //otherwise returns false 
+    // adopted from CFm coding JWANG Feb2007
+    if (object_value.length == 0)
+        return true;
+
+    //Returns true if value is a number defined as
+    //   having an optional leading + or -.
+    //   having at most 1 decimal point.
+    //   otherwise containing only the characters 0-9.
+    var start_format = ".+-0123456789";
+    var number_format = ".0123456789";
+    var check_char;
+    var decimal = false;
+    var trailing_blank = false;
+    var digits = false;
+  
+      //The first character can be + - .  blank or a digit.
+    check_char = start_format.indexOf(object_value.charAt(0))
+      //Was it a decimal?
+    if (check_char == 0)
+        decimal = true;
+    else if (check_char < 1)
+      return false;
+          
+    //Remaining characters can be only . or a digit, but only one decimal.
+    for (var i = 1; i < object_value.length; i++)
+    {
+      check_char = number_format.indexOf(object_value.charAt(i))
+      if (check_char < 0)
+        return false;
+      else if (check_char == 0)
+      {
+        if (decimal)    // Second decimal.
+          return false;
+        else
+          decimal = true;
+      }
+      else if (trailing_blank)
+        return false;
+      else
+        digits = true;
+    } 
+    //All tests passed, so...
+    return true
+   }
+</script>
+</head>
+<body>
+<TMPL_INCLUDE NAME="/includes/heritage/header/header-shipwrecks.html">
+<TMPL_INCLUDE NAME="/includes/heritage/header/header-nav.html">
+
+<div id="maincontent">
+  <div id="breadcrumb"><p><TMPL_INCLUDE NAME="/includes/environment/cpn/heritage-shipwrecks-database-search.html"></p></div>
+  <!-- endnoindex -->
+
+  <div class="floatright">
+    <img src="/apps/heritage/nsd/images/australia.gif" alt="Australia" width="253" height="236" usemap="#Map" />
+    <map name="Map" id="Map">
+      <area shape="poly" coords="102,147,98,30,89,26,74,25,67,39,57,43,52,53,39,68,6,83,1,115,12,130,23,161,23,171,34,179" href="/cgi-bin/heritage/nsd/nsd_list.pl?state=WA&amp;action=SEARCH" alt="WA" />
+      <area shape="poly" coords="169,194,174,111,100,108,103,147,130,153,143,175" href="/cgi-bin/heritage/nsd/nsd_list.pl?state=SA&amp;action=SEARCH" alt="SA" />
+      <area shape="poly" coords="159,43,149,34,153,16,147,9,107,5,101,29,102,107,156,109" href="/cgi-bin/heritage/nsd/nsd_list.pl?state=NT&amp;action=SEARCH" alt="NT" />
+      <area shape="poly" coords="189,4,175,49,162,45,156,110,175,110,174,130,230,135,235,139,248,134,245,107,228,72,213,65,210,34" href="/cgi-bin/heritage/nsd/nsd_list.pl?state=QLD&amp;action=SEARCH" alt="Qld" />
+      <area shape="poly" coords="248,134,239,163,219,193,207,184,191,182,172,168,174,132,230,135,236,140" href="/cgi-bin/heritage/nsd/nsd_list.pl?state=NSW&amp;action=SEARCH" alt="NSW" />
+      <area shape="poly" coords="218,196,201,200,198,204,170,195,170,168,190,181,204,183" href="/cgi-bin/heritage/nsd/nsd_list.pl?state=VIC&amp;action=SEARCH" alt="Vic" />
+      <area shape="poly" coords="208,207,206,228,200,234,190,231,181,205,194,213,201,213" href="/cgi-bin/heritage/nsd/nsd_list.pl?state=TAS&amp;action=SEARCH" alt="Tas" />
+    </map>
+  </div>
+  <h1><a name="top" id="top">National Shipwrecks database</a></h1>
+  <p>Australia's National Shipwrecks database is a searchable database of Australian shipwrecks.</p>
+  <p>The <acronym title="National Shipwrecks database">NSD</acronym> database is not intended for navigation purposes.  The shipwreck records are provided by the Australian State and Territory governments. The positions of many wrecks are unknown or estimated. Some wrecks are represented by a bounding box where the wreck is thought to occur.</p>
+  <p>To begin a new search, <strong>click a State</strong> on the map or <strong>select options</strong> on the search form. Alternatively, you can perform a <a href="nsd_geo.pl"><strong>geographic coordinate search</strong></a>.</p>
+
+  <form style="clear: both" method="get" action="/cgi-bin/heritage/nsd/nsd_list.pl" name="mySubmit">
+    <table>
+      <col width="40%" />
+      <col width="30%" />
+      <col width="30%" />
+      <caption>General search options</caption>
+      <tr>
+        <th><label for="text">Search Wreck name, Registered number, Region or Where lost:</label></th>
+        <TMPL_IF T_text>
+        <td colspan="2"><input style="width: 155px;" type="text" id="text" name="text" value="<TMPL_VAR NAME=T_text>" /> </td>
+        <TMPL_ELSE>
+        <td colspan="2"><input style="width: 155px;" type="text" id="text" name="text" /> </td>
+        </TMPL_IF>
+      </tr>
+      <tr>
+        <th><label for="state">Filter by <strong>State/Territory:</strong></label></th>
+        <td colspan="2"><select name="state" id="state">
+        <TMPL_LOOP NAME=STATE_LOOP>
+        <TMPL_VAR NAME=T_state_option>
+        </TMPL_LOOP>
+        </Select>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="status">Filter by <strong>Status:</strong></label></th>
+        <td colspan="2"><select name="status" id="status">
+        <TMPL_LOOP NAME=STATUS_LOOP>
+        <TMPL_VAR NAME=T_status_option>
+        </TMPL_LOOP>
+        </Select>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="type">Filter by <strong>Type:</strong></label></th>
+        <td colspan="2"><select name="type" id="type">
+        <TMPL_LOOP NAME=TYPE_LOOP>
+        <TMPL_VAR NAME=T_type_option>
+        </TMPL_LOOP>
+        </Select>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="fromyear"><strong>Year wrecked</strong> range:</label></th>
+        <TMPL_IF T_fromyear>
+        <td><input style="width: 155px;" type="text" name="fromyear" id="fromyear" value= "<TMPL_VAR NAME=T_fromyear>" /><br />
+        <strong>From:</strong> Earliest (<strong><TMPL_VAR NAME=T_minyear></strong>) or empty for no limitation</td>
+        <TMPL_ELSE>
+        <td><input style="width: 155px;" type="text" name="fromyear" id="fromyear" value="" /><br />
+        <strong>From:</strong> Earliest (<strong><TMPL_VAR NAME=T_minyear></strong>) or empty for no limitation</td>
+        </TMPL_IF>
+        <TMPL_IF T_toyear>
+        <td><input style="width: 155px;" type="text" name="toyear" value= "<TMPL_VAR NAME=T_toyear>" /><br />
+        <strong>To:</strong> Latest (<strong><TMPL_VAR NAME=T_maxyear></strong>) or empty for no limitation</td>
+        <TMPL_ELSE>
+        <td><input style="width: 155px;" type="text" name="toyear" value=""/><br />
+        <strong>To:</strong> Latest (<strong><TMPL_VAR NAME=T_maxyear></strong>) or empty for no limitation</td>
+        </TMPL_IF>
+      </tr>
+      <tr>
+        <input type="hidden" name="do" value="y">
+        <th>&nbsp;</th>
+        <td colspan="2"><input style="font-size: 120%" type=Button onClick="submitform()" value="Search" name="action" title="Simple Shipwrecks Search">&nbsp;
+        <input style="font-size: 120%" type="Button" onClick= "ClearEntry(this.form)" value="Clear form"></td>
+      </tr>
+    </table>
+  </form>
+  <TMPL_IF NAME=DATA_LOOP>
+    <p>Click on the Shipwreck Id link to see the Shipwreck details (<strong><TMPL_VAR NAME=T_totalFoundRec></strong> records found)</p>
+    <table>
+    <caption>Search results</caption>
+    <col width="10%" />
+    <col width="20%" />
+    <col width="20%" />
+    <col width="10%" />
+    <col width="30%" />
+    <col width="10%" />
+    <tr>
+      <th>Shipwreck Id</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Date wrecked</th>
+      <th>Where wrecked</th>
+      <th>State</th>
+    </tr>
+    <TMPL_IF NAME=T_totalFoundRec>
+      <TMPL_IF T_no_previous>
+      <TMPL_IF T_no_next>
+      <TMPL_ELSE>
+        <a href="#" onClick="history.go(-1)">Back</a> | <a href="nsd_list.pl?<TMPL_VAR NAME=T_txtpars>&start_record=<TMPL_VAR NAME=T_start_record>"> Next <TMPL_VAR NAME=T_remaining> </a>
+      </TMPL_IF>
+    <TMPL_ELSE>
+      <TMPL_IF T_no_next>
+        <a href="#" onClick="history.go(-1)">Back</a>
+      <TMPL_ELSE>
+        <a href="#" onClick="history.go(-1)">Back</a> | <a href="nsd_list.pl?<TMPL_VAR NAME=T_txtpars>&start_record=<TMPL_VAR NAME=T_start_record>"> Next <TMPL_VAR NAME=T_remaining> </a>
+      </TMPL_IF>
+    </TMPL_IF>
+      <TMPL_LOOP NAME=DATA_LOOP>
+        <tr>
+          <td><a href=nsd_form.pl?search_id=<TMPL_VAR NAME=T_ID>><TMPL_VAR NAME=T_ID></a></td><td><TMPL_VAR NAME=T_Name></td><td><TMPL_VAR NAME=T_Type></td><td><TMPL_VAR NAME=T_Date></td><td><TMPL_VAR NAME=T_Wherelost></td><td><TMPL_VAR NAME=T_State></td>
+        </tr>
+      </TMPL_LOOP>
+    <TMPL_ELSE>
+      <p>No (or 0) records found please search again</p>
+    </TMPL_IF>
+    </table>
+    <TMPL_IF T_no_previous>
+      <TMPL_IF T_no_next>
+      <TMPL_ELSE>
+        <a href="#" onClick="history.go(-1)">Back</a> | <a href="nsd_list.pl?<TMPL_VAR NAME=T_txtpars>&start_record=<TMPL_VAR NAME=T_start_record>"> Next <TMPL_VAR NAME=T_remaining> </a>
+      </TMPL_IF>
+    <TMPL_ELSE>
+      <TMPL_IF T_no_next>
+        <a href="#" onClick="history.go(-1)">Back</a>
+      <TMPL_ELSE>
+        <a href="#" onClick="history.go(-1)">Back</a> | <a href="nsd_list.pl?<TMPL_VAR NAME=T_txtpars>&start_record=<TMPL_VAR NAME=T_start_record>"> Next <TMPL_VAR NAME=T_remaining> </a>
+      </TMPL_IF>
+    </TMPL_IF>
+
+  <TMPL_ELSE>
+    <TMPL_IF NAME=T_mySearch>
+      <p>No (or 0) records found please search again</p>
+    <TMPL_ELSE>
+
+    </TMPL_IF>
+  </TMPL_IF>
+  <TMPL_IF NAME=ERROR>
+    <p><TMPL_VAR NAME=ERROR></p>
+  </TMPL_IF>
+
+  <div id="sidepanel">
+    <TMPL_INCLUDE NAME="/includes/heritage/sidepanel/historic-shipwrecks.html">
+    <TMPL_INCLUDE NAME="/includes/default/sidepanel/key.html">
+  </div>
+
+  <div id="footer">
+    <TMPL_INCLUDE NAME="/includes/heritage/footer/footer-data.html">
+  </div>
+
+</div>
+<div id="navigation">
+  <TMPL_INCLUDE name="/includes/environment/nav/heritage-shipwrecks-database-search.html">
+  <div id="navigation-image"></div>
+</div>
+</body>
+</html>

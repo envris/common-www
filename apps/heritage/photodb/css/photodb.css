@@ -1,0 +1,149 @@
+/* This stylesheet applies ONLY to the AHC Photodb Search form and results pages */
+
+/*
+input, select, textarea	{ font-size: 1em; line-height: 1.1em; }
+
+form table	{ margin: 0.75em 0; padding: 0; border-collapse: collapse; }
+form th, form td	{ padding: 5px;	}
+form td	{ text-align: left; }
+form th	{ background: #F3F3FF; text-align: right; white-space: nowrap;
+	border-bottom: thin solid #FFE886; }
+form input, form textarea, form select	{ font: 1.1em Arial sans serif; }
+
+form textarea:focus, form input:focus	{ background: #F3F3FF; }
+form input[type="reset"]:focus	{ background-color: white; }
+form input[type="submit"]:focus	{ background-color: white; }
+form input[type="button"]:focus	{ background-color: white; }
+
+*/
+
+/*	Miscellaneous classes	*/
+
+.tiptext	{ font-size: 0.8em; font-weight: normal; padding: 0.25em; }
+/* .applink	{ font: bold normal 1em Arial sans-serif; } */
+.applink	{ font-weight: bold; font-size: 1em;  }
+.imgtitle	{ font-size: 1.1em; font-weight: bold; margin: 0.5em; }
+.clearboth      { margin: 0; padding: 0; 
+		  clear: both; font-size: 0; } /* For IE */
+
+/*
+  Suggested table colors: dark border: #DFAC13
+			  dark cell: #FFE886
+			  light: cell: #FFFFCC
+*/
+
+/* The 'instructions' section */
+
+div.instructions   { margin: 0; padding: 0.5em 0; }
+div.instructions .left     { float: left; width: 60%;
+        margin: 0;  padding: 0 2em 0 0; }
+div.instructions .right    { float: right; margin: 0; padding: 0; }
+
+/* Search form */
+
+table#searchform	{ margin: auto; padding: 0; }
+table#searchform td,
+table#searchform th	{ padding: 5px; }
+table#searchform td { text-align: left; border-bottom: thin solid #FFE886;
+	background: #FFFFCC; }
+table#searchform th { text-align: right; border-bottom: thin solid #DFAC13; 
+	background: #FFE886; white-space: normal; }
+table#searchform .topbuttonrow	{ text-align: center; 
+	border-top-width: 0; border-left-width: 0; border-right-width: 0; }
+table#searchform .bottombuttonrow	{ text-align: left; 
+	border-bottom-width: 0; border-left-width: 0; border-right-width: 0; }
+table#searchform td span { font-size: 0.8em; font-weight: normal; }
+
+table#searchform textarea:focus, 
+table#searchform input:focus	{ background: #FFE886; }
+table#searchform input[type="reset"]:focus	{ background-color: white; }
+table#searchform input[type="submit"]:focus	{ background-color: white; }
+table#searchform input[type="button"]:focus	{ background-color: white; }
+
+table#searchform input, 
+table#searchform textarea, 
+table#searchform select	{ font: 1.1em/1.1 Arial sans serif; }
+table#searchform label span { display: none; }
+table#searchform label:hover span {
+        display: block; overflow: visible;
+        position: absolute; left: 20px; top: 250px; width: auto;
+        padding: 10px; margin: 10px; z-index: 1000;
+        color: black; background: white;
+        border: thin solid #000066;
+        font-size: 1em; font-weight: normal; text-align: center;
+}
+
+/* Classes defined 'cause IE5+ doesn't support attribute selectors */
+
+table#searchform .submitbutton	{
+	font: bold 1em Arial sans-serif;
+	background-color: #FFCC33; 
+	border-bottom: 2px outset #DFAC13; border-right: 2px outset #DFAC13;
+	padding: 0.2em 0.2em; margin: 0 2em 0 0;
+}
+table#searchform .resetbutton	{
+	font: bold 1em Arial sans-serif;
+	background-color: #FF6633;
+	border-bottom: 1px outset #000066; border-right: 1px outset #000066;
+	padding: 0.1em 0.1em;  margin: 0;
+}
+table#searchform .submitbutton:focus	{ background-color: white; }
+table#searchform .resetbutton:focus	{ background-color: white; }
+
+
+/* Search output */
+
+table#resultssummary	{ margin: 0; padding: 0.5em 0; }
+table#resultssummary th, 
+table#resultssummary td { padding: 5px; text-align: left; }
+table#resultssummary th { background: #FFE886; 
+	border-bottom: thin solid #FFFFCC; }
+table#resultssummary td { background: #FFFFCC;  
+	border-bottom: thin solid #FFE886; }
+
+table#results	{ margin: 0.5em 0; padding: 0; 
+	border: thin solid #DFAC13; 
+	width: auto; /* for IE5+ */
+	voice-family: "\"}\""; voice-family: inherit;
+	width: 100%;
+}
+html>body table#results	{ width: 100%; } /* For Opera */
+table#results td, 
+table#results th { padding: 5px; }
+table#results th { text-align: right; background: #FFE886; 
+	border-bottom: thin solid #DFAC13; }
+table#results td { text-align: left; background: #FFFFCC;
+	border-bottom: thin solid #FFE886; }
+
+table#results .imgcell	{ vertical-align: middle; text-align: center; 
+	background: white; border-bottom: thick solid #FFE886; }
+
+table#results .lastth	{ border-bottom: thick solid #FFFFCC; }
+table#results .lasttd	{ border-bottom: thick solid #FFE886; }
+
+table#fullresults	{ margin: 0.5em 0; padding: 0;
+	border: thin solid #DFAC13; 
+	width: auto; /* for IE5+ */
+	voice-family: "\"}\""; voice-family: inherit;
+	width: 100%;
+}
+html>body table#fullresults	{ width: 100%; } /* For Opera */
+table#fullresults td, 
+table#fullresults th { padding: 5px; }
+table#fullresults th { text-align: right; background: #FFE886; 
+	border-bottom: thin solid #DFAC13; }
+table#fullresults td { text-align: left; background: #FFFFCC;
+	border-bottom: thin solid #FFE886; }
+
+table#fullresults .imgcell	{ vertical-align: middle; text-align: center; 
+	background: white; border-bottom: thick solid #FFE886; }
+
+/* DH new definition for Sep 05 mods */	
+table#place_list	{ margin: 0.5em 0; padding: 0;
+	border: thin solid #DFAC13; 
+	width: auto; /* for IE5+ */
+	voice-family: "\"}\""; voice-family: inherit;
+	width: 15%;
+}
+
+

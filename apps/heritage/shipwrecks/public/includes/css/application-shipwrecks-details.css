@@ -1,0 +1,60 @@
+/* ----------------------------------------------------------------------
+|   Application template for chemicals application. 
+|   Inherits from /apps/environment/includes/css/application-master.css  |
+|   Author: DEWHA                                                        |
+-----------------------------------------------------------------------*/
+
+
+/* -----------------------------------------
+    new styles for shipwreck/relic details page 
+-------------------------------------------- */
+
+#application-area .clear {
+	clear:both;
+	margin-bottom:10px;
+}
+#application-area #generalDetails {
+	margin-right:210px;
+}
+#generalDetails form fieldset {
+	border:0;
+	background-color:#f1f5f9;
+}
+#generalDetails .detail-rows /*div.row-dark, div.row-light */{
+  background-color: #f1f5f9 !important;
+	border-bottom:#ababab solid 1px;
+  float: left;
+  padding: 4px;
+  width: 99%;
+}
+#generalDetails .wreck2col, .prompt25 {
+	font-weight:bold;
+	clear:both;
+}
+.sectionToggles {
+	float:left;
+	text-align:left;
+}
+
+
+
+
+/* MAP SECTION of page
+--------------------------------------------------------- */
+
+#map {
+	float: right;
+	width:200px;
+}
+
+#map img {
+	margin-bottom:5px;
+	border:1px solid #ccc;
+	width:200px;
+}
+
+
+
+
+
+

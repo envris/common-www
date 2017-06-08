@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-size:90%;
+	line-height:1.5em;
+	color:#000000;
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+		border-top:38px solid #01528B;
+			background:none!important;
+}
+h1, h2, h3, h4, h5 {
+font-family: arial, sans-serif;
+    font-stretch: condensed;
+    font-weight: normal;
+  line-height: 1.3em;
+  margin-top: 0;
+  clear:both;
+}
+h1 {
+  color: #005595!important;
+  font-size:2em;
+}
+h2, h3, h4, h5 {
+color:black!important;
+}
+#title{			background:none!important;}
+#header {
+	padding:0;
+	border-bottom:1px solid #ccc;
+	margin-bottom:1em;
+		background:none!important;
+		clear:both;
+}
+#header img {
+padding-top:1em;
+border:none;
+}
+.app-heading h1 {padding:0 0 0.5em 0.5em!important;}
+.app-heading h2 {padding:0 0 0.5em 0.6em!important;margin-top:-0.25em;}
+#global{background:none!important;}
+#global li {
+    background: #e5e5e5;}
+#breadcrumb {clear:both;}
+#navigation {
+    top: 150px;}
+	#navigation-image {
+    background: none;!important}
+	#navigation li.level1 a, #navigation li.level1 a:link, #navigation li.level1 a:visited {
+    background: #F3F3F1;    color: black;
+}
+  #navigation li.level5 a, #navigation li.level5 a:link, #navigation li.level5 a:visited,
+    #navigation li.level2 a, #navigation li.level2 a:link,
+	 #navigation li.level3 a, #navigation li.level3 a:link,
+	  #navigation li.level4 a, #navigation li.level4 a:link {background-color: #E1E2DE!important;}
+	#navigation li.level2 a, #navigation li.level2 a:link, #navigation li.level2 a:visited,
+	#navigation li.level3 a, #navigation li.level3 a:link, #navigation li.level3 a:visited ,
+	#navigation li.level4 a, #navigation li.level4 a:link, #navigation li.level4 a:visited{
+    border-bottom: 1px solid #ccc;}
+#footer {
+	margin-top:2em;
+	padding:1em;
+			text-align:center;
+		vertical-align:middle;
+		font-size:0.90em;
+  border-top: 9px #01528B solid;
+  background: #f8f8f8;
+}
+#footer ul li {
+	  background: none!important;
+  style: none!important;
+  list-style-image: none;
+  display: inline;
+  margin-left: 0.5em;
+  padding: 0 0 0 0.8em;
+  border-left: 1px solid #01528B;
+}
+#footer ul li.first {
+  border-left: none;
+}
+#footer ul li.last {
+    padding-left: 0;
+  border-left: none;
+}
+ #footer a {text-decoration:none;}
+  #footer a:hover {text-decoration:underline;}
+#sidepanel {
+	    padding: 0.25em;
+    background-color: #f7f7f7;
+    margin-bottom: 1em;
+    border-top: solid 4px #01528B;
+    top: 180px;
+	height:auto;
+}
+#sidepanel div.sidebox {
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+	border:none;
+}
+#sidepanel h2.sidebox {
+    background-color: transparent;
+    background-image: none;
+	border-bottom:none;
+}
+
+/*Tables*******************/
+table {
+  border: 1px solid #B2B2B2;
+  margin: 0.5em 0;
+    border-spacing: 0;
+	  border-collapse: collapse;
+}
+caption {
+  background-color: #005595!important;
+  color: white!important;
+  text-align: left;
+  font-weight: bold;
+  padding:0.5em;
+}
+th, table#resultssummary th, table.speciesdata th {background-color:#ccc;	font-weight:bold;}
+th.subhead {
+    background-color: #efefef;}
+tr:nth-child(2n+2) {
+  background: #e5e5e5!important;
+}
+.submitbutton {
+     background:none ;
+    background-color: none; 
+}
+td, th { border-bottom:solid 1px #B2B2B2; padding:0.5em;  text-align: left;}
+td {
+    background-color: white;
+}
+div.highlight {
+    background-color: #f7f7f7;
+    border: 1px solid #e7e7e7;
+    border-left-width: 4px;
+    border-radius: 3px;
+    border-left-color: #01528B;
+    margin-bottom: 1em;
+}
+label {
+    font-size: 100%;
+    border: none;
+}
+@media (max-width:550px) {
+	#footer {
+			text-align:left;
+}
+#footer ul li {
+display:block;
+border-left:none;
+text-align:left;
+}
+#footer ul {
+  padding: 0;
+}
+}

@@ -1,0 +1,151 @@
+/* Style sheet for Google Maps in Environment Heritage web pages.
+   Feb/2008: Used by ALL heritage pages which contain a Google Map.
+*/
+body {
+	font-family:Arial;
+	font-size: 79%;
+}
+h1, h2, h3, h4, h5 {
+	font-family: Georgia, serif;
+	line-height: 1.5em;
+	margin-bottom: 0.45em;
+	color:black;
+	font-weight:normal;
+	margin-top: 0;
+}
+span.popup {
+	background: url(/includes/default/images/ico-popup.gif) 100% 65% no-repeat;
+	padding-right: 10px;
+	font-size: 90%;
+	text-decoration: none;
+}
+p {
+	font-size: 85%;
+	line-height: 1.5em;
+}
+#maincontent ul li {
+	font-size: 85%;
+	line-height: 1.5em;
+	padding: 0 0 0.5em 15px;
+}
+/*.highlight {
+	background:#efefef;
+}*/
+form.mapfn {
+	margin:0;
+	padding:0;
+	display:inline;
+}
+p.mapfn {
+	margin:0;
+	padding:0.25em 0;
+}
+p.mapfn a:hover {
+	color:white;
+	background-color:#666666;
+	text-decoration:none;
+	padding:2px 4px;
+}
+input.mapfn {
+	margin:0;
+	padding:0.25em 0;
+}
+form.mapfn label {
+	margin:0;
+	padding-left:0.5em;
+	line-height: 1.5em;
+}
+#mapfn_stateform img, #mapfn_stateform input {
+	border: 0;
+	vertical-align: middle;
+	padding: 5px 5px 5px 0;
+}
+#mapfn_placeform select {
+	margin:0 0 5px 0;
+	padding:5px 0;
+}
+#place_list optgroup {
+	font-style: normal;
+	font-weight: bold;
+	margin: 5px 0 2px 2px;
+}
+#place_list optgroup.option {
+	font-style: normal;
+	font-weight: normal;
+	padding-left: 10px;
+}
+#place_list .invisible {
+	display:none;
+}   /* to hide pick list options */
+/* The following affect the map and the info popup windows. Please do
+   not modify w/o testing in all browsers.
+*/
+div#map {
+	margin:0 10px 0 0;
+	padding:0;
+	width:600px;
+	height:480px;
+	border:1px solid #666666;
+	float:left;
+	overflow:hidden;
+}
+div#markerwindow {
+	width:350px;
+	height:180px;
+	overflow-x:auto;
+	overflow-y:auto;
+	padding-top: 1em;
+}
+div#markerwindow p {
+	color: black;
+	font-size:1em;
+	font-weight: bold;
+	margin: -5px 10px 0 0;
+	padding: 0;
+}
+div#place_img {
+	margin:5px;
+	float:right;
+	width:25%;
+}
+div#markerwindow img {
+	border: 1px solid #ababab;
+	margin:0;
+	float:left;
+}
+div#markerwindow ul {
+	background-color: white;
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+div#markerwindow ul li {
+	line-height: 1.2em;
+	padding-left:-5px;
+	background: url(/includes/heritage/images/bullet2.gif) no-repeat 0 0.4em;
+}
+div#markerwindow #zoomleft {
+	margin:10px 0 0 0;
+	float:left;
+	text-align:left;
+		font-size: 85%;
+}
+div#markerwindow #zoomright {
+	margin:10px 0 0 0;
+	float:right;
+	text-align:right;
+	width:50%;
+		font-size: 85%;
+}
+  .google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }

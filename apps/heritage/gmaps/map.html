@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Find places on the National Heritage List</title>
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<meta name="DC.Title" lang="en" xml:lang="en" content="Find places on the National Heritage List using Google Maps" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Type.documentType" scheme="environment-document" content="Web Page" />
+<meta name="DC.Date.created" scheme="ISO 8601" content="2015-12-08" />
+<meta name="DC.Rights" scheme="URI" content="http://www.environment.gov.au/about/copyright.html" />
+<meta name="DC.Date.modified" scheme="ISO 8601" content="2017-02-21" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Identifier" scheme="URI" content="http://www.environment.gov.au/apps/heritage/gmaps/map.html" />
+<meta name="DC.Date.valid" scheme="DCMIPeriod" content="start=2017-02-21; end=2017-08-21" />
+<link rel="stylesheet" href="/apps/heritage/gmaps/css/hgmaps.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="/includes/default/css/default-print.css" media="print" type="text/css" />
+<!-- The National Heritage List Google Map application -->
+<script type="text/javascript">
+//<![CDATA[
+  // Parameters for the Google Map on this page
+  var GParamList = 'National';      // for the pick lists default option
+  var GParamMapLayer = 'nhl';       // to obtain the 'NHLareas' button
+//]]>
+</script>
+<script src="https://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAbtnLq_5YTtUAfT6WWdcJuBR8PCq--sSiVv3vSqOb34TQgSGlHBStWG-qtz2FGmvuDZx0O0WGXl61mg" type="text/javascript">
+</script>
+<script type="text/javascript" src="/apps/heritage/gmaps/js/dragzoom_packed.js">
+</script>
+<script type="text/javascript" src="/apps/heritage/gmaps/js/wmstilelayer.js">
+</script>
+<script type="text/javascript" src="/apps/heritage/gmaps/data/nhl-gmap-data.js">
+</script>
+<script type="text/javascript" src="/apps/heritage/gmaps/js/hgmaps.js">
+</script>
+<script type="text/javascript" src="/includes/default/scripts/common-functions.js">
+</script>
+</head>
+<body style="background:none:" onload="focus(); create_map();" onunload="GUnload();">
+
+
+<div id="maincontent">
+  <!-- endnoindex -->
+ 
+
+  <a id="googlemap" name="googlemap"></a>
+
+  <div id="googlemap-container">
+
+    <div class="map-column">
+      <noscript>
+        <p><strong>JavaScript must be enabled in order for you to use Google Maps.</strong> However, it seems JavaScript is either disabled or not supported by your browser. To view Google Maps, enable JavaScript by changing your browser options, and then try again.</p>
+      </noscript>
+      <form id="mapfn_placeform" action="" class="mapfn">
+        <p id="place_list"></p> <!-- Pick list for Places; built by JS -->
+      </form>
+      <div id="map"></div>
+    </div><!-- end map-column -->
+    <div class="highlight">
+      <h2 class="pane-title">Customise map view</h2>
+        <form id="mapfn_stateform" action="" class="mapfn">
+          <p>
+            <input type="radio" name="state" id="all_states" value="All" checked="checked" class="mapfn" onclick="displayset();" /><label for="all_states"><strong>Show all places</strong></label><br />
+            <input type="radio" name="state" id="nsw" value="NSW" class="mapfn" onclick="displayset('NSW');" /><label for="nsw"><acronym lang="en" xml:lang="en" title="New South Wales">NSW</acronym></label><br />
+            <input type="radio" name="state" id="vic" value="VIC" class="mapfn" onclick="displayset('VIC');" /><label for="vic"><acronym lang="en" xml:lang="en" title="Victoria">Vic</acronym></label><br />
+            <input type="radio" name="state" id="qld" value="QLD" class="mapfn" onclick="displayset('QLD');" /><label for="qld"><acronym lang="en" xml:lang="en" title="Queensland">Qld</acronym></label><br />
+            <input type="radio" name="state" id="sa" value="SA" class="mapfn" onclick="displayset('SA');" /><label for="sa"><acronym lang="en" xml:lang="en" title="South Australia">SA</acronym></label><br />
+            <input type="radio" name="state" id="wa" value="WA" class="mapfn" onclick="displayset('WA');" /><label for="wa"><acronym lang="en" xml:lang="en" title="Western Australia">WA</acronym></label><br />
+            <input type="radio" name="state" id="tas" value="TAS" class="mapfn" onclick="displayset('TAS');" /><label for="tas"><acronym lang="en" xml:lang="en" title="Tasmania">Tas</acronym></label><br />
+            <input type="radio" name="state" id="nt" value="NT" class="mapfn" onclick="displayset('NT');" /><label for="nt"><acronym lang="en" xml:lang="en" title="Northern Territory">NT</acronym></label><br />
+            <input type="radio" name="state" id="act" value="ACT" class="mapfn" onclick="displayset('ACT');" /><label for="act"><acronym lang="en" xml:lang="en" title="Australian Capital Territory">ACT</acronym></label><br />
+            <input type="radio" name="state" id="anta" value="Antarctica" class="mapfn" onclick="displayset('ANTA');" /><label for="anta">Antarctica</label><br />
+            <input type="radio" name="state" id="ext" value="External" class="mapfn" onclick="displayset('EXT');" /><label for="ext">External Territories</label>
+          </p>
+        </form>
+    </div>
+  </div>
+  
+</body>
+</html>

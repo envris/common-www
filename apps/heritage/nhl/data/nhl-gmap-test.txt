@@ -1,0 +1,44 @@
+PLACE_ID	NAME	LONGITUDE	LATITUDE	STATE	URL	IMAGE_URL	IMAGE_WIDTH	IMAGE_HEIGHT
+105741	Australian Academy of Science Building	149.1226537	-35.28368637	ACT	/heritage/nhl/act/science-building.html	/heritage/nhl/act/images/dome.jpg	187	125
+105889	Australian War Memorial and the Memorial Parade	149.1466853	-35.28314411	ACT	/heritage/nhl/act/war-memorial.html	/heritage/nhl/act/images/awg.jpg	185	246
+105774	Old Parliament House and Curtilage	149.1295217	-35.30245552	ACT	/heritage/nhl/act/old-parliament.html	/heritage/nhl/act/images/dig001061.jpg	185	139
+105713	Mawsons Huts and Mawsons Huts Historic Site	142.6681018	-67.00972543	ANTA	/heritage/nhl/other/mawsons.html	/heritage/nhl/other/images/rt32775.jpg	185	122
+105778	Brewarrina Aboriginal Fish Traps (Baiames Ngunnhu)	146.855035	-29.95792551	NSW	/heritage/nhl/nsw/brewarrina.html			
+105761	First Government House Site	151.2116422	-33.86352534	NSW	/heritage/nhl/nsw/govhouse.html	/heritage/nhl/nsw/images/rt08861.jpg	185	122
+105817	"Ku-ring-gai Chase National Park, Lion, Long and Spectacle Island Nature Reserves"	151.213244	-33.6308033	NSW	/heritage/nhl/nsw/ku-ring-gai.html	/heritage/nhl/nsw/images/ku-ring2.jpg	185	118
+105812	Kurnell Peninsula Headland	151.2220886	-34.02303484	NSW	/heritage/nhl/nsw/kurnell.html			
+105759	North Head - Sydney	151.2960743	-33.81386753	NSW	/heritage/nhl/nsw/north-head.html	/heritage/nhl/nsw/images/rt09493.jpg	185	125
+105893	Royal National Park and Garawarra State Conservation Area	151.0598175	-34.12154944	NSW	/heritage/nhl/nsw/royal-park.html	/heritage/nhl/nsw/images/royal-np.jpg	185	118
+105888	Sydney Harbour Bridge	151.2106171	-33.85114578	NSW	/heritage/nhl/nsw/harbour-bridge.html	/heritage/nhl/nsw/images/sydney-bridge.jpg	185	121
+105738	Sydney Opera House	151.2147975	-33.85748354	NSW	/heritage/nhl/nsw/opera.html	/heritage/nhl/nsw/images/rt11316-23258.jpg	185	122
+105853	Warrumbungle National Park	149.0140062	-31.28035865	NSW	/heritage/nhl/nsw/warrumbungle.html	/heritage/nhl/nsw/images/warrumbungle2.jpg	185	118
+105767	Hermannsburg Historic Precinct	132.7750324	-23.94509718	NT	/heritage/nhl/nt/hermannsburg.html	/heritage/nhl/nt/images/hermannsburg.jpg	185	118
+105664	Dinosaur Stampede National Monument	142.4121185	-23.0102417	QLD	/heritage/nhl/qld/larkquarry.html	/heritage/nhl/qld/images/dig000063.jpg	185	125
+105815	Glass House Mountains National Landscape	152.9225735	-26.93556449	QLD	/heritage/nhl/qld/glass-mountains.html	/heritage/nhl/qld/images/glass-mountain.jpg	185	124
+105721	Tree of Knowledge and curtilage	145.2896303	-23.55235226	QLD	/heritage/nhl/qld/tree.html			
+105880	Ediacara Fossil Site - Nilpena	138.4	-31.133	SA	/heritage/nhl/sa/ediacara.html	/heritage/nhl/sa/images/spriggina.jpg	185	183
+105710	South Australian Old and New Parliament Houses	138.5986291	-34.92113256	SA	/heritage/nhl/sa/sa-parliament.html	/heritage/nhl/sa/images/rt38594.jpg	185	119
+105718	Port Arthur Historic Site	147.8549304	-43.14406469	TAS	/heritage/nhl/tas/port-arthur.html	/heritage/nhl/tas/images/rt02200.jpg	185	125
+105665	Recherche Bay (North East Peninsula) Area	146.922692	-43.53389799	TAS	/heritage/nhl/tas/recherche.html	/heritage/nhl/tas/images/dig001169.jpg	185	139
+105724	Richmond Bridge	147.4400198	-42.73387379	TAS	/heritage/nhl/tas/richmond.html	/heritage/nhl/tas/images/rt42166.jpg	185	185
+105673	Budj Bim National Heritage Landscape - Mt Eccles Lake Condah Area	141.8813199	-38.07919168	VIC	/heritage/nhl/vic/budjbim.html	/heritage/nhl/vic/images/rt67144.jpg	185	120
+105678	Budj Bim National Heritage Landscape - Tyrendarra Area	141.7643007	-38.19387712	VIC	/heritage/nhl/vic/budjbim.html	/heritage/nhl/vic/images/rt67144.jpg	185	120
+105683	Castlemaine Diggings National Heritage Park	144.2269192	-37.1499945	VIC	/heritage/nhl/vic/castlemaine.html	/heritage/nhl/vic/images/ea015157.jpg	185	124
+105754	Eureka Stockade Gardens	143.8845843	-37.5646191	VIC	/heritage/nhl/vic/eureka.html	/heritage/nhl/vic/images/eureka1.jpg	185	124
+105922	Flemington Racecourse	144.9128987	-37.78902282	VIC	/heritage/nhl/vic/flemington.html	/heritage/nhl/vic/images/melbournecup-05.jpg	185	118
+105851	Flora Fossil Site - Yea	145.449294	-37.22101165	VIC	/heritage/nhl/vic/yea-flora.html	/heritage/nhl/vic/images/cooksonia.jpg	185	84
+105729	Glenrowan Heritage Precinct	146.2239309	-36.46270948	VIC	/heritage/nhl/vic/glenrowan.html			
+105852	Grampians National Park (Gariwerd)	142.409475	-37.25377058	VIC	/heritage/nhl/vic/grampians.html	/heritage/nhl/vic/images/grampians-np.jpg	185	185
+105764	HMVS Cerberus	145.0081033	-37.96781141	VIC	/heritage/nhl/vic/hmvs.html	/heritage/nhl/vic/images/rt17908.jpg	185	123
+105747	ICI Building (former)	144.9735223	-37.8089905	VIC	/heritage/nhl/vic/ici.html	/heritage/nhl/vic/images/ici.jpg	185	240
+105885	Melbourne Cricket Ground	144.9834474	-37.81994342	VIC	/heritage/nhl/vic/mcg.html	/heritage/nhl/vic/images/rt53177.jpg	185	121
+105739	Newman College	144.9637594	-37.7954081	VIC	/heritage/nhl/vic/newman.html	/heritage/nhl/vic/images/newman.jpg	185	124
+105680	Point Nepean Defence Sites and Quarantine Station Area	144.6840207	-38.31551577	VIC	/heritage/nhl/vic/point-nepean.html	/heritage/nhl/vic/images/pt-nepean-aerial.jpg	185	118
+105756	Quarantine Station and Surrounds	144.6933685	-38.31396941	VIC	/heritage/nhl/vic/point-nepean.html	/heritage/nhl/vic/images/pt-nepean-aerial.jpg	185	118
+105763	Rippon Lea House and Garden	144.9989507	-37.87958624	VIC	/heritage/nhl/vic/rippon-lea.html	/heritage/nhl/vic/images/rippon-lea-house.jpg	185	118
+105708	Royal Exhibition Building National Historic Place	144.9715844	-37.80423381	VIC	/heritage/nhl/vic/royal.html	/heritage/nhl/vic/images/rt15277.jpg	185	126
+105743	Sidney Myer Music Bowl	144.9747212	-37.82419772	VIC	/heritage/nhl/vic/sidney-myer.html	/heritage/nhl/vic/images/sidney.jpg	185	185
+105887	Batavia Shipwreck Site and Survivor Camps Area 1629 - Houtman Abrolhos	113.7469457	-28.46967556	WA	/heritage/nhl/wa/batavia.html	/heritage/nhl/wa/images/rt27724.jpg	185	118
+105808	Dirk Hartog Landing Site 1616 - Cape Inscription Area	112.9875691	-25.50038168	WA	/heritage/nhl/wa/cape-inscription.html	/heritage/nhl/wa/images/dig001996.jpg	185	139
+105762	Fremantle Prison (former)	115.7531769	-32.05503898	WA	/heritage/nhl/freemantle.html	/heritage/nhl/wa/images/dig000491-2941.jpg	185	123
+105818	Stirling Range National Park	118.047177	-34.39771813	WA	/heritage/nhl/wa/stirling.html	/heritage/nhl/wa/images/dig001405-10519.jpg	185	139

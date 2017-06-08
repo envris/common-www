@@ -1,0 +1,11 @@
+<div id="header">
+  <a href="index.html"><img src="http://www.environment.gov.au/apps/heritage/shipwrecks/includes/images/logo-environment.gif" width="425" height="47" alt="Logo" /></a>
+  <div id="title-doubleline">
+    <h1>Heritage</h1>
+    <h2>Australian National Shipwreck Database</h2>
+  </div>
+</div>
+
+<div id="breadcrumb">
+  <p>You are here: <a href="http://www.environment.gov.au/index.html">Environment home</a> &raquo; <a href="http://www.environment.gov.au/heritage/index.html">Heritage</a> &raquo; <a href="http://www.environment.gov.au/heritage/shipwrecks/index.html">Historic Shipwrecks</a> &raquo; <a href="http://draft.environment.gov.au/heritage/shipwrecks/work/new-database.html">Australian National Shipwreck Database</a></p>
+</div>

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Strict//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Australian Heritage Photographic Database - search results</title>
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<meta name="DC.Identifier" scheme="URI" content="http://www.environment.gov.au/about/index.html" />
+<meta name="DC.Title" lang="en" content="Heritage photographic database - search results page" xml:lang="en" />
+<meta name="DC.Identifier" scheme="ISBN" content="" />
+<meta name="DC.Identifier" scheme="ISSN" content="" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Subject" scheme="Department of the Environment and Water Resources Thesaurus http://www.environment.gov.au/about/publications/thesaurus.html" content="" />
+<meta name="DC.Description" lang="en" content="Register of the National Estate, Historic Environment, Natural Environment, Indigenous Environment, Photographs" xml:lang="en" />
+<meta name="DC.Publisher" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Date.modified" scheme="ISO8601" content="" />
+<meta name="DC.Type.documentType" scheme="deh-document" content="database" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="DC.Rights" scheme="URI" content="http://www.environment.gov.au/about/copyright.html" />
+<meta name="Description" content="Register of the National Estate, Historic Environment, Natural Environment, Indigenous Environment, Photographs" />
+<meta name="Keywords" content="" />
+<meta name="DC.Date.valid" scheme="DCMIPeriod" content="start=2004-01-01; end=2006-01-01" />
+<meta name="DC.Date.created" scheme="ISO 8601" content="2004-01-01" />
+<link rel="stylesheet" href="/includes/default/css/default-xmlnav.css" media="screen" type="text/css" /> 
+<link rel="stylesheet" href="/includes/heritage/css/heritage.css" media="screen" type="text/css" /> 
+<link rel="alternate stylesheet" href="/includes/default/css/default-wide.css" title="default-wide" type="text/css" /> 
+<link rel="stylesheet" href="/default/css/default-print.css" media="print" type="text/css" /> 
+<script type="text/javascript" src="/includes/default/scripts/accessibility.js"></script>
+<script type="text/javascript" src="/includes/default/scripts/event-listeners.js"></script>
+<script type="text/javascript" src="/includes/default/scripts/flyout.js" charset="UTF-8"></script> 
+<script type="text/javascript" src="/includes/default/scripts/resolution.js"></script>
+</head>
+
+<body>
+<TMPL_INCLUDE name="/includes/heritage/header/header-publications.html">
+<TMPL_INCLUDE name="/includes/heritage/header/header-nav.html">
+
+<div id="maincontent">
+  <div id="breadcrumb"><p><TMPL_INCLUDE name="/includes/environment/cpn/heritage-pubs-photodatabase.html"></p></div>
+  <!-- endnoindex -->
+  <h1><a name="top" id="top">Australian heritage photographic library search results</a></h1>
+  <table summary="Search Parameters / Buttons Layout table">
+    <caption>Query details</caption>
+    <col width="30%" />
+    <col width="70%" />
+    <TMPL_IF NAME=SEARCH_TEXT>
+    <tr>
+      <th>Search Text:</th>
+      <td><TMPL_VAR NAME=SEARCH_TEXT></td>
+    </tr>
+    </TMPL_IF>
+    <TMPL_IF NAME=SEARCH_LOCATION>
+    <tr>
+      <th>Location:</th>
+      <td><TMPL_VAR NAME=SEARCH_LOCATION></td>
+    </tr>
+    </TMPL_IF>
+    <TMPL_IF NAME=SEARCH_CREATOR>
+    <tr>
+      <th>Photographer:</th>
+      <td><TMPL_VAR NAME=SEARCH_CREATOR></td>
+    </tr>
+    </TMPL_IF>
+    <TMPL_IF NAME=SEARCH_PLACEID>
+    <tr>
+      <th>Place ID:</th>
+      <td><TMPL_VAR NAME=SEARCH_PLACEID></td>
+      </tr>
+    </TMPL_IF>
+    <TMPL_IF NAME=SEARCH_BARCODE_NO>
+    <tr>
+      <th>Barcode No:</th>
+      <td><TMPL_VAR NAME=SEARCH_BARCODE_NO></td>
+    </tr>
+    </TMPL_IF>
+    <TMPL_IF NAME=SEARCH_COLL_TERMS>
+    <tr>
+      <th>Keywords:</th>
+      <td><TMPL_VAR NAME=SEARCH_COLL_TERMS></td>
+    </tr>
+    </TMPL_IF>
+    <tr>
+      <th>Results:</th>
+      <td><TMPL_VAR NAME=RESULTS></td>
+    </tr>
+    <TMPL_IF NAME=REC_DISP>
+    <tr>
+      <th>Records Displayed:</th>
+      <td><TMPL_VAR NAME=REC_DISP></td>
+      </tr>
+    </TMPL_IF>
+  </table>
+
+<!-- The following table is only required IFF we have output  -->
+
+<TMPL_IF NAME=DATA_LOOP>
+<table summary="Layout table for record detail">
+  <caption>Search results</caption>
+  <col width="30%" />
+  <col width="20%" />
+  <col width="50%" />
+  <TMPL_LOOP NAME=DATA_LOOP>
+  <tr>
+    <td rowspan="4" class="imgcell"><TMPL_IF NAME=NO_IMAGE_FLAG>    
+      <span class="tiptext">No image available</span><br />
+      <a href="<TMPL_VAR NAME=VIEW_REF>">Full Image Details</a>
+      <TMPL_ELSE>
+      <a href="<TMPL_VAR NAME=VIEW_REF>">
+      <img src="<TMPL_VAR NAME=IMG_REF>" alt="<TMPL_VAR NAME=TITLE>" border="0" /></a><br clear="all" />
+      <span class="tiptext">Click image for more details</span>
+      </TMPL_IF>
+    </td>
+    <th>Title:</th>
+    <td><TMPL_VAR NAME=TITLE></td>
+  </tr>
+  <tr>
+    <th>Location:</th>
+    <td><TMPL_VAR NAME=LOCATION></td>
+  </tr>
+  <tr>
+    <th>Barcode No:</th>
+    <td><TMPL_VAR NAME=BARCODE></td>
+  </tr>
+  <tr>
+    <th>Place ID:</th>
+    <td><TMPL_VAR NAME=PLACEID></td>
+  </tr>
+  </TMPL_LOOP>    
+  <!-- End of DATA_LOOP loop -->
+</table>
+
+<ul class="floatleft" style="margin: 0; padding: 0;">
+  <li class="search-again"><a href="<TMPL_VAR NAME=SEARCH_REF>">Search Again</a></li>
+</ul>
+<ul style="margin: 0 0 0 30%; padding: 0;">
+  <li class="form-request"><a href="/apps/heritage/photodb/requests.html" target="ImageDB">Photographic request form<span class="popup" title="Opens in a new browser window">&nbsp;</span></a></li>
+  <li class="cart"><a href="/apps/heritage/photodb/fees.html" target="ImageDB">Copyright and photo reproduction<span class="popup" title="Opens in a new browser window">&nbsp;</span></a></li>
+</ul>
+<TMPL_IF NAME=REC_FOUND>
+  <div class="highlight">
+    <p class="floatleft">
+      <TMPL_IF NAME=FIRST_REF>&lt;&lt; <a href="<TMPL_VAR NAME=FIRST_REF>">First</a></TMPL_IF>
+      <TMPL_IF NAME=PREV_REF>&nbsp;&lt; <a href="<TMPL_VAR NAME=PREV_REF>">Previous</a></TMPL_IF>
+    </p>
+    <p style="margin: 0 0 0 30%;">
+      <TMPL_IF NAME=NEXT_REF><a href="<TMPL_VAR NAME=NEXT_REF>">Next</a> &gt;</TMPL_IF>
+      <TMPL_IF NAME=LAST_REF>&nbsp;<a href="<TMPL_VAR NAME=LAST_REF>">Last</a> &gt;&gt;</TMPL_IF>&nbsp;
+    </p>
+  </div>
+</TMPL_IF>
+
+</TMPL_IF>    <!-- End of NAME=DATA_LOOP if   -->
+
+</div>               
+
+  
+  <div id="sidepanel">
+    <TMPL_INCLUDE name="/includes/heritage/sidepanel/photo-resources.html">
+    <TMPL_INCLUDE name="/includes/default/sidepanel/key.html">
+  </div>
+  <div id="footer">
+    <TMPL_INCLUDE name="/includes/heritage/footer/footer-data.html">
+  </div>
+
+</div>
+
+<div id="navigation">
+  <TMPL_INCLUDE name="/includes/environment/nav/heritage-pubs-photodatabase.html">
+  <div id="navigation-image"></div>
+</div>
+
+</body>
+</html>

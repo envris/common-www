@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Heritage - Photographic database request form</title>
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<meta name="DC.Title" lang="en" xml:lang="en" content="Heritage - Photographic database request form" />
+<meta name="DC.Description" lang="en" xml:lang="en" content="Heritage - Photographic database request form" />
+<meta name="Description" content="Heritage - Photographic database request form" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Type.documentType" scheme="environment-document" content="Web Page" />
+<meta name="DC.Date.created" scheme="ISO 8601" content="2015-01-13" />
+<meta name="DC.Rights" scheme="URI" content="http://www.environment.gov.au/about/copyright.html" />
+<meta name="DC.Date.modified" scheme="ISO 8601" content="" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Identifier" scheme="URI" content="http://www.environment.gov.au/apps/heritage/photodb/requests.html" />
+<meta name="DC.Date.valid" scheme="DCMIPeriod" content="start=2015-01-13; end=2015-07-13" />
+<link rel="stylesheet" href="/includes/default/css/default-xmlnav.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="/includes/heritage/css/heritage.css" media="screen" type="text/css" />
+<link rel="alternate stylesheet" href="/includes/default/css/default-wide.css" title="default-wide" type="text/css" />
+<link rel="stylesheet" href="/includes/default/css/default-print.css" media="print" type="text/css" />
+<script type="text/javascript" src="/includes/default/scripts/common-functions.js" charset="UTF-8">
+</script>
+<script type="text/javascript" src="/apps/scripts/check_human_entry.js">
+</script>
+<style>
+.contact-form label {
+    float: left;
+    width: 30%;
+  }
+  .contact-form input,
+  .contact-form textarea {
+  }
+</style>
+</head>
+<body>
+<!--#include virtual="/includes/heritage/header/header-publications.html"-->
+<!--#include virtual="/includes/heritage/header/header-nav.html"-->
+</div>
+<div id="navigation">
+  <!--#include virtual="/includes/environment/nav/heritage-pubs-photodatabase-form.html" -->
+</div>
+<div id="maincontent">
+<div id="breadcrumb"><!--#include virtual="/includes/environment/cpn/heritage-pubs-photodatabase.html"--></div>
+<!-- endnoindex -->
+<h1><a name="top" id="top">Photographic request form</a></h1>
+<p>To request the use of photographs from the database, please fill in the form below. When completed press 'Submit Request'.</p>
+
+<form action="/cgi-bin/qweasd.pl" method="post" onsubmit="return checkit(this)" class="contact-form">
+<input type="hidden" name="_config" value="env_heritage_photodb_config_1" />
+<input type="hidden" name="subject" value="Photographic Request Form" />
+<input type="hidden" name="emailfield" value="email" />
+<input type="hidden" name="realnamefield" value="Name" />
+<fieldset>
+  <legend>Contact Details</legend>
+  <p><label for="Name">Name:</label> <input type="text" id="Name" name="Name" size="40" /></p>
+  <p><label for="Organisation">Organisation:</label> <input type="text" id="Organisation" name="Organisation" size="40" /></p>
+  <p><label for="Street">Street Address</label> <input type="text" id="Street" name="Street" size="40" /></p>
+  <p><label for="City,etc">City, State and Postcode</label> <input type="text" id="City,etc" name="City,etc" size="40" /></p>
+  <p><label for="Phone">Phone:</label> <input type="text" id="Phone" name="Phone" size="40" /></p>
+  <p><label for="fax">Fax:</label> <input type="text" id="fax" name="fax" size="40" /></p>
+  <p><label for="email">Email</label> <input type="text" id="email" name="email" size="40" /></p>
+</fieldset>
+<fieldset>
+  <legend>Photograph details</legend>
+  <p><label for="RTnumbers">Please list image number (eg. RT12345) of photographs required:</label> <textarea id="RTnumbers" name="RTnumbers" cols="40" rows="8"></textarea></p>
+  <p><label for="usage">Statement of use:</label> <textarea id="usage" name="usage" cols="40" rows="8"></textarea></p>
+  <p><label for="estcost"><strong>Charging details</strong><br />
+  Please estimate total cost as per Guidelines for Charging</label> <textarea id="estcost" name="estcost" cols="40" rows="8"></textarea></p>
+</fieldset>
+<fieldset title="Submit">
+<legend>Before you send</legend>
+      <p class="floatright" style="border:1px solid #aaa;margin:4.75em 1em 0;padding: .2em 1em .2em 0;background:#fff;-moz-border-radius:6px;font-weight:bold;"><a href="http://www.environment.gov.au/includes/default/code.mp3" title="Listen to the security code" style="color:#779;text-decoration:none;"><img src="http://www.environment.gov.au/includes/default/ico-play-audio.png" alt="Listen to the security code" style="float:left;margin:0 .5em;" />Play security code</a></p>
+
+<p><script type="text/javascript" src="/apps/scripts/write_human_entry_field.js"></script></p>
+<input class="submit" type="submit" name="Submit" value="Submit Request" />&nbsp; <input class="submit" type="reset" name="Submit2" value="Clear" />
+</fieldset>
+</form>
+
+<div id="sidepanel">
+  <!--#include virtual="/includes/heritage/sidepanel/photo-resources.html"-->
+</div>
+<div id="footer"><!--#include virtual="/includes/heritage/footer/footer-heritage.html"--></div>
+</div><!-- end maincontent -->
+
+</body>
+</html>

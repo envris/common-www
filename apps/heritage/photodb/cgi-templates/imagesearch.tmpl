@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Search the Australian Heritage Photographic Database</title>
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<meta name="DC.Identifier" scheme="URI" content="http://www.environment.gov.au/about/index.html" />
+<meta name="DC.Title" lang="en" content="Heritage photographic database - search page" xml:lang="en" />
+<meta name="DC.Identifier" scheme="ISBN" content="" />
+<meta name="DC.Identifier" scheme="ISSN" content="" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Subject" scheme="Department of the Environment and Water Resources Thesaurus http://www.environment.gov.au/about/deh-thesaurus.html" content="" />
+<meta name="DC.Description" lang="en" content="Register of the National Estate, Historic Environment, Natural Environment, Indigenous Environment, Photographs" xml:lang="en" />
+<meta name="DC.Publisher" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Date.modified" scheme="ISO8601" content="" />
+<meta name="DC.Type.documentType" scheme="deh-document" content="database" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="DC.Rights" scheme="URI" content="http://www.environment.gov.au/about/copyright.html" />
+<meta name="Description" content="Register of the National Estate, Historic Environment, Natural Environment, Indigenous Environment, Photographs" />
+<meta name="Keywords" content="" />
+<meta name="DC.Date.valid" scheme="DCMIPeriod" content="start=2004-01-01; end=2006-01-01" />
+<meta name="DC.Date.created" scheme="ISO 8601" content="2004-01-01" />
+<link rel="stylesheet" href="/includes/default/css/default-xmlnav.css" media="screen" type="text/css" /> 
+<link rel="stylesheet" href="/includes/heritage/css/heritage.css" media="screen" type="text/css" /> 
+<link rel="alternate stylesheet" href="http://www.environment.gov.au/includes/default/css/default-wide.css" title="default-wide" type="text/css" /> 
+<link rel="stylesheet" href="/includes/default/css/default-print.css" media="print" type="text/css" /> 
+<script type="text/javascript" src="/includes/default/scripts/accessibility.js"></script>
+<script type="text/javascript" src="/includes/default/scripts/event-listeners.js"></script>
+<script type="text/javascript" src="/includes/default/scripts/flyout.js" charset="UTF-8"></script> 
+<script type="text/javascript" src="/includes/default/scripts/resolution.js"></script>
+</head>
+
+<body>
+<TMPL_INCLUDE name="/includes/heritage/header/header-publications.html">
+<TMPL_INCLUDE name="/includes/heritage/header/header-nav.html">
+
+<div id="maincontent">
+  <div id="breadcrumb"><p><TMPL_INCLUDE name="/includes/environment/cpn/heritage-pubs-photodatabase.html"></p></div>
+  <!-- endnoindex -->
+  <h1><a name="top" id="top">Search the Australian heritage photographic library</a></h1>
+  <p>Note: Fields are not mandatory.</p> 
+  <form method="post" action="/cgi-bin/heritage/photodb/imagesearch.pl">
+    <table id="searchform" summary="Layout table for search form">
+      <col width="10%" />
+      <col width="50%" />
+      <col width="40%" />
+      <caption>Photo search</caption>
+      <tr>
+        <th colspan="2">Simple search</th>
+        <th>Refine your search by keyword</th>
+      </tr>
+      <tr> 
+        <td><label for="label">Free Text:</label></td>
+        <td>Enter a single word or phrase<br />
+          <input type="text" id="label" name="search_text" size="40" maxlength="255" />
+        </td>
+        <td rowspan="6">
+          Multiple keywords can be selected by holding down the control key.<br />
+          <select name="coll_termids" id="coll_termids" multiple="multiple" size="15">
+            <tmpl_loop name=COLL_TERMIDS_LOOP>
+              <option value="<TMPL_VAR ESCAPE=HTML NAME=VALUE>"><tmpl_if name=IS_SELECTED>selected="selected"</tmpl_if><tmpl_var name=LABEL></option>
+            </tmpl_loop>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="imageplace">Location:</label></td>
+        <td>
+          Enter all or part of a place name<br />
+          <input type="text" id="imageplace" name="imageplace" size="40" maxlength="255" />
+        </td>
+      </tr>
+      <tr> 
+        <th colspan="2">Advanced search</th>
+      </tr>
+      <tr> 
+        <td><label for="creator">Photographer:</label></td>
+        <td>
+          Enter all or part of a photographer's name<br />
+          <input type="text" id="creator" name="creator" size="40" maxlength="255" />
+        </td>
+      </tr>
+      <tr> 
+        <td><label for="placeid">Place ID:</label></td>
+        <td>
+          Enter all or part of a Place ID<br />
+          <input type="text" id="placeid" name="placeid" size="40" maxlength="255" />
+        </td>
+      </tr>
+      <tr> 
+        <td><label for="barcode_no">Barcode No:</label></td>
+        <td>
+          Enter all or part of a Barcode Number<br />
+          <input type="text" id="barcode_no" name="barcode_no" size="40" maxlength="255" />
+        </td>
+      </tr>
+      <tr> 
+        <td>&nbsp;</td>
+        <td colspan="3"><input type="checkbox" name="indigenous" id="indigenous" /> 
+          <strong>View Indigenous Photos</strong> (Password protected, contact 
+          photographic officer for details)</td>
+      </tr>
+      <tr> 
+        <td class="bottombuttonrow">&nbsp;</td>
+        <td colspan="3" class="bottombuttonrow"> <input class="submit" type="submit" name="submit" value = "Search" title="Submit your search request" class="submitbutton" /> 
+          <input class="submit" type="reset" name="reset" value = "Clear Form" title="Clear all fields in the form" class="resetbutton" /> 
+        </td>
+      </tr>
+    </table>
+    <input type="hidden" name="proc" value="search_results" />
+  </form>
+  <ul>
+    <li>Please note that indigenous images have been masked and are not available for viewing.</li>
+    <li>Images are scanned at screen resolution of 72dpi and are NOT suitable to download for printing purposes.</li>
+    <li>To request images for any use please contact the Photographic Officer or submit an <a href="/apps/heritage/photodb/requests.html">photographic request form<span class="popup" title="Opens in a new browser window">&nbsp;</span></a>.</li>
+    <li>Copyright applies to all images within the library. Permission is required for the use of any photograph. In most cases fees apply.</li>
+    <li>Fees apply for reproduction and use of some images. For more detail please refer to <a href="/apps/heritage/photodb/fees.html">photo reproduction fees<span class="popup" title="Opens in a new browser window">&nbsp;</span></a>.</li>
+  </ul>
+  
+  <div id="sidepanel">
+    <TMPL_INCLUDE name="/includes/heritage/sidepanel/photo-resources.html">
+    <TMPL_INCLUDE name="/includes/default/sidepanel/key.html">
+  </div>
+  <div id="footer">
+    <TMPL_INCLUDE name="/includes/heritage/footer/footer-data.html">
+  </div>
+
+</div>
+
+<div id="navigation">
+  <TMPL_INCLUDE name="/includes/environment/nav/heritage-pubs-photodatabase.html">
+  <div id="navigation-image"></div>
+</div>
+
+</body>
+</html>

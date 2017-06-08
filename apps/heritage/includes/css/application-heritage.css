@@ -1,0 +1,113 @@
+/* ----------------------------------------------------------------------
+|   Application template for chemicals application. 
+|   Inherits from /apps/environment/includes/css/application-master.css  |
+|   Author: DEWHA                                                        |
+-----------------------------------------------------------------------*/
+
+body {
+  background: white url(../images/bg-body.gif) repeat-x 0 0;
+}
+fieldset {
+  background: #f0f3e4 url(../images/bg-fieldset.gif) repeat-x 0 0;
+}
+table caption {
+  background-color: #f0f3e4;
+  border-bottom: 1px solid #b9bab0;
+  border-top: 1px solid #b9bab0;
+  color: #333;
+  font-size: 110%;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  padding: 5px 3px;
+  text-align: left;
+}
+th {
+  background-color: #949586;
+  border-bottom: 1px solid #b9bab0;
+  color: white;
+  font-weight: normal;
+  padding: 3px;
+  text-align: left;
+  vertical-align: top;
+}
+td {
+  background-color: #f0f3e4;
+  border-bottom: 1px solid #c9cac0;
+  padding: 3px;
+  vertical-align: top;
+}
+td.subheading {
+  background-color: #e4e5ce;
+}
+
+
+
+/* HEADER
+--------------------------------------------------------- */
+#header h1 {
+  color: white;
+  font-size: 160%;
+  font-weight: normal;
+  margin: 0 115px 2px 0;
+}
+#header h2 {
+  color: #e5dfc6;
+  font-size: 110%;
+  font-weight: bold;
+  margin-right: 115px;
+}
+
+/* use singleline if there is no H2 */
+#title-doubleline,
+#title-singleline {
+  background: transparent url(../images/bg-header.gif) no-repeat right 13px;
+  height: 60px;
+  margin-right: 6px;
+}
+
+
+/* Application area styles
+--------------------------------------------------------- */
+#application-area {
+  width: 77%;
+}
+#application-area h1 {
+  color: #633;
+  font-size: 140%;
+  margin: 1em 0;
+}
+#application-area h2 {
+  color: #506179;
+  font-size: 120%;
+  margin: 1em 0;
+}
+#application-area h3 {
+  color: #333;
+  font-size: 110%;
+  margin: 1em 0 0.5em 0;
+}
+
+
+/* ---------------------------------------------------------
+| APPLICAION SPECIFIC STYLES                               |
+--------------------------------------------------------- */
+
+#sidepanel ul.logout {
+  padding-left: 13px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+#sidepanel ul.logout li {
+  background: transparent url(../images/ico-logout.gif) no-repeat 100% 7px;
+  list-style-type: none;
+  padding-right: 15px;
+  font-size: 85%;
+}
+.footnote {
+  text-style: italic;
+  color: #666;
+}
+div.row-dark {
+  background: #efefe1 !important;
+}

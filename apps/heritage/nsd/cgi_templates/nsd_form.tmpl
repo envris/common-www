@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<title>Search the National Shipwrecks database</title>
+<meta name="DC.Title" lang="en" content="National Shipwrecks database" xml:lang="en" />
+<meta name="DC.Identifier" scheme="ISBN" content="" />
+<meta name="DC.Identifier" scheme="ISSN" content="" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Subject" scheme="Department of the Environment and Water Resources Thesaurus http://www.environment.gov.au/about/environment-thesaurus.html" content="National Shipwrecks database - Australia" />
+<meta name="DC.Subject" scheme="Keywords" content="" />
+<meta name="DC.Description" lang="en" content="Information from the National Shipwrecks database in Australia." xml:lang="en" />
+<meta name="DC.Publisher" lang="en" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" xml:lang="en" />
+<meta name="DC.Date.created" scheme="ISO8601" content="2001-09-01" />
+<meta name="DC.Date.modified" scheme="ISO8601" content="" />
+<meta name="DC.Type.documentType" scheme="deh-document" content="Web Page" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Relation.isPartOf" scheme="URI" content="/heritage/shipwrecks/index.html" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="DC.Coverage.periodName" lang="en" content="1900/2000" xml:lang="en" />
+<meta name="DC.coverage.x.min" scheme="DD" content="105.1" />
+<meta name="DC.coverage.x.max" scheme="DD" content="168" />
+<meta name="DC.coverage.y.min" scheme="DD" content="-57.3" />
+<meta name="DC.coverage.y.max" scheme="DD" content="-9" />
+<meta name="DC.Rights" scheme="URI" lang="en" content="/about/copyright.html" xml:lang="en" />
+<meta name="Description" content="Australia's historic shipwrecks form an invaluable, limited and irreplaceable resource. The Historic Shipwrecks Act 1976 , which is administered by this Department, protects historic wrecks and relics in Commonwealth waters, extending from below the low water mark to the edge of the continental shelf." />
+<meta name="Keywords" content="" />
+<meta name="DC.Date.valid" scheme="DCMIPeriod" content="start=2001-09-01; end=2004-09-01" />
+<link rel="stylesheet" href="/includes/default/css/default-xmlnav.css" media="screen" type="text/css" /> 
+<link rel="stylesheet" href="/includes/heritage/css/heritage.css" media="screen" type="text/css" /> 
+<link rel="alternate stylesheet" href="/includes/default/css/default-wide.css" title="default-wide" type="text/css" /> 
+<link rel="stylesheet" href="/includes/default/css/default-print.css" media="print" type="text/css" /> 
+<script type="text/javascript" src="/includes/default/scripts/common-functions.js"></script>
+</head>
+<body>
+<TMPL_INCLUDE NAME="/includes/heritage/header/header-shipwrecks.html">
+<TMPL_INCLUDE NAME="/includes/heritage/header/header-nav.html">
+
+<div id="maincontent">
+  <div id="breadcrumb"><p><TMPL_INCLUDE NAME="/includes/environment/cpn/heritage-shipwrecks-database-search.html"></p></div>
+  <!-- endnoindex -->
+  <h1><a name="top" id="top">National Shipwrecks database - wreck details</a></h1>
+  <! this template file is prepared by JWang in Feb2007 -->
+  <! The entry of double quote for text search is not allowed in this version. The 0 entry does not redisplay on search screen. This will considered in the future version.-->
+  <TMPL_IF T_ERROR>
+    <p>When you see this message, it means some unexpected errors have occured. Please contact staff listed on the contact page for details.</p>
+  <TMPL_ELSE> 
+    <p><a href="#" onClick="history.go(-1)">Back</a></p>
+    <table>
+    <caption>Wreck details</caption>
+    <col width="20%" />
+    <col width="80%" />
+      <tr><th colspan="2">Wreck</th></tr>
+      <tr><td>Name:</td><td><TMPL_VAR NAME=T_Name></td></tr>
+      <tr><td>Details:</td><td><TMPL_VAR NAME=T_Description></td></tr>
+      <tr><td>Date wrecked:</td><td><TMPL_VAR NAME=T_DateWrecked></td></tr>
+      <tr><td>Year wrecked:</td><td><TMPL_VAR NAME=T_YearWrecked></td></tr>
+      <tr><td>Protected:</td><td><TMPL_VAR NAME=T_Protected></td></tr>
+      <tr><td>Status:</td><td><TMPL_VAR NAME=T_Status></td></tr>
+      <tr><td>From port:</td><td><TMPL_VAR NAME=T_FromPort></td></tr>
+      <tr><td>To port:</td><td><TMPL_VAR NAME=T_ToPort></td></tr>
+      <tr><td>Comments:</td><td><TMPL_VAR NAME=T_Comments></td></tr>
+
+      <tr><th colspan="2">Location</th></tr>
+      <tr><td>Where wrecked:</td><td><TMPL_VAR NAME=T_WhereWrecked></td></tr>
+      <tr><td>Found:</td><td><TMPL_VAR NAME=T_Found></td></tr>
+      <tr><td>Region:</td><td><TMPL_VAR NAME=T_Region></td></tr>
+      <tr><td>State:</td><td><TMPL_VAR NAME=T_State></td></tr>
+      <tr><td>Jurisdiction:</td><td><TMPL_VAR NAME=T_Jurisdiction></td></tr>
+      <tr><td>Latmax:</td><td><TMPL_VAR NAME=T_Latmax></td></tr>
+      <tr><td>Latmin:</td><td><TMPL_VAR NAME=T_Latmin></td></tr>
+      <tr><td>Lonmax:</td><td><TMPL_VAR NAME=T_Lonmax></td></tr>
+      <tr><td>Lonmin:</td><td><TMPL_VAR NAME=T_Lonmin></td></tr>
+      <tr><td>GPS coordinates:</td><td><TMPL_VAR NAME=T_GPSCoordinates></td></tr>
+      <tr><td>Water depth:</td><td><TMPL_VAR NAME=T_WaterDepth></td></tr>
+
+      <tr><th colspan="2">Vessel</th></tr>
+      <tr><td>Draft(mtrs):</td><td><TMPL_VAR NAME=T_Draft></td></tr>
+      <tr><td>Construction:</td><td><TMPL_VAR NAME=T_Construction></td></tr>
+      <tr><td>Type:</td><td><TMPL_VAR NAME=T_Type></td></tr>
+      <tr><td>Gross tonnage:</td><td><TMPL_VAR NAME=T_GrossTonnage></td></tr>
+      <tr><td>Net tonnage:</td><td><TMPL_VAR NAME=T_NetTonnage></td></tr>
+      <tr><td>LOA(mtrs):</td><td><TMPL_VAR NAME=T_LOA></td></tr>
+      <tr><td>Beam(mtrs):</td><td><TMPL_VAR NAME=T_Beam></td></tr>
+      <tr><td>Engine:</td><td><TMPL_VAR NAME=T_Engine></td></tr>
+      <tr><td>Builder:</td><td><TMPL_VAR NAME=T_Builder></td></tr>
+      <tr><td>Port built:</td><td><TMPL_VAR NAME=T_PortBuilt></td></tr>
+      <tr><td>State built:</td><td><TMPL_VAR NAME=T_StateBuilt></td></tr>
+      <tr><td>Country built:</td><td><TMPL_VAR NAME=T_CountryBuilt></td></tr>
+      <tr><td>Date built:</td><td><TMPL_VAR NAME=T_DateBuilt></td></tr>
+      <tr><td>Port registered:</td><td><TMPL_VAR NAME=T_PortRegistered></td></tr>
+      <tr><td>Official number:</td><td><TMPL_VAR NAME=T_OfficialNumber></td></tr>
+      <tr><td>Registered number:</td><td><TMPL_VAR NAME=T_RegisteredNumber></td></tr>
+      <tr><td>Home port:</td><td><TMPL_VAR NAME=T_HomePort></td></tr>
+      <tr><td>Home country:</td><td><TMPL_VAR NAME=T_HomeCountry></td></tr>
+      <tr><td>Cargo:</td><td><TMPL_VAR NAME=T_Cargo></td></tr>
+      <tr><td>Industry type:</td><td><TMPL_VAR NAME=T_IndustryType></td></tr>
+      <tr><td>Industry type 2:</td><td><TMPL_VAR NAME=T_IndustryType2></td></tr>
+
+      <tr><th colspan="2">Crew - passengers</th></tr>
+      <tr><td>Master:</td><td><TMPL_VAR NAME=T_Master></td></tr>
+      <tr><td>Owner:</td><td><TMPL_VAR NAME=T_Owner></td></tr>
+      <tr><td>Crew:</td><td><TMPL_VAR NAME=T_Crew></td></tr>
+      <tr><td>Passengers:</td><td><TMPL_VAR NAME=T_Passengers></td></tr>
+      <tr><td>Deaths:</td><td><TMPL_VAR NAME=T_Deaths></td></tr>
+      <tr><td>Crew deaths:</td><td><TMPL_VAR NAME=T_CrewDeaths></td></tr>
+      <tr><td>Passenger deaths:</td><td><TMPL_VAR NAME=T_PassengerDeaths></td></tr>
+
+      <tr><th colspan="2">Other information</th></tr>
+      <tr><td>Wreck Id:</td><td><TMPL_VAR NAME=T_WreckID></td></tr>
+      <tr><td>URL:</td><td><TMPL_VAR NAME=T_URL></td></tr>
+      <tr><td>Signage:</td><td><TMPL_VAR NAME=T_Signage></td></tr>
+      <tr><td>Source:</td><td><TMPL_VAR NAME=T_Source></td></tr>
+      <tr><td>Protection notes:</td><td><TMPL_VAR NAME=T_ProtectionNotes></td></tr>
+      <tr><td>Inspected:</td><td><TMPL_VAR NAME=T_Inspected></td></tr>
+    </table>
+    <p><a href="#" onClick="history.go(-1)">Back</a></p>
+  </TMPL_IF>
+  <div id="sidepanel">
+    <TMPL_INCLUDE NAME="/includes/heritage/sidepanel/historic-shipwrecks.html">
+    <TMPL_INCLUDE NAME="/includes/default/sidepanel/key.html">
+  </div>
+  <div id="footer">
+    <TMPL_INCLUDE NAME="/includes/heritage/footer/footer-data.html">
+  </div>
+
+</div>
+<div id="navigation">
+  <TMPL_INCLUDE name="/includes/environment/nav/heritage-shipwrecks-database-search.html">
+  <div id="navigation-image"></div>
+</div>
+</body>
+</html>
