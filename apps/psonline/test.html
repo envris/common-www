@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>National Television and Computer Recycling Scheme</title>
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<meta name="DC.Date.created" scheme="ISO 8601" content="2013-02-26" />
+<meta name="DC.Rights" scheme="URI" content="http://www.environment.gov.au/about/copyright.html" />
+<meta name="DC.Date.modified" scheme="ISO 8601" content="" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Identifier" scheme="URI" content="http://www.environment.gov.au/apps/psonline/test.html" />
+<meta name="DC.Date.valid" scheme="DCMIPeriod" content="start=2013-02-26; end=2016-08-26" />
+<link href="/apps/environment/includes/css/application-master.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/apps/psonline/includes/css/application-psonline.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- BEGIN header - may be included -->
+<div id="header">
+  <a href="http://www.environment.gov.au/index.html"><img src="/apps/psonline/includes/images/logo-small-quality.gif" alt="Logo" /></a>
+  <div id="title-singleline">
+    <h1>PSOnline | Product Stewardship Online</h1>
+  </div>
+</div>
+<div id="breadcrumb">
+  <p>You are here: <a href="http://www.environment.gov.au/settlements/waste/product-stewardship/index.html">Product Stewardship</a> &raquo; PSOnline</p>
+</div>
+<!-- END header -->
+
+<!-- BEGIN application area - all application code goes inside this div, including main headings -->
+<div id="application-area">
+
+  <h1>Application templates</h1>
+  <p>This page demonstrates a selection of typical page elements to be used consistently for DEWHA applications. Developers should <strong>view source</strong> to see which classes to use. Each application will inherit base styles from a master CSS file but also include a local CSS file for specific branding and unique layout cascades. If you have special styling requirements not covered in this example <a href="mailto:web.helpdesk@environment.gov.au">email the web helpdesk</a>.</p>
+  <!--form action="switcher.php" method="post">
+    <label for="style">Change the skin of this page with an existing template (<strong>not functional yet</strong>):</label>
+    <select name="style">
+      <option value="">Default DEWHA</option>
+      <option value="">Chemicals database</option>
+      <option value="">Caring for our Country</option>
+    </select>
+    <input type="submit" value="Change Style">
+  </form-->
+
+
+  <form name="organisationForm" method="post" action="">
+    <fieldset>
+      <legend>Add an organisation</legend>
+
+      <div class="row-light">
+        <div class="float30"><label for="organisationName">Organisation Name<span class="required">*</span></label></div>
+        <div><input type="text" name="organisationName" value="" id="organisationName"></div>
+      </div>
+
+      <div class="row-dark">
+        <div class="float30"><label for="department">Department</label></div>
+        <div><input type="text" name="department" value="" id="department"></div>
+      </div>
+
+      <div class="row-light">
+        <div class="float30"><label for="contactName">Contact Name</label></div>
+        <div><input type="text" name="contactName" value="" id="contactName"></div>
+        <div class="float30"><label for="contactPosition">Contact Position</label></div>
+        <div><input type="text" name="contactPosition" value="" id="contactPosition"></div>
+      </div>
+
+      <div class="row-dark">
+        <div class="float30"><label for="street">Address</label></div>
+        <div class="float30">
+          <div class="float30"><label for="street">Street</label></div>
+          <div><input type="text" name="street" value="" id="street"></div>
+          <div class="float30"><label for="suburb">Suburb</label></div>
+          <div><input type="text" name="suburb" value="" id="suburb"></div>
+          <div class="float30"><label for="state">State</label></div>
+          <div style="display: inline;">
+            <select name="state" id="state">
+              <option value=""></option>
+              <option value="ACT">ACT</option>
+              <option value="NSW">NSW</option>
+              <option value="NT">NT</option>
+              <option value="QLD">QLD</option>
+              <option value="SA">SA</option>
+              <option value="TAS">TAS</option>
+              <option value="VIC">VIC</option>
+              <option value="WA">WA</option>
+            </select>
+          </div>
+          <br />
+          <div class="float30"><label for="postcode">Postcode</label></div>
+          <div><input type="text" name="postcode" size="5" value="" id="postcode"></div>
+        </div>
+      </div>
+
+      <div class="row-light">
+        <div class="float30"><label for="phone">Phone</label></div>
+        <div><input type="text" name="phone" value="" id="phone"></div>
+        <div class="float30"><label for="fax">Fax</label></div>
+        <div><input type="text" name="fax" value="" id="fax"></div>
+      </div>
+
+      <div class="row-dark">
+        <div class="float30"><label for="email">Email</label></div>
+        <div><input type="text" name="email" value="" id="email"></div>
+        <div class="float30"><label for="url">URL</label></div>
+        <div><input type="text" name="url" value="" id="url"></div>
+      </div>
+
+      <div>
+        <input class="submit" type="submit" name="submitAction" value="Add">
+        <input class="submit clear" type="submit" name="submitAction" value="Clear">
+      </div>
+    </form>
+  </fieldset>
+
+  <form name="contactForm" method="post" action="/chmd_secure_styles/organisation/contact.do">
+    <input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="0c532993ef1ee8505b78db522b7de8e1">
+    <input type="hidden" name="organisationId" value="89">
+    <table id="row" class="row-dark">
+      <caption>Contacts</caption>
+      <col width="20%" />
+      <col width="30%" />
+      <col width="15%" />
+      <col width="15%" />
+      <col width="20%" />
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Phone</th>
+          <th>Fax</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="">Simon Sorentino</a></td>
+          <td>Water Quality Engineer</td>
+          <td>+61 123456</td>
+          <td>+61 234567</td>
+          <td><a href="">simon.sorentino@wfip.com</a></td>
+        </tr>
+        <tr>
+          <td><a href="">Bill Hendrickson</a></td>
+          <td>Developer, Hydophysics Pty Ltd</td>
+          <td>+61 456789</td>
+          <td>-</td>
+          <td><a href="">bill.hendrickson@hydrophysics.com</a></td>
+        </tr>
+        <tr>
+          <td><a href="">Susan Gallacher</a></td>
+          <td>AGO, Filtration Inspections</td>
+          <td>+61 098765</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td><a href="">Andrew Gray</a></td>
+          <td>CEO, Aqua Systems Inc</td>
+          <td>+61 090807</td>
+          <td>+61 060708</td>
+          <td><a href="">andrew.gray@asystems.com</a></td>
+        </tr>
+        <tr>
+          <td colspan="5">
+            <input class="submit" type="submit" name="submitAction" value="New Contact">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+  <form name="activityForm" method="post" action="/chmd_secure_styles/activity/activity.do"><div><input type="hidden" name="org.apache.struts.taglib.html.TOKEN" value="0c532993ef1ee8505b78db522b7de8e1"></div>
+    <input type="hidden" name="organisationId" value="89">
+    <table id="row" class="row-dark">
+      <caption>Monitoring Activities</caption>
+      <col width="70%" />
+      <col width="10%" />
+      <col width="10%" />
+      <col width="10%" />
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="right">Start Date</th>
+          <th class="right">End Date</th>
+          <th class="right">Frequency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="">Morbi eget ligula eu orci condimentum viverra</a></td>
+          <td class="right">12/34/10</td>
+          <td class="right">12/34/11</td>
+          <td class="right">12</td>
+        </tr>
+        <tr>
+          <td><a href="">Sed accumsan auctor pede</a></td>
+          <td class="right">12/34/10</td>
+          <td class="right">12/34/11</td>
+          <td class="right">9</td>
+        </tr>
+        <tr>
+          <td><a href="">Suspendisse sit amet urna et quam ornare commodo</a></td>
+          <td class="right">12/34/10</td>
+          <td class="right">12/34/11</td>
+          <td class="right">15</td>
+        </tr>
+        <tr>
+          <td class="center" colspan="4">
+            <input class="submit" type="submit" name="submitAction" value="New Activity">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+<h2>External link and popup icons</h2>
+<p>Add the external link icon, without any white spaces, between the end of the link text and the closing &lt;/a&gt; element:</p>
+<div class="highlight">
+  <p><code>&lt;span class="external" title="External link"&gt;&amp;nbsp;&lt;/span&gt;</code> &#8212; external link <a href="">looks like this<span class="external" title="External link">&nbsp;</span></a><br />
+     <code>&lt;span class="popup" title="Opens popup window"&gt;&amp;nbsp;&lt;/span&gt;</code> &#8212; popup link <a href="">looks like this<span class="popup" title="Opens popup window">&nbsp;</span></a>
+  </p>
+</div>
+<p>Note: the 'key' box must be added to the side column on all pages that link to external files or use popup windows.</p>
+
+
+</div>
+<!-- END application area -->
+
+<!-- BEGIN right hand side nav - if not needed, add fullwidth class to body tag -->
+<div id="sidepanel">
+  <ul class="logout">
+    <li><a href="logoutpage">Logout</a></li>
+  </ul>
+  <div class="sidebox">
+    <h3>Data Maintenance</h3>
+    <ul>
+      <li><a href="">Search Organisation and Activities</a></li>
+      <li><a href="">Add Organisation</a></li>
+      <li><a href="">Search the database</a></li>
+      <li><a href="">Add database entry</a></li>
+      <li><a href="">Protocols and Guidelines</a></li>
+    </ul>
+    <h3>Management</h3>
+    <ul>
+      <li><a href="">Management Information</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebox">
+    <h3>Key</h3>
+    <p>
+      <span class="external" title="External link">&nbsp;</span>&nbsp; Links to another web site<br />
+      <span class="popup" title="Opens in a new browser window">&nbsp;</span>&nbsp; Opens a pop-up window
+    </p>
+  </div>
+
+  <div class="sidebox">
+    <h3>Hiding this column</h3>
+    <p>If no side column is needed, add:<br />
+    <code>class="fullwidth"</code><br />
+    to the html body tag.</p>
+  </div>
+
+  <div class="sidebox">
+    <h3>Other test pages</h3>
+    <p>Other application test pages.</p>
+    <ul>
+      <li><a href="/apps/test/test.html">DEWHA default</a></li>
+      <li><a href="/apps/nrm/test.html">Caring for our Country</a></li>
+      <li><a href="/apps/settlements/chemicals/test.html">Chemical Monitoring Database</a></li>
+      <li><a href="/apps/waterrating/test.html">Water Efficiency Labelling Scheme</a></li>
+      <li><a href="/apps/heritage/shipwrecks/test.html">Australian National Shipwreck Database</a></li>
+    </ul>
+  </div>
+
+</div>
+<!-- END right hand side nav -->
+
+<!-- BEGIN footer -->
+<div id="footer">
+  <p><a href="http://www.environment.gov.au/about/accessibility.html">Accessibility</a> | <a href="http://www.environment.gov.au/about/disclaimer.html">Disclaimer</a> | <a href="http://www.environment.gov.au/about/privacy.html">Privacy</a> | <a href="http://www.environment.gov.au/about/copyright.html">&copy; Commonwealth of Australia</a> | <a href="mailto:lara@environment.gov.au">Contact us</a></p>
+</div>
+<!-- END footer -->
+
+</body>
+</html>

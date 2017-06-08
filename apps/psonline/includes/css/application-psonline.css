@@ -1,0 +1,108 @@
+/* ----------------------------------------------------------------------
+|   Application template for chemicals application. 
+|   Inherits from /apps/environment/includes/css/application-master.css  |
+|   Author: DEWHA                                                        |
+-----------------------------------------------------------------------*/
+
+body {
+  background: white url(../images/bg-body.gif) repeat-x 0 0;
+}
+table caption {
+  background-color: #FEF1C3;
+  border-bottom: 1px solid #a4b2c8;
+  border-top: 1px solid #a4b2c8;
+  color: #333;
+  font-size: 110%;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  padding: 5px 3px;
+  text-align: left;
+}
+th {
+  background-color: #FFF6DA;
+  border-bottom: 1px solid #cfcfcf;
+  font-weight: normal;
+  padding: 3px;
+  text-align: left;
+  vertical-align: top;
+}
+td {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 3px;
+  vertical-align: top;
+}
+td.subheading {
+  background-color: #E8F2F8;
+}
+td.subsubheading {
+  background-color: #E8F2F8;
+}
+
+
+/* HEADER
+--------------------------------------------------------- */
+ #header {
+  background: #FCC406;
+  margin-bottom:10px;
+  height:80px;
+}
+
+#header h1 {
+  color: black;
+  font-size: 140%;
+  font-stretch:normal;
+  font-weight: normal;
+  margin: 5px 15px 2px 0;
+}
+#header h2 {
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  margin-right: 250px;
+}
+
+/* use singleline if there is no H2 */
+#title-doubleline,
+#title-singleline {
+  background: none;
+    height: 59px;
+  margin: 0 5px 0 0;
+  float: right;
+}
+
+
+/* Application area styles
+--------------------------------------------------------- */
+#application-area {
+  width: 77%;
+  
+}
+#application-area h1 {
+  color: #000;
+  font-size: 140%;
+  margin: 0.25em 0 1em 0;
+}
+#application-area h2 {
+  color: #506179;
+  font-size: 120%;
+  margin: 1em 0;
+}
+#application-area h3 {
+  color: #333;
+  font-size: 110%;
+  margin: 1em 0 0.5em 0;
+}
+
+
+/* ---------------------------------------------------------
+| APPLICATION SPECIFIC STYLES                               |
+--------------------------------------------------------- */
+
+div.row-dark {
+  background: #FFF6DA !important;
+}
+
+div.row-light {
+  background: #fff !important;
+}
