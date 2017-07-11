@@ -1,0 +1,163 @@
+/*-----------------------------------------------------------------------------------------|
+|  CSS for search results page                                                             |
+|-----------------------------------------------------------------------------------------*/
+
+
+#agencysearchform {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 00% !important;
+}
+#agencysearchform #submit {
+  float: left;
+  font-size: 100%;
+}
+#agencysearchform .searchoptions {
+  margin-top: 0.75em;
+  margin-bottom: 1.25em;
+  padding: 0;
+}
+#agencysearchform fieldset {
+  background: white url(http://www.environment.gov.au/includes/images/bg-search-fieldset.gif) repeat-x 0 0;
+  float: right;
+  margin: 0 0 0 0.25em;
+  padding: 0 0 0 1em;
+  width: 210px;
+}
+#agencysearchform form {
+  margin: 0;
+  padding: 1em 0 0 0;
+}
+#agencysearchform form p {
+  padding: 1em 0 0 0;
+}
+#agencysearchform img {
+/* funnelback logo as required */
+  float: right;
+  margin: -10px 0 10px 0;
+  padding: 0;
+}
+#agencysearchform legend {
+  color: green;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+#agencysearchpagenav span {
+/* space around page nav links */
+  padding-left: 3px;
+  padding-right: 3px;
+}
+#agencysearchpagenav strong {
+/* current results page number */
+  color: #cc0000;
+}
+#agencysearchresults ol li {
+  font-size: 90%;
+  line-height: 1.4em;
+  padding-bottom: 0.75em;
+}
+#agencysearchresults ol li span {
+/* format file type - html, pdf etc */
+  color: green;
+  font-weight: bold;
+}
+.agencysearchinfo {
+  color: green;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 95%;
+}
+.agencysearchsummary {
+  font-family: arial, helvetica, sans-serif;
+  padding-bottom: 0.25em;
+  padding-top: 0.5em;
+}
+.button {background:#fc6;color:black;font-size:1.1em;padding:2px 4px}
+}
+.buttonadvanced {background:#fc6;color:black;font-size:1.1em;padding:4px
+}
+.hidden {
+  display:none;
+}
+/* The following class was added by Alex Fahey and is used to show and hide radio buttons in the search again box */
+/* The class may not validate correctly, but it is needed for the show/hide functionality to work in all browsers - 15/10/2006 */
+.shown {
+  display: ;
+}
+/*
+ *  Styles for new funnelback template 
+ */
+body.search {background:white;background-image:none;}
+body.search #maincontent {
+  height: 100%;
+  margin: 0 6.0em 0 2.0em; /* resolution layout change */
+  padding: 0 100px 0 0;
+  padding-bottom: 2em;
+  /*overflow: auto;*/
+  /* removed right-margin 204, added overflow hidden to fix moz whitespace bug */
+}
+body.search h1 {font-size:1.8em;font-weight:400;padding-top:0.8em}
+body.search h2 {font-size:0.9em;font-weight:600;margin:0px}
+body.search h3 {font-size:1.3em;font-weight:500;margin:0px;color:#666}
+body.search #global ul {left: 1em;}
+div.result_pages p {font-size:0.9em;margin-top:0px;padding-top:0px;font-weight:580}
+ul#search-results {padding:0; margin-top:1.5em;}
+ul#search-results li {margin-bottom:1em; margin-left:0; list-style-type:none; background-image:none;padding-left:0;}
+.search-title {font-weight:bold;
+}
+.search_terms {color:#009
+}
+.search-meta-info {color:#500;
+}
+.search-field-label {color:#500;font-weight:580
+}
+div#search_form p {border: 1px solid #ccc; background-color: #f4f4f7; padding:0.2em 0.5em
+}
+div.search-featured-page p {border: 1px solid #999; padding: 0.4em 2em 0.4em 3em; background-color:white;margin-bottom:0.6em;margin-left:2em;margin-right: 3em;
+}
+#search-content {width: 700px;
+}
+#sidepanel div.sidebox {
+  background-color: #fff;
+  border: none;
+}
+#sidepanel h2.sidebox {
+  background-color: #fff;
+  background-image: none;
+  border-bottom:2px solid #008;
+  font-weight:normal;
+  font-size:1.3em;
+  color: #008;
+}
+#sidepanel h3 {
+  background-color: #fff;
+  background-image: none;
+  border-bottom:2px solid #008;
+  font-weight:normal;
+  font-size:1.1em;
+  color: #008;
+}
+table#search_form {
+  border-collapse: collapse;
+  border: 0;
+  font-size: 85%;
+  padding: 0;
+  margin: 1em 0 1em 0;
+border-bottom:none;border-top:1px solid #ccc}
+table#search_form th {valign:top;background:transparent;color:#007;font-weight:bold;width:20%}
+table#search_form td {valign:top;background:transparent;color:#008}
+
+
+body.search table.resultstable {
+  border-collapse: collapse;
+  border: 0;
+  font-size: 0.8em;
+  padding: 0;
+  margin: 1.5em 0 1em 0;
+border-bottom:none;
+border-top:1px solid #ccc
+}
+body.search table.resultstable th {background:white;font-weight:bold;color:#008;width:20%}
+body.search table.resultstable th.resource {background:#e9eff5;padding:0.3em}
+body.search table.resultstable td {background:white;color:#006}
+body.search table.resultstable td.resource {background:#e9eff5;padding:0.3em}

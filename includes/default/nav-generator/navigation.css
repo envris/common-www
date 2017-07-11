@@ -1,0 +1,226 @@
+/* -----------------------------------------------------------------------------------------
+  TYPE SELECTOR RULES
+  --------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+a:link {
+  color: #039;
+}
+a:visited {
+  color: #660066;
+}
+a:hover, a:active {
+  color: black;
+}
+
+body {
+  background: white url(/includes/default/images/bg-nav.gif) repeat-y left;
+  font: 80%/1.4em normal Arial, Verdana, Geneva, sans-serif;
+}
+
+
+
+/* Left navigation
+--------------------------------------------------------- */
+#navigation {
+  font: 90%/1.4em Arial, Geneva, sans-serif;
+  left: 0;
+  position: absolute;
+  top: 101px;
+}
+
+/* Default behaviour - level 1 (home)
+--------------------------------------------------------- */
+#navigation ul {
+  border-bottom: 1px solid white;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* html #navigation ul li {
+  display: inline;
+} /* fix ie padding bug */
+#navigation ul li a,
+#navigation ul li a:link,
+#navigation ul li a:visited {
+  background-color: transparent;
+  background: #f0f3e4 url(/includes/default/images/bg-nav-heading.gif) no-repeat 0 0;
+  color: white;
+  display: block;
+  font-weight: bold;
+  padding: 0.75em 0 0.75em 7px;
+  text-decoration: none;
+  width: 162px;
+}
+#navigation ul li a:hover {
+  background-color: inherit;
+  color: white;
+  text-decoration: underline;
+}
+
+/* Nested styles - level 1 (home)
+--------------------------------------------------------- */
+#navigation ul li ul {
+  border: none;
+}
+#navigation ul li ul li a,
+#navigation ul li ul li a:link,
+#navigation ul li ul li a:visited {
+  background-color: #f0f3e4;
+  background-image: none;
+  border-bottom: 1px solid #c6c8a7;
+  border-top: 1px solid white;
+  color: #336;
+  font-weight: normal;
+  text-decoration: none;
+  width: 162px;
+}
+#navigation ul li ul li a:hover {
+  background-color: #e5ead1;
+  color: black;
+  text-decoration: underline;
+}
+
+/* Default behaviour - current section
+--------------------------------------------------------- */
+#navigation li.current-section {
+  margin-top: 0;
+}
+#navigation ul li.current-section {
+  list-style-type: none;
+}
+#navigation ul li.current-section a,
+#navigation ul li.current-section a:link,
+#navigation ul li.current-section a:visited {
+  background-color: #f0f3e4;
+  background-image: none;
+  border-bottom: 1px solid #c6c8a7;
+  color: #336;
+  display: block;
+  font-weight: bold;
+  padding: 0.75em 0 0.75em 7px;
+  text-decoration: none;
+}
+#navigation ul li.current-section a:hover {
+  background-color: #f0f3e4;
+  color: black;
+  text-decoration: underline;
+}
+
+/* Nested styles - current section
+--------------------------------------------------------- */
+#navigation ul li.current-section ul li a,
+#navigation ul li.current-section ul li a:link,
+#navigation ul li.current-section ul li a:visited {
+  background-color: #f0f3e4;
+  background-image: none;
+  border-bottom: 1px solid #c6c8a7;
+  border-top: 1px solid white;
+  color: #336;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.5em 0 0.6em 12px;
+  text-decoration: none;
+  width: 157px;
+}
+#navigation ul li.current-section ul li a:hover {
+  background-color: #e5ead1;
+  color: black;
+  text-decoration: underline;
+}
+
+
+/* Default behaviour - parent section
+--------------------------------------------------------- */
+#navigation li.parent-section {
+  margin-top: 0;
+}
+#navigation ul li.parent-section {
+  list-style-type: none;
+}
+#navigation ul li.parent-section a,
+#navigation ul li.parent-section a:link,
+#navigation ul li.parent-section a:visited {
+  background-color: #dae2da;
+  background-image: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #a7b6c8;
+  color: #336;
+  display: block;
+  font-weight: normal;
+  padding: 0.75em 0 0.75em 7px;
+  text-decoration: none;
+}
+#navigation ul li.parent-section a:hover {
+  background-color: #dae2da;
+  color: #336;
+  text-decoration: underline;
+}
+
+/* Nested styles - parent section
+--------------------------------------------------------- */
+#navigation ul li.parent-section ul li a,
+#navigation ul li.parent-section ul li a:link,
+#navigation ul li.parent-section ul li a:visited {
+  background-color: #f0f3e4;
+  background-image: none;
+  border-bottom: 1px solid #c6c8a7;
+  border-top: 1px solid white;
+  color: #336;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.5em 0 0.6em 12px;
+  text-decoration: none;
+  width: 157px;
+}
+#navigation ul li.parent-section ul li a:hover {
+  background-color: #e5ead1;
+  color: black;
+  text-decoration: underline;
+}
+
+
+/* Style for current page
+--------------------------------------------------------- */
+#navigation li.current-page a {
+  background-color: white !important;
+  color: black !important;
+  border-bottom: 1px solid white !important;
+  border-top: 1px solid #c6c8a7 !important;
+}
+
+
+/* Controls left nav flyout lists
+--------------------------------------------------------- */
+#navigation ul.nav-items {
+  background-color: #f0f3e4;
+  border-bottom: 1px solid #1b4e81;
+  border-right: 1px solid #1b4e81;
+  border-top: 1px solid #1b4e81;
+  display: none;
+  left: 0;
+  list-style-type: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 190px !important;
+  z-index: 1;
+} 
+#navigation ul.nav-items li a {
+  background-image: none; 
+  display: block;
+  padding: 0.3em 0.25em 0.3em 0.3em !important;
+  width: 188px !important;
+}
+#navigation ul.nav-items a:hover {
+  background-color: #1b4e81;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+#navigation ul li.parent-section ul.nav-items a:hover {
+  background-color: #dae2da;
+  text-decoration: none;
+}

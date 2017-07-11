@@ -1,0 +1,493 @@
+/*-----------------------------------------------------------------------------------------|
+|  Base Print CSS included by all sites within deh directory                               |
+|-----------------------------------------------------------------------------------------*/
+
+
+/* TYPE SELECTOR RULES
+----------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+a:link {
+  color: #039;
+}
+a:visited {
+  color: #660066;
+}
+a:hover, a:active {
+  color: black;
+}
+blockquote {
+  font-size: 85%;
+  line-height: 1.5em;
+  padding: 1em 2em 0 2em;
+}
+body {
+  background: none;
+  font: 80%/1.4em normal Arial, Verdana, Geneva, sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}  
+h1 {
+  color: black;
+  font: 150%/1.4em Arial, Geneva, sans-serif;
+  font-weight: bold;
+  padding: 0.5em 0.4em 0 0;
+}
+h2 {
+  color: #333;
+  font: 140%/1.4em Arial, Geneva, sans-serif;
+  font-weight: bold;
+  padding: 1em 0.4em 0 0;
+}
+h3 {
+  background-color: transparent;
+  color: black;
+  font: 110%/1.4em Arial, Geneva, sans-serif;
+  font-weight: bold;
+  padding: 1em 0.4em 0 0;
+}
+h4 {
+  background-color: transparent;
+  color: black;
+  font: 105%/1.4em Arial, Geneva, sans-serif;
+  font-weight: bold;
+  padding: 1em 0.4em 0 0;
+}
+h5 {
+  color: #666; 
+  font: 100%/1.4em Arial, Geneva, sans-serif;
+  font-weight: bold;
+  padding: 1em 0.4em 0 0;
+} 
+h6 {
+  color: black; 
+  font: 90%/1.4em Arial, Geneva, sans-serif;
+  font-weight: bold;
+  padding: 1em 0.4em 0 0;
+} 
+p {
+  font-size: 85%;
+  line-height: 1.5em;
+  padding: 1em 0.4em 0 0;
+}
+img {
+  border: 0;
+}
+input {
+  font-size: 100%;
+}
+span.external {
+  display: none;
+}
+span.popup {
+  display: none;
+}
+caption {
+  background-color: #f0f3e4;
+  font-weight: bold;
+  padding: 0.25em;
+  margin: 1em 0 0 0;
+  text-align: left;
+  width: 100%;
+}
+table {
+  border-collapse: collapse;
+  border: 0;
+  font-size: 85%;
+  width: 100%;
+  padding: 0;
+  margin: 1em 0 1em 0;
+}
+table.tableleft td {
+  text-align: left;
+}
+table.tableleft th {
+  text-align: left;
+}
+table.tableright td {
+  text-align: right;
+}
+table.tableright th {
+  text-align: right;
+}
+th {
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+  color: black;
+  font-weight: bold;
+  padding: 0.25em;
+  text-align: left;
+  vertical-align: top;
+}
+td {
+  border-bottom: 1px solid #ccc;
+  padding: 0.25em;
+  text-align: left;
+  vertical-align: top;
+}
+td.middle, th.middle {
+  vertical-align: middle;
+}
+td p {
+  font-size: 100%;
+  padding: 0 0 0.5em 0;
+}
+td.highlight {
+  font-weight: bold;
+}
+td.left, th.left {
+  text-align: left !important;
+}
+td.right, th.right {
+  text-align: right !important;
+}
+td.center, th.center {
+  text-align: center !important;
+}
+th sup a:link {
+  color:white;
+}
+th sup a:visited {
+  color:white;
+}
+
+  
+/* Contact us form
+--------------------------------------------------------- */
+form.contact-form fieldset {
+  background: #f0f3e4 url(/includes/default/images/bg-fieldset.gif) repeat-x 0 0;
+  border: 1px solid #aca899;
+  margin: 1em 1em 1em 0;
+  padding: 0 0.5em 1em 0.5em;
+}
+form.contact-form fieldset.submit {
+  background: #f0f3e4 url(/includes/default/images/bg-fieldset-submit.gif) repeat-x 0 0;
+  border: 1px solid #aca899;
+  margin: 1em 1em 1em 0;
+  padding: 0 0.5em 1em 0.5em;
+}
+form.contact-form legend {
+  background-color: white;
+  border-left: 1px solid #aca899;
+  border-right: 1px solid #aca899;
+  border-top: 1px solid #aca899;
+  font-weight: bold;
+  padding: 2px 1em 2px 1em;
+}
+form.contact-form p {
+  font-size: 90%;
+}
+form.contact-form label {
+  font-size: 100%;
+}
+form.contact-form input,
+form.contact-form textarea {
+  font-size: 95%;
+  font-family: Arial, Verdana, Geneva, sans-serif;
+}
+form.contact-form input.submit {
+  margin: 1em 0 0 0;
+}
+form.contact-form input.aligned {
+  position: absolute; 
+  left: 200px;
+}
+
+
+/* ID SELECTOR RULES
+----------------------------------------------------------------------------------------- */
+#breadcrumb {
+  color: #333;
+  font-size: 85%;
+  margin: 0 0 1em 0;
+}
+#breadcrumb a,
+#breadcrumb a:link,
+#breadcrumb a:visited {
+  background-color: transparent;
+  color: #333;
+}
+#breadcrumb a:hover {
+  background-color: inherit;
+  color: black;
+}
+#breadcrumb p {
+  padding: 0;
+  margin: 0;
+}
+#footer {
+  border-top: 1px solid #ccc;
+  clear: both;
+  font-size: 90%;
+  margin: 2em 0 2em 0;
+  padding-top: 0.5em;
+  text-align: center;
+}
+#footer div a {
+  background-color: white;
+  color: #666;
+}
+#footer div a:hover {
+  background-color: white;
+  color: black;
+}
+#footer p {
+  line-height: 1.3em;
+}
+#footer #address {
+  border-right: 1px solid #ccc; 
+  color: #666; 
+  float: left; 
+  padding-right: 2%;
+  text-align: right; 
+  width: 48%; 
+}
+#footer #links {
+  color: #666; 
+  float: right; 
+  text-align: left; 
+  width: 48%;
+}
+#footer-wide {
+display:none
+}
+#global {
+  display: none;
+}
+#header {
+  background: none;
+  font: normal 85% arial, helvetica, sans-serif;
+  position: relative;
+  width: 100%;
+}
+#header a img {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+#header ul {
+  display: none;
+}
+#header div#print img {
+  background: url(/includes/default/images/logo-environment-print.gif) repeat-x 0 0;
+}
+#maincontent {
+  height: 100%;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  padding-bottom: 2em;
+}
+#maincontent p.top {
+  display: none;
+}
+#maincontent ol {
+  padding: 0.5em 0 0 3em;
+}
+#maincontent ol li {
+  font-size: 85%;
+  line-height: 1.5em;
+  padding: 0 0 0.5em 0;
+}
+#maincontent ol ol {
+  padding: 0.5em 0 0 2em;
+}
+#maincontent ol ol li {
+  font-size: 100%;
+  padding: 0.2em 0 0.2em 0;
+}
+#maincontent ol ul {
+  padding: 0.5em 0 0 0.5em;
+}
+#maincontent ol ul li {
+  list-style-type: square; 
+  font-size: 100%;
+  padding: 0.2em 0 0.2em 1em;
+}
+#maincontent ul {
+  list-style-type: none;
+  padding: 0.5em 0 0 1.5em;
+}
+#maincontent ul li {
+  list-style-type: square; 
+  font-size: 85%;
+  line-height: 1.5em;
+  padding: 0 0 0.5em 0.5em;
+}
+#maincontent ul ol {
+  padding: 0.5em 0 0 3em;
+}
+#maincontent ul ol li {
+  background: none; 
+  list-style-type: decimal;
+  font-size: 100%;
+  padding: 0.2em 0 0.2em 0;
+}
+#maincontent ol.lower-alpha li {
+  list-style-type: lower-alpha;
+}
+#maincontent ul ul {
+  padding: 0.5em 0 0 2em;
+}
+#maincontent ul ul li {
+  list-style-type: square; 
+  font-size: 100%;
+  padding: 0.2em 0 0.2em 1em;
+}
+
+/* Displays ticks and cross image tags for print
+--------------------------------------------------------- */
+#maincontent li.tick,
+#maincontent li.cross,
+#maincontent li.none {
+  background: none !important;
+  list-style-type: none !important;
+}
+#maincontent li.tick img,
+#maincontent li.cross img,
+#maincontent li.none img {
+  display: inline !important;
+}
+
+#maincontent p.source, #maincontent p.footnote {
+  font-size: 85%;
+  font-style: italic;
+  color: #666;
+  font-weight: normal;
+  padding: 0.1em 0.4em 0 0;
+}
+#maincontent .floatright {
+  float: right;
+  padding-left: 5px;
+}
+#maincontent .floatleft {
+  float: left;
+  padding-right: 5px;
+}
+#maincontent .figure p {
+  clear: both;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+#maincontent .figure p.source,
+#maincontent .figure p.footnote {
+  font-weight: normal;
+}
+#static-banner {
+  display: none;
+}
+
+/* Mosaic map content
+--------------------------------------------------------- */
+#map-list {
+  float: right;
+}
+#map-image {
+  float: left;
+}
+#map-thumbs {
+  display: none;
+}
+  
+
+/* Controls blocks of links to related pages or anchors
+--------------------------------------------------------- */
+#pagenav, 
+#sectionnav {
+  background-color: #f7f7f0;
+  border: 1px solid #c6c8a7;
+  padding: 0 0.25em 0.25em 0.25em;
+  margin: 0.5em 0 0.75em 0;
+}
+#pagenav h2, 
+#sectionnav h2 {
+  border: 0;
+  color: #333;
+  font-size: 100%;
+  padding: 0.5em 0 0.25em 0.25em;
+  margin: 0;
+}
+#pagenav ul, 
+#sectionnav ul {
+  margin-left: 1em;
+}
+#pagenav ul li {
+  background: none; 
+  list-style-type: square;
+}
+
+
+/* Navigation bar down the left
+----------------------------------------------------------------------------------------- */
+#navigation {
+  display: none;
+}
+
+/* Side navigation links down the right
+----------------------------------------------------------------------------------------- */
+#sidepanel {
+  display: none;
+}
+#title {
+  height: 70px;
+  width: 100%;
+  margin-left: 10px;
+  margin-top: 1px;
+}  
+#title h1 {
+  background: transparent;
+  color: black;
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 5px;
+}
+#title h2 {
+  background: transparent;
+  border-bottom: 1px solid #666;
+  color: #333;
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 120%;
+  font-weight: bold;
+  line-height: 1.4em;
+  padding-left: 0;
+  padding-top: 0;
+  text-align: left;
+}
+
+/* General class rules
+--------------------------------------------------------- */
+.clear {
+  clear: both;
+}
+.u {
+  text-decoration: underline;
+}
+
+div.highlight {
+  border: 1px solid #000;
+  background-color: #ffffff;
+  margin: 0.75em 0.5em 0.5em 0;
+  padding: 0 0.5em 1em 0.5em;
+}
+
+wideright#table {
+  border-collapse: collapse;
+  border: 0;
+  font-size: 85%;
+  width: 100%;
+  padding: 0;
+  margin: 1em 0 1em 0;
+}
+/* Turn off javascript watermark on NRM, 
+--------------------------------------------------------- */
+
+#mysitelogo{display:none}
+
+
+

@@ -1,0 +1,552 @@
+/*-----------------------------------------------------------------------------------------|
+|  Styles to cascade from http://www.deh.gov.au/includes/default/css/default.css           |
+|-----------------------------------------------------------------------------------------*/
+
+body {
+  background: white url(/includes/quality/images/bg-nav.gif) repeat-y left;
+}
+h1 {
+  color: #300;
+  padding-bottom: 0.5em;
+  padding-top: 0;
+}
+h2 {
+  color: #555;
+}
+h3 {
+  color: #600;
+}
+h4 {
+  color: #224469;
+}
+h5 {
+  color: #555; 
+} 
+table caption {
+  background-color: #003e5e;
+  color: white;
+}
+th {
+  background-color: #fff;
+  border-bottom: 1px solid #f6b04d;
+  border-bottom: 1px solid #999;
+  color: white;
+}
+th.subhead {
+  background-color: #689ed4;
+  border-bottom: 1px solid #689ed4;
+}
+td {
+  background-color: #fff;
+  border-bottom: 1px solid #d8dde5;
+}
+td.highlight {
+  background-color: #dae2ee;
+}
+#global {
+  background: #3791c3 url(/includes/atmosphere/images/bg-global.gif) repeat-x 180px 0;
+}
+#global a,
+#global a:link,
+#global a:visited {
+  background-color: transparent;
+  color: #252514;
+  text-decoration: none;
+}
+#global li {
+  background: transparent url(/includes/quality/images/bg-button.gif) no-repeat 0 50%;
+}
+#header {
+  background: #d7b449 url(/includes/quality/images/bg-header.gif) repeat-x 0 0;
+}
+#header img {
+  padding-left: 12px;
+  padding-top: 5px;
+}
+#header ul a,
+#header ul a:visited {
+  color: #fbf4de; color:#000
+}
+#header ul li {
+  background: transparent url(/includes/atmosphere/images/bg-access-repeat.gif) repeat-x 0 0;
+}
+#header ul li.left-link {
+  background: transparent url(/includes/atmosphere/images/bg-access-left.gif) no-repeat 0 0;
+}  
+
+/* Controls navigation for anchor links and related page links 
+----------------------------------------------------------------------------------------- */
+#pagenav, 
+#sectionnav {
+  background:  url(/includes/greenvouchers/images/bg-pagenav.gif) no-repeat 0 9px;
+}
+#pagenav h2, #sectionnav h2 {
+  color: #1077ae;
+}
+
+
+--------------------------------------------------------- */
+#navigation {
+  font: 90%/1.4em Arial, Geneva, sans-serif;
+  left: 0;
+  position: absolute;
+  top: 101px;
+  z-index: 5;
+}
+
+/* Generic list behaviour
+--------------------------------------------------------- */
+#navigation ul {
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html #navigation ul li { /* needed for ie */
+  display: inline;
+}
+#navigation ul li a,
+#navigation ul li a:link,
+#navigation ul li a:visited {
+  background-color: #f2e9c6;
+  background-color: #eef;
+  color: #5d482e;
+  text-decoration: none;
+}
+#navigation ul li a:hover {
+  text-decoration: underline;
+}
+#navigation ul li.selected a {
+  background-color: white !important;
+  border-top: 1px solid #ddd !important;
+  color: black !important;
+}
+#navigation ul li.selected li a {
+  background-color: #f2e9c6 !important;
+  background-color: #eef!important;
+  border-top: 1px solid white  !important;
+  color: #5d482e !important;
+  
+}
+
+/* Controls left nav lists
+--------------------------------------------------------- */
+#navigation li.level1 a,
+#navigation li.level1 a:link,
+#navigation li.level1 a:visited {
+  background: transparent url(/includes/quality/images/bg-nav-heading.gif) no-repeat 0 0;
+  border-top: 0;
+  color: white;
+  display: block;
+  padding: 0.75em 0 0.75em 7px;
+  text-decoration: none;
+  width: 163px;
+}
+#navigation li.level1 a:hover {
+  background-color: inherit;
+  color: black;
+  text-decoration: underline;
+}
+#navigation li.level1 li a,
+#navigation li.level1 li a:link,
+#navigation li.level1 li a:visited {
+  color: #5d482e;
+  color: #000;
+}
+#navigation li.level1 li a:hover {
+  background-color: inherit;
+  color: black;
+}
+#navigation li.level2 a,
+#navigation li.level2 a:link,
+#navigation li.level2 a:visited {
+  background-color: #f2e9c6;
+  background-color: #ddd;
+  background-image: none;
+  border-bottom: 1px solid #c5bb94;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid white;
+  display: block;
+  padding: 0.6em 0 0.6em 13px;
+  width: 156px;
+}
+#navigation li.level3 a,
+#navigation li.level3 a:link,
+#navigation li.level3 a:visited {
+  border-bottom: 1px solid #c5bb94;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid white;
+  display: block;
+  padding: 0.6em 0 0.6em 20px;
+  width: 149px;
+}
+#navigation li.level4 a,
+#navigation li.level4 a:link,
+#navigation li.level4 a:visited {
+  background-color: #f2e9c6;
+  background-color: #fff;  
+  border-bottom: 1px solid #c5bb94;
+  border-top: 1px solid white;
+  display: block;
+  padding: 0.5em 0 0.5em 28px;
+  width: 141px;
+}
+#navigation li.level5 a,
+#navigation li.level5 a:link,
+#navigation li.level5 a:visited {
+  background-color: #f2e9c6;
+  background-color: #fff;
+  border-bottom: 1px solid #c5bb94;
+  border-top: 1px solid white;
+  display: block;
+  padding: 0.35em 0 0.35em 35px;
+  text-decoration: none;
+  width: 134px;
+}
+#navigation li.level5 a:hover {
+  text-decoration: underline;
+}
+#navigation li.level6 a,
+#navigation li.level6 a:link,
+#navigation li.level6 a:visited {
+  background-color: #f2e9c6;
+  background-color: #ddd;
+  border-bottom: 1px solid #c5bb94;
+  border-top: 1px solid white;
+  display: block;
+  padding: 0.35em 0 0.35em 42px;
+  text-decoration: none;
+  width: 127px;
+}
+#navigation li.level6 a:hover {
+  text-decoration: underline;
+}
+#navigation li.level7 a,
+#navigation li.level7 a:link,
+#navigation li.level7 a:visited {
+  background-color: #f2e9c6;
+  background-color: #ddd;
+  border-bottom: 1px solid #c5bb94;
+  border-top: 1px solid white;
+  display: block;
+  padding: 0.35em 0 0.35em 49px;
+  text-decoration: none;
+  width: 120px;
+}
+#navigation li.level7 a:hover {
+  text-decoration: underline;
+}
+
+/* Flyout lists
+--------------------------------------------------------- */
+#navigation ul.nav-items {
+  background-color: #f2e9c6;
+  background-color: #ddd;
+  border-bottom: 1px solid #a33c23;
+  border-right: 1px solid #a33c23;
+  border-top: 1px solid #a33c23;
+  display: none;
+  left: 0;
+  list-style-type: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 190px !important;
+  z-index: 1;
+} 
+#navigation ul.nav-items li a {
+  background-image: none !important; 
+  color: #5d482e !important;
+  display: block;
+  font-size: 95%;
+  padding: 0.3em 0.25em 0.3em 0.3em !important;
+  width: 188px !important;
+  text-decoration: none !important;
+}
+#navigation ul.nav-items a:hover {
+  background-color: #a33c23 !important;
+  background-image: none; 
+  color: white !important;
+  display: block;
+  text-decoration: none;
+}
+
+
+/* Image under nav
+--------------------------------------------------------- */
+#navigation-image {
+  background: url(/includes/quality/images/bg-navigation-image.jpg) no-repeat 0 0;
+  height: 160px;
+  margin-top: 0;
+}
+
+/* Side navigation links down the right
+----------------------------------------------------------------------------------------- */
+#sidepanel a,
+#sidepanel a:link,
+#sidepanel a:visited {
+  background-color: transparent;
+  color: #003e5e;
+  text-decoration: underline;
+  font-size: 110%;
+}
+#sidepanel a:hover {
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  color: black;
+}
+#sidepanel div.sidebox {
+  background-color: #fff;
+  border-left: 1px solid #4980b8;
+
+  border-right: 1px solid #4980b8;
+
+  border-bottom: 1px solid #4980b8;
+}
+#sidepanel h2.sidebox {
+  background-color: #bf422d;
+
+  background-image: url(/ncludes/settlements/images/bg-panel-heading.gif); 
+  color:#5189c2;
+  color:#fff;
+  border-bottom:3px solid #bf422d;
+  font-size:120%;
+  padding-bottom:0px
+}
+#sidepanel p {
+padding:2px 2px 2px 10px
+}
+#sidepanel div.sideboxphoto {
+  background-color: #f0f3e4;
+  margin: 0;
+  padding: 0;
+  width: auto; /* resolution layout change */
+}
+
+#title {
+  background: transparent url(/includes/quality/images/bg-feature.gif) no-repeat right 0;
+  width: 750px;
+  top: 26px;
+  height: 76px;
+  right: 2px;
+}
+.protection {
+  background: transparent url(/includes/quality/images/bg-feature-protection.gif) no-repeat right 0 !important;
+} 
+.biotechnology {
+  background: transparent url(/includes/quality/images/bg-feature-biotechnology.jpg) no-repeat right 0 !important;
+}
+.chemicals {
+  background: transparent url(/includes/quality/images/bg-feature-chemicals.jpg) no-repeat right 0 !important;
+} 
+.hazardous {
+  background: transparent url(/includes/quality/images/bg-feature-hazardous.jpg) no-repeat right 0 !important;
+}
+.homes {
+  background: transparent url(/includes/quality/images/bg-feature-homes.jpg) no-repeat right 0 !important;
+}
+.lights {
+  background: transparent url(/includes/quality/images/bg-feature-lights.jpg) no-repeat right 0 !important;
+}
+.policy {
+  background: transparent url(/includes/quality/images/bg-feature-policy.jpg) no-repeat right 0 !important;
+}
+.waste {
+  background: transparent url(/includes/quality/images/bg-feature-waste.jpg) no-repeat right 0 !important;
+}
+
+#title h1 {
+  color: #f3f3f4;
+  font-size: 170%;
+  padding: 4px 0 0 0;
+  margin-right: 155px;
+}
+#title h2 {
+  color: white;
+  font-size: 120%;
+  margin-right: 149px;
+}
+#map-search p {
+  padding: 0.5em 5px 0.5em 5px;
+  text-align: left;
+}
+#map-search h2 {
+  padding: 0.5em;
+  text-align: left;
+}
+
+
+/* Home page column layout
+----------------------------------------------------------------------------------------- */
+
+.settlements {
+  margin: 0 15px 5px 0;
+  border: 1px solid #fff;
+}
+.settlements h3 {
+  background: #d0e1eb url(/includes/quality/images/bg-homebox-heading.jpg) no-repeat right 0;
+  margin-top: 30px;
+  padding: 5px 0 5px 5px;
+  color: black;
+  font-size: 90%;
+}
+.settlements p {
+  margin: 2px 0 0 0;
+  padding:3px 0 0 0;
+  color: black;
+  font-size: 0.8em;
+  border-top: 1px dashed #979c7c;
+}
+.settlements ul {
+  font-size: 90%;
+}
+
+
+/* settlements/industry/ggap
+----------------------------------------------------------------------------------------- */
+.ggap {border-bottom:1px solid #ddd}
+.ggapheader {padding:4px;border-bottom:1px solid #ccc;background:transparent;color:#5a6577;font-weight:600;}
+.ggapproject {padding:4px;border-bottom:1px solid #ccc;background:#f4f4f6;color:#000}
+#rightnavccp p {margin:0px;text-align:left;padding:10px;font-size:80%}
+#rightnavccp .logo {text-align:center;padding-bottom:10px;}
+#boxfeatureccp { background: #f0f3f7;margin:20px}
+.boxfeature { text-align: left;display: block;margin: 0;padding: 10px;
+border: 1px solid #ddd;border-bottom: none;border-top: none;border-bottom: 1px solid #ddd;}
+.boxfeaturenews {font-size:95%;padding:10px}
+#rightnavccp p {margin:0px;text-align:left;padding:10px;font-size:80%}
+#rightnavccp .logo {text-align:center;padding-bottom:10px;}
+.boxfeaturecontainer { background: #f0f3f7;margin:20px}
+.boxfeature { text-align: left;display: block;margin: 0;padding: 10px;
+border: 1px solid #ddd;border-bottom: none;border-top: none;border-bottom: 1px solid #ddd;}
+.boxfeaturetext {font-size:95%;padding:10px}
+.r1 {margin: 0px 5px;background: #ccc}
+.r2 {margin: 0px 3px}
+.r3 {margin: 0px 2px}
+.r4 {margin: 0px 1px;height: 2px}
+.rtop, .rbottom {display:block;background: white;}
+.rtop *, .rbottom *{display: block;height: 1px;overflow: hidden;background:#ddd;}
+p.quote {text-align:right;font-weight:bold}
+
+ul li.arrow {
+  background: url(/includes/default/images/ico-next.gif) no-repeat 1px 0.5em !important; 
+}
+.search {
+  background: transparent url(/erin/images/search.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+.exclam {
+  background: url(/includes/default/images/exclamation.gif) no-repeat 0 0 !important; 
+  list-style-type: none !important;
+  padding: 0 0 0.5em 20px !important;
+  margin: 0 !important;
+  }
+  li.question {
+  background: url(/includes/default/images/exclamation.gif) no-repeat 0 0 !important; 
+  list-style-type: none !important;
+  padding: 0 20px 0.5em 0px !important;
+  margin: 0 !important;
+  }
+  /* BEGIN LEFT NAVIGATION 
+----------------------------------------------------------------------------------------- */
+#navigation ul li a,
+#navigation ul li a:link,
+#navigation ul li a:visited {
+  background-color: #ffeaab;
+  color: #5d482e;
+  text-decoration: none;
+}
+#navigation ul li a:hover {
+  text-decoration: underline;
+}
+#navigation ul li.selected a {
+  background-color: white !important;
+  border-top: 1px solid #ddd !important;
+  color: black !important;
+}
+#navigation ul li.selected li a {
+  background-color: #ffeaab !important;
+  background-color: #ffefbe !important;
+  border-top: 1px solid white !important;
+  color: #5d482e !important;
+}
+/* Controls left nav lists
+--------------------------------------------------------- */
+#navigation li.level1 a,
+#navigation li.level1 a:link,
+#navigation li.level1 a:visited {
+  background: transparent url(/includes/settlements/images/bg-nav-heading.gif) no-repeat 0 0;
+}
+#navigation li.level1 a:hover {
+  background-color: inherit;
+  color: white;
+  text-decoration: underline;
+}
+#navigation li.level1 li a,
+#navigation li.level1 li a:link,
+#navigation li.level1 li a:visited {
+  color: #336;
+}
+#navigation li.level1 li a:hover {
+  background-color: inherit;
+  color: black;
+}
+#navigation li.level2 a,
+#navigation li.level2 a:link,
+#navigation li.level2 a:visited {
+  background-color: #ffeaab;
+  background-image: none;
+  border-bottom: 1px solid #d7b449;
+}
+#navigation li.level3 a,
+#navigation li.level3 a:link,
+#navigation li.level3 a:visited {
+ background-color: #ffeaab;
+  background-image: none;
+  border-bottom: 1px solid #d7b449;
+}
+#navigation li.level4 a,
+#navigation li.level4 a:link,
+#navigation li.level4 a:visited {
+  background-color: #ffeaab;
+   background-color: #ffefbe;
+  border-bottom: 1px solid #d7b449;
+}
+#navigation li.level5 a,
+#navigation li.level5 a:link,
+#navigation li.level5 a:visited {
+  background-color: #ffeaab;
+  border-bottom: 1px solid #d7b449;
+}
+#navigation li.level5 a:hover {
+  text-decoration: underline;
+}
+#navigation li.level6 a,
+#navigation li.level6 a:link,
+#navigation li.level6 a:visited {
+  background-color: #ffeaab;
+  border-bottom: 1px solid #d7b449;
+}
+#navigation li.level6 a:hover {
+  text-decoration: underline;
+}
+#navigation li.level7 a,
+#navigation li.level7 a:link,
+#navigation li.level7 a:visited {
+  background-color: #ffeaab;
+  border-bottom: 1px solid #d7b449;
+}
+
+/* Flyout lists
+--------------------------------------------------------- */
+#navigation ul.nav-items {
+  background-color: #ffeaab;
+  border-bottom: 1px solid #013d5f;
+  border-right: 1px solid #013d5f;
+  border-top: 1px solid #013d5f;
+} 
+#navigation ul.nav-items li a {
+  color: #5d482e !important;
+}
+#navigation ul.nav-items a:hover {
+  background-color: #003e5e !important;
+}

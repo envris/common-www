@@ -1,0 +1,82 @@
+/*-----------------------------------------------------------------------------------------|
+|  CSS for search results page                                                             |
+|-----------------------------------------------------------------------------------------*/
+
+
+#agencysearchform {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 100%;
+}
+#agencysearchform #submit {
+  float: left;
+  font-size: 100%;
+}
+#agencysearchform .searchoptions {
+  margin-top: 0.75em;
+  margin-bottom: 1.25em;
+  padding: 0;
+}
+#agencysearchform fieldset {
+  background: white url(http://www.deh.gov.au/includes/images/bg-search-fieldset.gif) repeat-x 0 0;
+  float: right;
+  margin: 0 0 0 0.25em;
+  padding: 0 0 0 1em;
+  width: 210px;
+}
+#agencysearchform form {
+  margin: 0;
+  padding: 1em 0 0 0;
+}
+#agencysearchform form p {
+  padding: 1em 0 0 0;
+}
+#agencysearchform img {
+/* funnelback logo as required */
+  float: right;
+  margin: -10px 0 10px 0;
+  padding: 0;
+}
+#agencysearchform legend {
+  color: green;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+#agencysearchpagenav span {
+/* space around page nav links */
+  padding-left: 3px;
+  padding-right: 3px;
+}
+#agencysearchpagenav strong {
+/* current results page number */
+  color: #cc0000;
+}
+#agencysearchresults ol li {
+  font-size: 90%;
+  line-height: 1.4em;
+  padding-bottom: 0.75em;
+}
+#agencysearchresults ol li span {
+/* format file type - html, pdf etc */
+  color: green;
+  font-weight: bold;
+}
+.agencysearchinfo {
+  color: green;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 95%;
+}
+.agencysearchsummary {
+  font-family: arial, helvetica, sans-serif;
+  padding-bottom: 0.25em;
+  padding-top: 0.5em;
+}
+.hidden {
+  display:none;
+}
+/* The following class was added by Alex Fahey and is used to show and hide radio buttons in the search again box */
+/* The class may not vaidate correctly, but it is needed for the show/hide funcationality to work in all browsers - 15/10/2006 */
+.shown {
+  display: ;
+}

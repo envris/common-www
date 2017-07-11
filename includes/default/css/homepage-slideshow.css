@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Rotating images
+--------------------------------------------------------- */
+.slideshowContainer {
+max-width:1024px;
+	position:relative;
+	
+}
+.slideshow {
+border-top:solid 1px #fff;
+	
+}
+
+ul.slideshow {
+	min-width:95%;
+	height:164px;
+	overflow:hidden;
+	position:relative;
+	margin:-10px 0 0 -15px;
+	padding:0;
+}	
+	
+
+ul.slideshow li {
+background:none!important;
+	list-style-type:none;
+	position:absolute;
+	left:0;
+	right:0;
+}
+
+ul.slideshow li.show {
+background:none!important;
+	list-style-type:none;
+	z-index:1;	
+}
+
+ul img {
+padding:0;
+margin:0;
+	border:none;	
+}
+
+
+#slideshow-caption {
+	min-width:95%;
+height:25px;
+	position:absolute;
+	bottom:0;
+	left:0;	
+	color:#fff;
+	z-index:2;
+margin:0 0 -1px 15px;
+	background-repeat: repeat;
+	background:url(/includes/default/images/transparent-bg.png) 0 0 repeat!important;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/includes/default/images/transparent-bg.png', sizingMethod='scale'!important);
+    /*filter:alpha(opacity=45)!important; //IE8 another filter not used but kept for interest*/ 
+}
+show-caption .slideshow-caption-container {
+	padding:5px 10px;		
+	z-index:3;
+}
+
+#slideshow-caption h3 {
+color:white;
+margin-left:20px;
+	position:absolute;
+	bottom:0;
+	left:0;		
+	font-size:18px;
+}
+
+#slideshow-caption p {
+margin:0;
+	position:absolute;
+	top:-4px;
+	left:10px;	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1em;
+	opacity: 1.0!important;
+}
+#buttons {
+	position:absolute;
+	bottom:5px;
+	right:25px;
+color:#ccc;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:.7em;
+	z-index:10;
+}
+#buttons a {
+color:#ccc;
+text-decoration:none;
+}
+#buttons a:hover {
+color:#fff;
+text-decoration:none;
+}

@@ -1,0 +1,489 @@
+/*-----------------------------------------------------------------------------------------|
+|  Styles to cascade from http://www.deh.gov.au/includes/default/css/default.css           |
+|-----------------------------------------------------------------------------------------*/
+body {
+  background-image: none;
+}
+h1 {
+  color: #000;
+  padding-bottom: 0.5em;
+  padding-top: 0;
+}
+h1.main {
+  color: #000;
+  border-bottom:1px solid #000;
+  font-size:1.2em;
+  font-weight:540;
+  padding:0px;
+}
+h2 {
+  color: #000;
+  text-decoration:none;
+}
+h2.main {
+  color: #000;
+  font-size:2.2em;
+  font-weight:500;
+  padding:0px;
+}
+h2.home {
+font-size:1.3em;color:#000;font-weight:580;padding:0.3em 0.3em 0.1em 0.2em;
+}
+h3 {
+  color: #b44c02;
+}
+h3.home, .contentleft h3, .contentright h3 {
+color:#000;
+font-size:1em;
+padding:0.3em 0.3em 0.1em 0.2em;
+}
+h4 {
+  color: #224469;
+}
+h5 {
+  color: #000; 
+} 
+table caption {
+  background-color: #999c74;
+  color: white;
+}
+th {
+  background-color: #b44c02;
+  border-bottom: 1px solid #fff;
+  color: white;
+}
+th.subhead {
+  background-color: #1077AE;
+  border-bottom: 1px solid #1077AE;
+}
+td {
+  background-color: #fff;
+  border-bottom: 1px solid #999c74;
+}
+td.highlight {
+  background-color: #dae2ee;
+}
+div.highlight {
+background:#D9DBCC;
+  border: 1px solid #999C74;
+}
+#news-item {
+  float: left;
+  margin-right: 0.75em;
+  margin-top: 0.5em;
+  border:none;
+}
+#global {
+  background: #ffca38 url(/includes/eqd/images/bg-global.gif) repeat-x 180px 0;
+
+}
+#global a,
+#global a:link,
+#global a:visited {
+  background-color: transparent;
+  color: #252514;
+  text-decoration: none;
+}
+#global li {
+  background: transparent url(/includes/eqd/images/bg-button.gif) no-repeat 0 50%;
+  
+}
+#header {
+	background-color: #efc838;
+	background-image: url(/includes/eqd/images/swirl.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+#header img {
+  padding-left: 12px;
+  padding-top: 5px;
+}
+#header ul a,
+#header ul a:visited {
+  color: #fbf4de; color:#000
+}
+#header ul li {
+  background: transparent url(/includes/eqd/images/bg-access-repeat.gif) repeat-x 0 0;
+  height:30px;
+}
+#header ul li.left-link {
+  background: transparent url(/includes/eqd/images/bg-access-left.gif) no-repeat 0 0;
+}  
+/* New styles - header with search box
+----------------------------------------------------------------------------------------- */
+#title { background-image: none; width: 500px; top: 30px;height: 76px;right: 2px;}
+#title h1 {color:#000;font-size: 1.5em;padding: 9px 0 6px 0;margin-right: 10px;margin-bottom:0px;font-weight:normal;border:none;line-height:0.5em}
+#title label  {background:transparent;color:black;font-size:1.0em;padding:2px;border:none} 
+#title .searchbox {background:#f9eee4;color:black;font-size:1.2em;padding-top:0px;border-right:2px solid #999;border-bottom:2px solid #999}
+#title .button {background:#FAEEC3;color:black;font-size:1.1em;padding:2px 4px}
+div#title form {padding-top:0px;float:right;}
+#title h2 {padding-top: 10px; line-height:1.3em;margin-right: 15px;
+}
+
+.contact-form label {
+border:none;
+}
+
+/* Controls navigation for anchor links and related page links 
+----------------------------------------------------------------------------------------- */
+#pagenav, 
+#sectionnav {
+  background-image: none
+}
+#pagenav h2, #sectionnav h2 {
+  color: #800;
+  font-weight:bold
+}
+/* BEGIN LEFT NAVIGATION 
+----------------------------------------------------------------------------------------- */
+#navigation ul li a,
+#navigation ul li a:link,
+#navigation ul li a:visited {
+  background-color: #F0DBCC;
+  color: #000;
+  text-decoration: none;
+}
+#navigation ul li a:hover {
+  text-decoration: underline;
+}
+#navigation ul li.selected a {
+  background-color: white !important;
+  border-top: 1px solid #ddd !important;
+  color: black !important;
+}
+#navigation ul li.selected li a {
+  background-color: #F0DBCC !important;
+  border-top: 1px solid white !important;
+  color: #000 !important;
+}
+/* Controls left nav lists
+--------------------------------------------------------- */
+#navigation li.level1 a,
+#navigation li.level1 a:link,
+#navigation li.level1 a:visited {
+  background: transparent url(/includes/eqd/images/bg-nav-heading.gif) no-repeat 0 0;
+}
+#navigation li.level1 a:hover {
+  background-color: inherit;
+  color: white;
+  text-decoration: underline;
+}
+#navigation li.level1 li a,
+#navigation li.level1 li a:link,
+#navigation li.level1 li a:visited {
+  color: black;
+}
+#navigation li.level1 li a:hover {
+  background-color: inherit;
+  color: black;
+}
+#navigation li.level2 a,
+#navigation li.level2 a:link,
+#navigation li.level2 a:visited {
+  background-color: #F0DBCC;
+  background-image: none;
+  border-bottom: 1px solid #E8C8B1;
+}
+#navigation li.level3 a,
+#navigation li.level3 a:link,
+#navigation li.level3 a:visited {
+ background-color: #F0DBCC;
+  background-image: none;
+  border-bottom: 1px solid #E8C8B1;
+}
+#navigation li.level4 a,
+#navigation li.level4 a:link,
+#navigation li.level4 a:visited {
+ background-color: #F0DBCC;
+ border-bottom: 1px solid #E8C8B1;
+}
+#navigation li.level5 a,
+#navigation li.level5 a:link,
+#navigation li.level5 a:visited {
+  background-color: #F0DBCC;
+  border-bottom: 1px solid #E8C8B1;
+}
+#navigation li.level5 a:hover {
+ text-decoration: underline;
+}
+#navigation li.level6 a,
+#navigation li.level6 a:link,
+#navigation li.level6 a:visited {
+  background-color: #F0DBCC;
+  border-bottom: 1px solid #E8C8B1;
+}
+#navigation li.level6 a:hover {
+text-decoration: underline;
+}
+/* Flyout lists
+--------------------------------------------------------- */
+#navigation ul.nav-items {
+  background-color: #F0DBCC;
+  border-bottom: 1px solid #E8C8B1;
+  border-right: 1px solid #E8C8B1;
+  border-top: 1px solid #E8C8B1;
+} 
+#navigation ul.nav-items li a {
+  color: #000 !important;
+}
+#navigation ul.nav-items a:hover {
+  background-color: #B44C02 !important;
+}
+
+#navigation-image {
+	height: 350px;
+	margin-top:0;
+	background-image: url(/includes/eqd/images/nav-gradient.jpg);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+}
+
+/* Tabs - set the current page tab in body tag as id
+--------------------------------------------------------- */
+
+.tabwidth {
+width:700px;
+}
+ul#tabnav li a { /* all tabs */
+  background-color: #efc838;
+  color: #000;
+}
+ul#tabnav a:hover {
+  background-color: #fff;
+  text-decoration:underline;
+}
+
+/* Side navigation links down the right
+----------------------------------------------------------------------------------------- */
+#sidepanel div.sidebox {
+ background-color: #fff;
+ border:none; 
+}
+#sidepanel a:hover {
+background-color:#eee;
+color:#c00;
+}
+.search {
+  background: transparent url(/erin/images/search.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+#sidepanel div.side-news {
+padding:5px;
+clear:both;
+}
+
+#sidepanel div.side-news .news-pic {
+  float: left;
+  margin-right: 0.75em;
+  margin-top: 0.5em;
+  border:1px solid #CCCCCC;
+}
+#sidepanel div.side-news p {
+	overflow:hidden;
+}
+/* New styles
+----------------------------------------------------------------------------------------- */
+#maincontent {
+  margin: 0 0 0 210px;
+}
+body.wideright #sidepanel {
+   border-left:1px solid #ddd !important;
+}
+body.wideright #sidepanel .sidebox {
+  padding-left:20px;
+     border:none;
+}
+body.wideright #sidepanel h2.sidebox {
+  background-image: url(/includes/eqd/images/bg-panel-heading.jpg);
+  background-repeat: no-repeat;
+  background-color:white;
+  color: black; 
+  font-size:1.2em;
+  padding:0.5em;
+  border:none; 
+}
+body.wideright #sidepanel h2.newsandevents {
+	background-color: #fff;
+	background-image: url(/includes/quality/images/bg-panel-heading.jpg);
+	background-repeat: no-repeat;
+	color: white;
+	padding-left: 1.0em;
+}
+body.wideright #sidepanel h3 {
+  background-color: white;
+  color: #b44c02;
+  font-size:1.1em;
+  font-weight:bold;
+  border-bottom:2px dotted #b44c02;
+  padding-bottom:0px;
+  margin-left:5px;
+}
+.news-item {
+	border-top:1px solid #CCC;margin-top:10px;
+}
+.news-item-bt {
+	border-top:1px solid #CCC;border-bottom:1px solid #CCC;margin-top:10px;
+}
+.news-item img, .news-item-bt img {
+float:left!important;margin:.75em 1em 0 0!important;border:none!important;
+}
+/* Images background colour
+----------------------------------------------------------------------------------------- */
+
+#maincontent .photo {
+  background-color: #ebf4fa;
+
+}
+
+/* Footer
+----------------------------------------------------------------------------------------- */
+.footer-didly {
+float:right;margin-top:-40px;
+}
+
+/* Two columns fuel quality homepage
+----------------------------------------------------------------------------------------- */
+.columncontainer {
+float:left;
+}
+
+/* front page boxes
+--------------------------------------------------------- */
+.boxes {
+	float: left;
+	width:100%;
+	margin-top:15px;
+}
+.boxes2 {
+	float: left;
+		width:100%;
+			margin-top:15px;
+}
+.columntwo {
+	float: right;
+		width: 45%;
+	min-width:100px;
+	padding:10px;
+		background-image: url(/includes/eqd/images/gradient.jpg);
+	background-repeat: repeat-x;
+	border-top: 1px solid #ccc;
+}
+.contentleft {
+margin-top:10px;
+float:left;
+width:55%;
+}
+.contentright {
+margin-top:10px;
+float:right;
+width:43%;
+}
+.columnone {
+	float: left;
+	width: 98%;
+	min-width:100px;
+	padding:10px;
+background-image: url(/includes/eqd/images/gradient.jpg);
+	background-repeat: repeat-x;
+	border-top: 1px solid #ccc;
+	  border-bottom: 1px solid #ccc;
+	  margin-bottom:10px;
+}
+.columnone h2 {
+font-size:1.3em;
+border-bottom:1px dotted #fff;
+}
+.columntwo h2 {
+font-size:1.3em;
+border-bottom:1px dotted #fff;
+}
+.frontbox-left p {
+	overflow:hidden;
+}
+.frontbox-right p {
+	overflow:hidden;
+}
+/*FAQS*/
+
+.iconspan{
+float: right;
+margin: 3px;
+cursor:hand;
+cursor:pointer;
+font-weight: bold;
+}
+
+.eg-bar {
+padding: 3px 3px 6px 3px;
+}
+.eg-bar p{
+font-family:Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size:1.1em;
+color: #000;
+padding: 3px 50px 0px 0px;
+}
+.question {
+margin-right: 80px;
+line-height:1.2em;
+}
+
+div.eg-bar{
+width: 95%;
+}
+
+.icongroup1{
+padding: 0px 3px 10px 3px;
+width: 95%;
+}
+
+li.complaint {
+list-style:none;
+  background: url(/includes/quality/images/exclamation-ico.gif) no-repeat 0 0.4em !important; 
+  list-style-type: none !important;
+  line-height: 20px !important;
+  padding: 0.2em 0 0.7em 29px !important;
+  margin: 0 10px 0 0px !important;
+}
+.complaint {
+margin-top:0px;border-top:1px dotted #FFCD9B;border-bottom:1px dotted #FFCD9B;margin-left:25px;margin-right:25px;
+}
+/* Boxcontainer - used for all Box styles
+----------------------------------------------------------------------------------------- */
+div.boxcontainer {padding:0.5em;width:100%;clear:both;}
+div.boxcontainer h2 {color:#fff; background-image: none ;background:#b44c02;border:none;font-size:1.0em;font-weight:bold;padding:0.5em;}
+div.boxcontainer h2.red
+{color:#fff; background-image: none ;background:#800;}
+div.boxcontainer h3 {font-size:1.0em}
+/* Box - Two columns without images
+----------------------------------------------------------------------------------------- */
+div.boxtwocols {float:left;border:1px solid #fff;width:48.0%;padding-right:6px}
+div.boxtwocols h3 {color:#000;border-top:1px solid #ccc;font-size:1.0em;font-weight:bold;padding:0.5em ; }
+
+/*---------Show and Hide Plug-in Css--------------*/
+
+.collapsible-heading { padding-left:15px; background:url(/includes/default/images/icon-triangle.png) 0 23px no-repeat; cursor:pointer;}
+.collapsible-heading-collapsed { background-position:0 -67px; }
+.collapsible-heading-toggle { text-decoration:none; color:#333;font-size:.9em; }
+.collapsible-heading-status { position:absolute; left:-99999px; }
+.collapsible-content { overflow:hidden; }
+.collapsible-content-collapsed { display:none; }
+.latest-news  {
+background-color: white;
+  color: #000!important;
+  font-size:1em;
+  font-weight:bold;
+  border-bottom:none!important;
+  padding-bottom:0px!important;
+  margin-left:0px!important;
+}
+.latest-news-fuel  {
+background-color: white;
+  color: #000!important;
+  font-size:1em!important;
+line-height:1.5em;
+  border-bottom:none!important;
+  padding-bottom:0px!important;
+  margin-left:0px!important;
+}

@@ -1,0 +1,37 @@
+/*-----------------------------------------------------------------------------------------|
+|  Styles to cascade from http://www.deh.gov.au/includes/default/css/default.css           |
+|-----------------------------------------------------------------------------------------*/
+
+body {
+  background: white url(/includes/default/images/bg-header-small.gif) repeat-x left top;
+}
+
+#header {
+  background: none;
+  height: 65px;
+}
+#header img {
+  padding-left: 12px;
+  padding-top: 5px;
+}
+
+#maincontent {
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+#title {
+  background: transparent url("/includes/default/images/bg-feature-small.gif") no-repeat right 0;
+  width: 650px;
+  top: 5px;
+}  
+#title h1 {
+  color: white;
+  font-size: 150%;
+  padding: 0;
+  margin: -2px 117px 0 0;
+}
+#title h2 {
+  color: #f0f3e4;
+  font-size: 110%;
+  margin-right: 110px;
+}

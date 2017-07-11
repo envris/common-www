@@ -1,0 +1,1519 @@
+/* -----------------------------------------------------------------------------------------
+  TYPE SELECTOR RULES
+  --------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+a:link {
+  color: #039;
+}
+a:visited {
+  color: #660066;
+}
+a:hover, a:active {
+  color: black;
+}
+acronym {
+  cursor: help;
+}
+blockquote {
+  font-size: 85%;
+  line-height: 1.5em;
+  padding: 1em 2em 0 2em;
+}
+blockquote p {
+  font-size: 100%;
+}
+body {
+  background: white url(/includes/default/images/bg-nav.gif) repeat-y left;
+  font-family: Verdana, Arial, Geneva, sans-serif;
+  font-size: 80%;
+  line-height: 1.4em;
+  font-weight: normal;
+}
+/* Overrides right margin space
+--------------------------------------------------------- */
+body.fullwidth #maincontent {
+  margin-right: 1em !important;
+}
+code {
+  color: green;
+}
+dd {
+  background: url(/includes/default/images/bullet.gif) no-repeat 0 0.85em;
+  font-size: 85%;
+  list-style-type: none;
+  padding: 0.1em 0 0.1em 15px;
+  margin: 0 0 0 1em;
+}
+dfn {
+  border-bottom: 1px dashed #999;
+  cursor: help;
+}
+div.highlight {
+  border: 1px solid #d9e0bf;
+  background-color: #f6f8ee;
+  margin: 0.75em 0.5em 0.5em 0;
+  padding: 0 0.5em 1em 0.5em;
+}
+dl {
+  margin: 0.5em 6em 0.5em 0;
+}
+dt {
+  font-size: 85%;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 0.1em 0 0.1em 0;
+  margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  background-color: inherit;
+  font-family: Arial, Geneva, sans-serif;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 1em 0.4em 0 0;
+}  
+h1 {
+  color: #333;
+   font-size: 2.1em;
+  font-weight:500;
+  padding: 0.5em 0.4em 0 0;
+}
+h2 {
+  color: #369;
+  font-size: 1.8em;
+font-weight:normal;
+  padding: 0.5em 0.4em 0 0;
+}
+h3 {
+  color: #333;
+  font-size: 1.5em;
+    font-weight:560;
+}
+h4 {
+  color: #333;
+  font-size: 105%;
+}
+h5 {
+  color: #369; 
+  font-size: 100%;
+} 
+h6 {
+  color: #333; 
+  font-size: 90%;
+} 
+hr {
+  border: 1px solid #ccc;
+  clear: both;
+}
+img {
+  border: 0;
+}
+input {
+  font-size: 100%;
+}
+input.submit {
+  background: #eee url(/includes/default/images/bg-input-submit.gif) repeat-x 0 0;
+  border-left-color: #ccc; 
+  border-top-color: #ccc; 
+  border: 3px double #b4b4b4; 
+  color: #333; 
+  font-weight: bold; 
+  padding: 0.25em; 
+  width: auto; 
+} 
+input.submit:active {
+  background-color: #fff;
+  border: 3px double #d8d8d8;
+  border-top-color: #8a8a8a;
+  border-left-color: #8a8a8a;
+} 
+input.clear {
+  background: transparent url(/includes/default/images/bg-input-clear.gif) repeat-x 0 0;
+  color: #666;
+}
+p {
+  font-size: 85%;
+  line-height: 1.5em;
+  padding: 1em 0.4em 0 0;
+}
+pre {
+  clear: both;
+  font-size: 85%;
+  margin: 1em 0 1em 1em;
+}
+span.data {
+  background: url(/includes/default/images/ico-data.gif) 100% 65% no-repeat;
+  padding-right: 10px;
+  font-size: 90%;
+  text-decoration: none;
+}
+span.external {
+  background: url(/includes/default/images/ico-external.gif) 100% 65% no-repeat;
+  padding-right: 10px;
+  font-size: 90%;
+  text-decoration: none;
+}
+span.popup {
+  background: url(/includes/default/images/ico-popup.gif) 100% 65% no-repeat;
+  padding-right: 10px;
+  font-size: 90%;
+  text-decoration: none;
+}
+span.new {
+  background: url(/includes/default/images/ico-new.gif) 100% 65% no-repeat;
+  padding-right: 17px;
+  font-size: 90%;
+  text-decoration: none;
+}
+span.lock {
+  background: url(/includes/default/images/ico-lock.gif) 4px 2px no-repeat;
+  padding-right: 10px;
+  font-size: 90%;
+  text-decoration: none;
+}
+span.rtf {
+  background: url(/includes/default/images/ico-rtf.gif) 50% 50% no-repeat;
+  padding: 0 10px 0.1em 0;
+  margin: 0 5px 0 2px;
+}
+span.zip {
+  background: url(/includes/default/images/ico-zip.gif) 50% 50% no-repeat;
+  padding: 0 10px 0.1em 0;
+  margin: 0 5px 0 2px;
+}
+span.word {
+  background: url(/includes/default/images/ico-word.gif) 50% 50% no-repeat;
+  padding: 0 10px 0.1em 0;
+  margin: 0 5px 0 2px;
+}
+span.arrow {
+  background: url(/includes/default/images/ico-next.gif) 50% 50% no-repeat;
+  padding: 0 10px 0.1em 0;
+  margin: 0 5px 0 2px;
+}
+td span.word {
+  background: url(/includes/default/images/ico-word.gif) 50% 50% no-repeat;
+  padding: 0 12px 0.1em 0;
+  margin: 0 5px 0 2px;
+  line-height:19px;
+}
+td span.pdf {
+  background: url(/includes/default/images/ico-pdf.gif) 50% 50% no-repeat;
+  padding: 10px 12px 0.1em 0!important;
+  margin: 0 5px 0 2px!important;
+  line-height:19px;
+}
+span.xls {
+  background: url(/includes/default/images/ico-xls.gif) 50% 50% no-repeat;
+  padding: 0 10px 0.1em 0;
+  margin: 0 5px 0 2px;
+}
+
+/* pdf and word icons in tables such as heritage notice db output - added by RL 24/7/09 */
+td span.word {
+  background: url(/includes/default/images/ico-word.gif) 50% 50% no-repeat;
+  padding: 0 12px 0.1em 0;
+  margin: 0 5px 0 2px;
+  line-height:19px;
+}
+td span.pdf {
+  background: url(/includes/default/images/ico-pdf.gif) 50% 50% no-repeat;
+  padding: 10px 12px 0.1em 0!important;
+  margin: 0 5px 0 2px!important;
+  line-height:19px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 0;
+  font-size: 85%;
+  width: 99%;
+  padding: 0;
+  margin: 1em 0 1em 0;
+}
+table caption {
+  background-color: #f0f3e4;
+  font-weight: bold;
+  padding: 0.25em;
+  margin: 1em 0 0 0;
+  text-align: left;
+}
+table.tableleft td,
+table.tableleft th {
+  text-align: left;
+}
+table.tableright td,
+table.tableright th {
+  text-align: right;
+}
+th {
+  background-color: #4980b8;
+  border-bottom: 1px solid #6289b1;
+  color: white;
+  font-weight: bold;
+  padding: 0.25em;
+  text-align: left;
+  vertical-align: top;
+}
+th.subhead {
+  background-color: #6ea2d7;
+  border-top: 1px solid #eff3f7;
+  color: white;
+  padding: 0.1em 0.25em;
+}
+td {
+  background-color: #eff3f7;
+  border-bottom: 1px solid #c0d0df;
+  padding: 0.25em;
+  text-align: left;
+  vertical-align: top;
+}
+td.left, 
+th.left {
+  text-align: left !important;
+}
+td.right,
+th.right {
+  text-align: right !important;
+}
+td.center,
+th.center {
+  text-align: center !important;
+}
+td.middle,
+th.middle {
+  vertical-align: middle;
+}
+td p {
+  font-size: 100%;
+  padding: 0 0 0.5em 0;
+}
+th sup a:link {
+  background-color: inherit;
+  color: white;
+}
+th sup a:visited {
+  background-color: inherit;
+  color: white;
+}
+
+/* Contact us form
+--------------------------------------------------------- */
+form.contact-form fieldset {
+  background: #f0f3e4 url(/includes/default/images/bg-fieldset.gif) repeat-x 0 0;
+  border: 1px solid #aca899;
+  margin: 1em 1em 1em 0;
+  padding: 0 0.5em 1em 0.5em;
+}
+form.contact-form fieldset.submit {
+  background: #f0f3e4 url(/includes/default/images/bg-fieldset-submit.gif) repeat-x 0 0;
+  border: 1px solid #aca899;
+  margin: 1em 1em 1em 0;
+  padding: 0 0.5em 1em 0.5em;
+}
+form.contact-form legend {
+  background-color: white;
+  border-left: 1px solid #aca899;
+  border-right: 1px solid #aca899;
+  border-top: 1px solid #aca899;
+  font-weight: bold;
+  padding: 2px 1em 2px 1em;
+}
+form.contact-form p {
+  font-size: 90%;
+}
+form.contact-form label {
+  font-size: 100%;
+}
+form.contact-form input,
+form.contact-form textarea {
+  font-size: 100%;
+  font-family: Arial, Verdana, Geneva, sans-serif;
+}
+form.contact-form input.submit {
+  margin: 1em 0 0 0;
+}
+form.contact-form input.aligned {
+  position: absolute; 
+  left: 340px;
+}
+form.contact-form select.aligned {
+  position: absolute; 
+  left: 340px;
+}
+form.contact-form input.aligned-efe {
+	position: absolute;
+	left: 400px;
+	}
+form.contact-form p {
+  font-size: 85%;
+}
+
+
+/* -----------------------------------------------------------------------------------------
+  ID SELECTOR RULES
+  --------------------------------------------------------------------------------------- */
+  
+#breadcrumb {
+  color: #515124;
+  font-size: 85%;
+  margin: 0 0 1em 0;
+}
+#breadcrumb a,
+#breadcrumb a:link,
+#breadcrumb a:visited {
+  background-color: transparent;
+  color: #515124;
+}
+#breadcrumb a:hover {
+  background-color: inherit;
+  color: black;
+}
+#breadcrumb p {
+  padding: 0;
+  margin: 0;
+}
+
+/* Controls citation and cover image for publications
+--------------------------------------------------------- */
+#citation {
+  border-bottom: 1px solid #c8c8c8;
+}
+#citation h1 {
+  margin: 0 0 -0.25em 0;
+  padding: 0;
+}
+#citation p {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+#citation strong {
+  font-style: normal;
+}
+#publication #sidepanel img {
+  border: 1px solid #999;
+  padding: 1px 14px;
+}
+#sidepanel img.wide-cover {
+  padding: 0 !important;
+}
+#publication #sidepanel p img {
+  border: 0;
+  padding: 0;
+}
+
+/* Footer
+--------------------------------------------------------- */
+#footer {
+  border-top: 1px solid #ccc;
+  clear: both;
+  font-size: 90%;
+  margin: 2em 0;
+  padding-top: 0.5em;
+  text-align: center;
+}
+#footer div a {
+  color: #555;
+}
+#footer div a:hover {
+  color: black;
+}
+#footer p {
+  line-height: 1.3em;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+#footer #address {
+  border-right: 1px solid #ccc; 
+  color: #555; 
+  float: left; 
+  padding-right: 2%;
+  text-align: right; 
+  width: 48%; 
+}
+#footer #links {
+  color: #555; 
+  float: right;
+  text-align: left; 
+  width: 48%;
+}
+
+/* Controls standard nav and search form
+--------------------------------------------------------- */
+#global {
+  background: #7196c8 url(/includes/default/images/bg-global.gif) repeat-x 180px 2px;
+  font-size: 90%;
+  height: 25px;
+  padding: 0 0 0.5em 0.5em;
+  position: relative;
+}
+#global a,
+#global a:link,
+#global a:visited {
+  background-color: transparent;
+  color: #336;
+  text-decoration: none;
+}
+#global a:hover {
+  background-color: transparent;
+  color: black;
+  text-decoration: underline !important;
+}
+#global p {
+  position: absolute; 
+  right: 0; 
+  top: 1px;
+}
+#global ul {
+  float: left;
+  position: absolute; 
+  left: 180px; 
+  top: 1px;
+}
+#global li {
+  background: #7196c8 url(/includes/default/images/bg-button.gif) no-repeat 0 50%;
+  color: #182d48;
+  float: left;
+  height: 21px;
+  list-style-type: none;
+  margin: 0 3px 0 0;
+  text-align: center;
+  width: 105px;
+}
+#global form p {
+  height: 30px;
+  padding: 0 0.5em 0 0.5em;
+}
+#global .search-label {
+  position: absolute;
+  left: -2000px;
+}
+
+/* Controls accessibility links and title headings
+--------------------------------------------------------- */
+#header {
+  background: #7196c8 url(/includes/default/images/bg-header.gif) repeat-x 0 0;
+  font: normal 85% arial, helvetica, sans-serif;
+  height: 100px;
+  width: 100%;
+}
+#header img {
+  padding-left: 12px;
+  padding-top: 4px;
+}
+#header ul a,
+#header ul a:visited {
+  color: black; 
+  display: block; 
+  font-weight: normal; 
+  margin: 0; 
+  padding: 1px 10px 4px 6px;
+  text-decoration: none;
+}
+#header ul a:hover {
+  text-decoration: underline;
+}
+#header ul {
+  list-style-type: none;
+  height: 21px;
+}
+#header ul li {
+  float: right; 
+  margin: 0; 
+  padding: 1px 0 0 0;
+}
+#header ul {
+  list-style-type: none;
+  height: 21px;
+}
+#header ul li {
+  background: transparent url(/includes/default/images/bg-access-repeat.gif) repeat-x 0 0; 
+  float: right; 
+  margin: 0; 
+  padding: 1px 0 0 0;
+}
+#header ul li.left-link {
+  background: transparent url(/includes/default/images/bg-access-left.gif) no-repeat 0 0;
+  padding-left: 10px;
+}  
+#header span {
+  color: #333; 
+  display: block; 
+  font-weight: normal; 
+  margin: 0; 
+  padding: 1px 15px 3px 15px;
+  text-decoration: none;
+}
+
+#title {
+  background: transparent url(/includes/default/images/bg-feature.gif) no-repeat right 0;
+  position: absolute;
+  top: 30px;
+  height: 70px;
+  right: 10px;
+  width: 700px;
+}  
+#title h1 {
+  background: transparent;
+  color: white;
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.4em;
+  text-align: right;
+  padding-top: 5px;
+  margin-right: 145px;
+}
+#title.single-line h1 {
+  padding-top: 15px;
+}
+#title h2 {
+  background: transparent;
+  color: #f0f3e4;
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 120%;
+  font-weight: bold;
+  line-height: 1.4em;
+  padding-left: 200px;
+  padding-top: 0;
+  text-align: right;
+  margin-right: 145px;
+}
+
+/* Descendant selector rules for main content area
+--------------------------------------------------------- */
+#maincontent {
+  height: 100%;
+  margin: 0 0 0 180px; /* resolution layout change */
+  padding: 0;
+  padding: 0 20px 0 0;
+  padding-bottom: 2em;
+  /*overflow: auto;*/
+  /* removed right-margin 204, added overflow hidden to fix moz whitespace bug */
+}
+#maincontent ol {
+  padding: 0.5em 0 0 3em;
+}
+#maincontent ol li {
+  font-size: 85%;
+  line-height: 1.5em;
+  padding: 0 0 0.5em 0;
+}
+#maincontent ol ol {
+  padding: 0.5em 0 0 2em;
+}
+#maincontent ol ol li {
+  font-size: 100%;
+  padding: 0.2em 0 0.2em 0;
+}
+#maincontent ol ul {
+  padding: 0.5em 0 0 0.5em;
+}
+#maincontent ol ul li {
+  background: url(/includes/default/images/bullet.gif) no-repeat 0 0.9em; 
+  font-size: 100%;
+  padding: 0.2em 0 0.2em 15px;
+}
+#maincontent ol.lower-alpha li {
+  list-style-type: lower-alpha;
+}
+#maincontent ol.lower-roman li {
+  list-style-type: lower-roman;
+}
+
+#maincontent ul {
+  list-style-type: none;
+  padding: 0.5em 0 0 1em;
+}
+
+#maincontent ul li {
+  background: url(/includes/default/images/bullet.gif) no-repeat 0 0.6em; 
+  font-size: 85%;
+  line-height: 1.5em;
+  padding: 0 0 0.5em 15px;
+}
+#maincontent ul.blank li{
+	list-style-type: none;
+	background: none;
+	}
+#maincontent ul ol {
+  padding: 0.5em 0 0 3em;
+}
+#maincontent ul ol li {
+  background: none; 
+  font-size: 100%;
+  padding: 0.2em 0 0.2em 0;
+}
+#maincontent ul ul {
+  padding: 0.5em 0 0 1.5em;
+}
+#maincontent ul ul li {
+  background: url(/includes/default/images/bullet.gif) no-repeat 0 0.8em; 
+  font-size: 100%;
+  padding: 0.2em 0 0.2em 15px;
+}
+#maincontent ul.horizontal {
+  padding: 1em 0 0 0;
+  margin: 0;
+  list-style-type: none;
+  float: left;
+  width: 100%;
+}
+#maincontent ul.horizontal li { 
+  background: none;
+  display: inline;
+  float: left;
+  padding: 0 0.75em;
+}
+.order {background:#fdf6ca;border:1px solid #fc6}
+
+/* Graphical 'download' LI icons
+--------------------------------------------------------- */
+ul.pdf {
+  background-image: none !important;
+  margin: 0 0 0 2em !important;
+}
+ul.pdf li {
+  background: url(/includes/default/images/ico-pdf.gif) no-repeat 0 0.4em !important; 
+  list-style-type: none !important;
+  line-height: 19px !important;
+  padding: 0.2em 0 0.2em 22px !important;
+  margin: 0 10px 0 -40px !important;
+}
+ul.pdf li.none {
+  background: url(/includes/default/images/bullet.gif) no-repeat 6px 0.9em !important;
+}
+ul.pdf li.audio {
+  background: url(/includes/default/images/ico-audio.gif) no-repeat 1px 0.5em !important; 
+}
+ul.pdf li.video {
+  background: url(/includes/default/images/ico-video.gif) no-repeat 1px 0.5em !important; 
+}
+ul.pdf li.ppt {
+  background: url(/includes/default/images/ico-ppt.gif) no-repeat 1px 0.5em !important; 
+}
+ul.pdf li.word {
+  background: url(/includes/default/images/ico-word.gif) no-repeat 1px 0.5em !important; 
+}
+ul.pdf li.xls {
+  background: url(/includes/default/images/ico-xls.gif) no-repeat 1px 0.5em !important; 
+}
+ul.pdf li.zip {
+  background: url(/includes/default/images/ico-zip.gif) no-repeat 1px 0.5em !important; 
+}
+
+/* Graphical 'general' LI icons
+--------------------------------------------------------- */
+.input-box {
+  background: url(/includes/default/images/ico-input.gif) no-repeat 1px 0.5em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+.img {
+  background: url(/includes/default/images/ico-img.gif) no-repeat 1px 0.75em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.news {
+  background: url(/includes/default/images/ico-news.gif) no-repeat 1px 0.5em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+.rss {
+  background: url(/includes/default/images/ico-rss.gif) no-repeat 1px 0.5em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+.twitter {
+  background: url(/includes/default/images/ico-twitter.gif) no-repeat 1px 0.5em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 35px !important;
+}
+.youtube {
+  background: url(/includes/default/images/ico-youtube.gif) no-repeat 1px 0.5em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 35px !important;
+}
+.audio {
+  background: transparent url(/includes/default/images/ico-audio.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.arrow {
+  background: url(/includes/default/images/ico-next.gif) no-repeat 1px 0.5em !important; 
+}
+li.book {
+  background: transparent url(/includes/default/images/book_open.png) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.email {
+  background: url(/includes/default/images/ico-email.gif) no-repeat 0 0.4em !important; 
+  list-style-type: none;
+  line-height: 25px !important;
+  padding: 0.2em 0 0.2em 30px !important;
+  margin: 0 10px 0 0px !important;
+}
+li.exclam {
+  background: url(/includes/default/images/exclamation.gif) no-repeat 1px 0.5em !important; 
+  padding: 5px 0 5px 25px !important;
+}
+li.checkbox {
+  background: url(/includes/default/images/ico-check.gif) no-repeat 1px 0.5em !important; 
+  padding: 5px 0 5px 25px !important;
+}
+.interactive {
+  background: transparent url(/includes/default/images/ico-interactive.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+.pdf {
+  background: url(/includes/default/images/ico-pdf.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+.video {
+  background: url(/includes/default/images/ico-video.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.ppt {
+  background: url(/includes/default/images/ico-ppt.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.question {
+  background: url(/includes/default/images/ico-question.gif) no-repeat 1px 0.5em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.rtf {
+  background: transparent url(/includes/default/images/ico-rtf.gif) no-repeat 3px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.word {
+  background: transparent url(/includes/default/images/ico-word.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.insulation {
+  background: transparent url(/energyefficiency/images/button-insulation.jpg) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 25px 25px 35px 100px !important;
+}
+li.solar {
+  background: transparent url(/energyefficiency/images/button-solar.jpg) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 25px 25px 35px 100px !important;
+}
+.none {
+  background: transparent url(/includes/default/images/bullet.gif) no-repeat 9px 1em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.xls {
+  background: url(/includes/default/images/ico-xls.gif) no-repeat 1px 0.5em !important; 
+  padding: 5px 0 5px 25px !important;
+}
+li.zip {
+  background: transparent url(/includes/default/images/ico-zip.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+.xml {
+  background: transparent url(/includes/default/images/ico-xml.gif) no-repeat 1px 0.8em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+.xsl {
+  background: transparent url(/includes/default/images/ico-xsl.gif) no-repeat 1px 0.8em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+.xsd {
+  background: transparent url(/includes/default/images/ico-xsd.gif) no-repeat 1px 0.8em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+li.access {
+  background: url(/includes/default/images/ico-access.png) no-repeat 0 0.5em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+  color:#666;
+}
+.tick {
+  background: url(/includes/default/images/ico-tick.gif) no-repeat 0 0.5em !important; 
+  list-style-type: none !important;
+  padding: 0 0 0.5em 15px !important;
+  margin: 0 !important;
+}
+
+
+#maincontent td ul,
+#maincontent td ol {
+ padding-top: 0.1em;
+}
+#maincontent td li {
+  font-size: 100%;
+}
+#maincontent .download {
+  color: #333;
+  font-size: 110%;
+  padding-top: 1em;
+}
+#maincontent .floatright {
+	display: block;
+	float: right;
+	padding-top: 5px;
+	padding-left: 15px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+	Margin-top: 15px; 
+	Margin-right: 5px;
+	margin-bottom: 15px;
+	margin-left: 5px;
+	}
+#maincontent .floatleft {
+  float: left;
+  padding-right: 5px;
+}
+#maincontent ul.pagination {
+  clear: both;
+  margin: 0 10px 30px 0;
+}
+#maincontent ul.pagination li.next {
+  background: url(/includes/default/images/ico-next.gif) no-repeat 50px 8px; 
+  float: right;
+  list-style-type: none;
+  padding: 0.2em 18px 0.2em 1.5em;
+}
+#maincontent ul.pagination li.contents {
+  background: url(/includes/default/images/ico-up.gif) no-repeat 0 8px;
+  float: right;
+  list-style-type: none;
+  padding: 0.2em 0 0.2em 1.5em;
+}
+#maincontent ul.pagination li.previous {
+  float: right;
+  background: url(/includes/default/images/ico-previous.gif) no-repeat 0 8px; 
+  list-style-type: none;
+  padding: 0.2em 10px 0.2em 1.5em;
+}
+#maincontent p.top {
+  text-align:right;
+  border-bottom:1px solid #ddd;
+  padding: 0.2em 10px 0.2em 1.5em;
+}
+
+
+/* Figures, photos, footnotes and source
+--------------------------------------------------------- */
+#maincontent .photo {
+  background-color: #e5ead1;
+  color: black;
+  font-weight: normal;
+  font-size: 90%;
+  text-align: left;
+  padding: 3px;
+  margin: 0.75em 0.5em 0.5em 0;
+}
+#maincontent .photo p {
+  margin: 0;
+  padding: 0;
+}
+#maincontent .figure p {
+  clear: both;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+#maincontent .figure p.source,
+#maincontent .figure p.footnote,
+#maincontent .figure p.normal {
+  font-weight: normal;
+}
+#maincontent div.source,
+#maincontent div.footnote {
+  font-size: 100%;
+}
+#maincontent p.footnote {
+  font-size: 0.9em;
+  
+}
+
+/* Left navigation
+
+Requires 4 colour variations of a chosen hue:
+1 darkest (hover on flyouts, same as bg-nav right border)
+1 darker (border-bottom colour for 3D effect)
+1 medium (for level 1 and 2 backgrounds - ensure sufficient text contrast)
+1 light  (for level 3 to 7 backgrounds - slightly lighter than medium)
+
+--------------------------------------------------------- */
+#navigation {
+  font: 90%/1.4em Arial, Geneva, sans-serif;
+  left: 0;
+  position: absolute;
+  top: 101px;
+  width: 169px;
+}
+
+/* Generic list behaviour
+--------------------------------------------------------- */
+#navigation ul {
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html #navigation ul li { /* needed for ie */
+  display: inline;
+}
+#navigation ul li a,
+#navigation ul li a:link,
+#navigation ul li a:visited {
+  background-color: #e9eff5;
+  color: #336;
+  text-decoration: none;
+}
+#navigation ul li a:hover {
+  text-decoration: underline;
+  
+}
+#navigation ul li.selected a {
+  background-color: white !important;
+  border-top: 1px solid #ddd !important;
+  color: black !important;
+}
+#navigation ul li.selected li a {
+  background-color: #e9eff5 !important;
+  border-top: 1px solid white !important;
+  color: #336 !important;
+}
+
+/* Controls left nav lists
+--------------------------------------------------------- */
+#navigation li.level1 a,
+#navigation li.level1 a:link,
+#navigation li.level1 a:visited {
+  background: transparent url(/includes/default/images/bg-nav-heading.gif) no-repeat 0 0;
+  border-top: 0;
+  color: white;
+  display: block;
+  padding: 0.75em 0 0.75em 7px;
+  text-decoration: none;
+  width: 163px;
+}
+#navigation li.level1 a:hover {
+  background-color: inherit;
+  color: white;
+  text-decoration: underline;
+}
+#navigation li.level1 li a,
+#navigation li.level1 li a:link,
+#navigation li.level1 li a:visited {
+  color: #336;
+}
+#navigation li.level1 li a:hover {
+  background-color: inherit;
+  color: black;
+}
+#navigation li.level2 a,
+#navigation li.level2 a:link,
+#navigation li.level2 a:visited {
+  background-color: #d7e2ed;
+  background-image: none;
+  border-bottom: 1px solid #a7bdc8;
+  border-top: 1px solid white;
+  display: block;
+  padding: 0.6em 0 0.6em 13px;
+  width: 156px;
+}
+#navigation li.level3 a,
+#navigation li.level3 a:link,
+#navigation li.level3 a:visited {
+  border-bottom: 1px solid #a7bdc8;
+  border-top: 1px solid white;
+  display: block;
+  padding: 0.6em 0 0.6em 20px;
+  width: 149px;
+}
+#navigation li.level4 a,
+#navigation li.level4 a:link,
+#navigation li.level4 a:visited {
+  background-color: #e9eff5;
+  border-bottom: 1px solid #a7bdc8;
+  border-top: 1px solid white;
+  display: block;
+  font-size: 95%;
+  padding: 0.5em 0 0.5em 28px;
+  width: 141px;
+}
+#navigation li.level5 a,
+#navigation li.level5 a:link,
+#navigation li.level5 a:visited {
+  background-color: #e9eff5;
+  border-bottom: 1px solid #a7bdc8;
+  border-top: 1px solid white;
+  display: block;
+  font-size: 95%;
+  padding: 0.35em 0 0.35em 35px;
+  text-decoration: none;
+  width: 134px;
+}
+#navigation li.level5 a:hover {
+  text-decoration: underline;
+}
+#navigation li.level6 a,
+#navigation li.level6 a:link,
+#navigation li.level6 a:visited {
+  background-color: #e9eff5;
+  border-bottom: 1px solid #a7bdc8;
+  border-top: 1px solid white;
+  display: block;
+  font-size: 95%;
+  padding: 0.35em 0 0.35em 42px;
+  text-decoration: none;
+  width: 127px;
+}
+#navigation li.level6 a:hover {
+  text-decoration: underline;
+}
+#navigation li.level7 a,
+#navigation li.level7 a:link,
+#navigation li.level7 a:visited {
+  background-color: #e9eff5;
+  border-bottom: 1px solid #a7bdc8;
+  border-top: 1px solid white;
+  font-size: 95%;
+  display: block;
+  padding: 0.35em 0 0.35em 49px;
+  text-decoration: none;
+  width: 120px;
+}
+#navigation li.level7 a:hover {
+  text-decoration: underline;
+}
+
+/* Flyout lists
+--------------------------------------------------------- */
+#navigation ul.nav-items {
+  background-color: #e9eff5;
+  border-bottom: 1px solid #1b4e81;
+  border-right: 1px solid #1b4e81;
+  border-top: 1px solid #1b4e81;
+  display: none;
+  left: 0;
+  list-style-type: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 190px !important;
+  z-index: 1;
+} 
+#navigation ul.nav-items li a {
+  background-image: none !important; 
+  color: #336 !important;
+  display: block;
+  font-size: 95%;
+  padding: 0.3em 0.25em 0.3em 0.3em !important;
+  width: 188px !important;
+  text-decoration: none !important;
+}
+#navigation ul.nav-items a:hover {
+  background-color: #1b4e81 !important;
+  background-image: none; 
+  color: white !important;
+  display: block;
+  text-decoration: none;
+}
+
+
+/* Controls layout of boxed content on home pages
+--------------------------------------------------------- */
+
+ /* Wraps all boxes */
+.featurebox-container {
+  clear: both;
+  width: 100%;
+}
+ /* Wraps left column */
+.featurebox-left {
+  float: left;
+  width: 50%;
+}
+ /* Wraps right column */
+.featurebox-right {
+  margin-left: 50%;
+}
+ /* Wraps individual box */
+.featurebox {
+  background:  url(/includes/default/images/bg-featurebox.gif) no-repeat 0 0;
+  margin-bottom: 10px;
+  margin-right: 12px;
+}
+.featurebox h4 {
+  padding: 10px 0 0 10px;
+  margin: 0;
+}
+ /* Wraps featurebox heading */
+.featurebox-heading {
+  border-right: 1px solid #4980b8;
+  margin: 0;
+}
+.featurebox-heading h3 {
+  font-size: 100%;
+  padding: 6px 0 6px 55px;
+}
+.featurebox-heading img {
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+ /* Wraps featurebox body */
+.featurebox-body {
+  background-color: #f0f3e4;
+  border-bottom: 1px solid #4980b8;
+  border-left: 1px solid #4980b8;
+  border-right: 1px solid #4980b8;
+  margin: 0;
+  padding: 14px 0 0 0;
+}
+.featurebox-body p {
+  padding: 5px 7px 10px 15px;
+}
+
+
+/* General class rules
+--------------------------------------------------------- */
+.clear {
+  clear: both;
+}
+.important {
+  font-weight: bold;
+  color: red;
+}
+.indent {
+  padding-left: 1.5em;
+}
+.noscript {
+  background-color: #f0f3e4;
+  border: 1px solid #224f22;
+  margin-right: 185px;
+  padding: 0.75em 1em 0.75em 0;
+}
+.source, 
+.footnote {
+  font-size: 85%;
+  padding: 0.1em 0.4em 0 0;
+}
+.source {
+  font-style: italic;
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Controls blocks of links to related pages or anchors
+--------------------------------------------------------- */
+#pagenav, 
+#sectionnav {
+  background: transparent url(/includes/default/images/bg-pagenav.gif) no-repeat 0 9px;
+  padding: 0 0.25em 1px 18px;
+  margin: 0.5em 0.5em 1em 0;
+}
+#pagenav h2, 
+#sectionnav h2 {
+  color: #369;
+  font-size: 100%;
+  padding: 0.5em 0 0.5em 4px;
+  margin: 0;
+}
+#pagenav ul, 
+#sectionnav ul {
+  padding: 0;
+  margin: 0 0 0 0.25em;
+}
+#pagenav ul li {
+  background: url(/includes/default/images/ico-down.gif) no-repeat 0 6px; 
+  list-style-type: none;
+  padding: 0.2em 0 0.2em 1.5em;
+}
+#sectionnav li.top {
+  background: url(/includes/default/images/ico-up.gif) no-repeat 0 6px; 
+  font-weight: bold;
+}
+#sectionnav ul ul {
+  padding: 0;
+}
+#sectionnav ul ul li {
+  padding: 0.1em 0 0.1em 1em;
+}
+#sectionnav ul li {
+  background: url(/includes/default/images/ico-next.gif) no-repeat 0 6px; 
+  list-style-type: none;
+  padding: 0.2em 0 0.2em 1.5em;
+}
+
+
+/* Right nav
+--------------------------------------------------------- */
+#sidepanel {
+  clear: both;
+  font-size:.9em; /* changed from - font:90%/1.4em Arial,Geneva,sans-serif; - 8/12/08 */
+  margin: 0.5em 0 0 0;
+  right: 0;
+  width: 100%; /* resolution layout change */
+}
+#sidepanel div.sidebox {
+  background-color: #f0f3e4;
+  border-left: 1px solid #4980b8;
+  border-right: 1px solid #4980b8;
+  border-bottom: 1px solid #4980b8;
+  margin: 0 10px 0.5em 0;
+  padding: 0 0.5em 0.5em 0.5em;
+  width: auto; /* resolution layout change */
+}
+#sidepanel h2.sidebox {
+  background: #4980b8 url(/includes/default/images/bg-panel-heading.gif) no-repeat right 0; 
+  color: white;
+  font-size: 110%;
+  line-height: 1.2em;
+  font-weight: bold;
+  padding: 0.5em;
+  margin: 0.5em 10px 0 0;
+  width: auto; /* resolution layout change */
+}
+#sidepanel div.usability {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 0.5em 10px 0.5em 0;
+  padding: 0 0.5em 0.5em 0.5em;
+  width: auto; /* resolution layout change */
+}
+#sidepanel h2.usability {
+  background-image: none; 
+  border-bottom:1px solid #333;
+  color: #333;
+  font-size: 110%;
+  line-height: 1.2em;
+  font-weight: bold;
+  padding: 0.5em;
+  margin: 0.5em 10px 0 0;
+  width: auto; /* resolution layout change */
+}
+#sidepanel h3 {
+  color: #333;
+  font-size: 100%;
+  margin: 0;
+  padding: 0.75em 0 0.25em 0;
+}
+#sidepanel img {
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  float: left; 
+  background-color: #f0f3e4; 
+  margin-right: 10px;
+}
+#sidepanel p {
+  color: #333;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  padding: 1em 0 0.5em 0;
+}
+#sidepanel p a:link,
+#sidepanel p a:visited,
+#sidepanel p a:hover {
+  font-size: 100%;
+}
+#sidepanel ul {
+  margin: 0 0 0.5em 0;
+  padding-top: 0.5em;
+}
+#sidepanel li {
+  list-style-type: none;
+  background: url(/includes/default/images/bullet.gif) no-repeat 0 0.7em; 
+  border: none;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0.1em 0 0.1em 1em 15px;
+}
+#sidepanel ul li ul {
+  padding: 0.1em 0 0.1em 0;
+}
+#sidepanel ul li ul li {
+  background: url(/includes/default/images/bullet.gif) no-repeat 0 0.8em; 
+  font-size: 100%;
+  padding: 0.1em 0 0.1em 1em;
+}
+#sidepanel .photo {
+  background-color: #e5ead1;
+  border: 1px solid #ccc;
+  color: black;
+  font-weight: normal;
+  font-size: 90%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 187px;
+}
+#sidepanel .photo img {
+  border: 0 !important;
+  padding: 0 !important;
+}
+#sidepanel .photo p {
+  margin: 0;
+  padding: 2px;
+}
+
+#sidepanel label {
+  border:none;
+}
+
+/* Mixed styles
+--------------------------------------------------------- */
+
+.hidden {
+  display: none;
+}
+.shown {
+  visibility: visible;
+}
+.u {
+  text-decoration: underline;
+}
+/* New style to hide text in links, etc March 2012. Existing hidden class also hides content from screen readers
+----------------------------------------------------------------------------------------------------------- */
+
+.hidden-text {position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;}
+
+
+/* TEMP LOCATION HERE - styles for feature boxes, map search
+--------------------------------------------------------- */
+#map-search {
+  background-color: #fafbf6;
+  border: 1px solid #c8c4a7;
+  float: right;
+  width: 315px;
+  text-align: center;
+  margin: 0 5px 0 5px;
+  padding-bottom: 5px;
+}
+#map-search h2 {
+  background-color: #efefe1;
+  font-size: 100%;
+  font-weight: bold;
+  padding: 0.25em 0.25em 0.5em 0.5em;
+  margin-bottom: 5px;
+}
+#map-search p {
+  padding: 0;
+  margin: 0;
+}
+.mouse-map {
+  position: relative;
+  width: 186px;
+  height: 145px;
+}
+
+/* Flash banner with revolving images
+--------------------------------------------------------- */
+#flash-banner-container {
+  /* if required, override id in page with inline css to control background image and colour */
+  overflow: hidden;
+  margin-left: 0;
+}
+/* Static banner
+--------------------------------------------------------- */
+#static-banner {
+  /* if required, override id in page with inline css to control background image and colour */
+  height: 166px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+/* Controls layout of boxed content on publications home pages
+--------------------------------------------------------- */
+ /* Wraps all boxes */
+.featureboxpubs-container {
+  clear: both;
+  background:#f2e9c6;
+  padding:0.6em;
+  margin:0.6em;
+  border:1px solid #000;
+}
+.featureboxpubs-container h2 { 
+font-size:1.0em;
+  padding: 0px;
+  margin: 0;
+}
+label
+{ font-size:95%;border:1px solid #fff}
+fieldset
+{ padding:4px;border:1px solid #fff}
+input.submit
+{ padding:2px;font-size:95%}
+ /* Wraps left column */
+.featureboxpubs-left {
+  float: left;
+  width: 47%;
+  height:7.0em;
+  min-width:150px;
+  background:#fff;
+  border:1px solid #069;
+  padding:4px 8px
+}
+ /* Wraps right column */
+.featureboxpubs-right {
+  margin-left: 50%;
+  background:#fff;
+  height:7.0em;
+  min-width:150px;
+  border:1px solid #000;
+  padding:4px 8px;
+}
+ /* New styles */
+h1 {font-size:2.1em;
+font-weight:500;
+}
+h2 {font-size:1.6em;
+font-weight:500;
+}
+h3 {font-size:1.3em;
+font-weight:520;
+}
+h4 {font-size:1.1em;
+font-weight:520;
+}
+h5 {font-size:1.0em;
+font-weight:520;
+}
+
+/* Wide footer
+----------------------------------------------------------------------------------------- */
+#footer2 p { color:#003;text-align:center;font-size:0.8em;line-height: 1.3em;margin-bottom: 0.1em;padding: 0;}
+#footer2 a { border:none;color:#003;text-align:center;font-size:0.9em;text-decoration:none}
+#footer2 a:hover { text-decoration:underline}
+#footer-wide .cols5 h2 {font-size:1.0em;color:#008;font-weight:bold}
+#footer-wide .cols5 h2 a {font-size:1.0em;color:#008}
+#footer-wide .cols6 h2 {font-size:1.0em;color:#008;font-weight:bold}
+#footer-wide .cols6 h2 a {font-size:1.0em;color:#008}
+#footer-wide a {text-decoration:none;color:#008;font-size:0.8em}
+#footer-wide a:hover {text-decoration:underline;color:#800;}
+#footer-wide ul {list-style-type: none;}
+#footer-wide ul li {background: url(/includes/default/images/bullet.gif) no-repeat 0 0.6em; 
+  font-size: 0.9em;padding: 0 0 0 15px;}
+#footerwide ul li {font-size: 0.9em;line-height: 1.5em;padding: 0 0 0.5em 15px;}
+.cols5 {float:left;margin-top:0px;width:18%;}
+.cols6 {float:left;margin-top:0px;width:14%;}
+#footer-wide p {font-size:0.9em}
+#footer-wide {background:#fff;border-top:3px solid #cdf;color:#008;margin-top:2px;
+overflow:hidden;padding:2px 0px;width:100%;height:32em;
+}

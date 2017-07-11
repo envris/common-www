@@ -1,0 +1,57 @@
+
+ /*  Styles for new funnelback template 
+ */
+body.search {background:white;background-image:none;}
+body.search #maincontent 
+{
+   margin: 0px 320px 0px 220px !important;
+}
+body.search h1 {font-size:1.8em;font-weight:400;padding-top:0.8em}
+body.search h2 {font-size:0.9em;font-weight:600;margin:0px}
+body.search h3 {font-size:1.3em;font-weight:500;margin:0px;color:#666}
+body.search #global ul {left: 1em;}
+
+.search_terms {color:#009}
+.search-meta-info {color:#500;}
+.search-field-label {color:#500;font-weight:580}
+
+#sidepanel h2 {
+  background-color: #fff;
+  background-image: none;
+  border-bottom:2px solid #008;
+  font-weight:normal;
+  font-size:1.5em;
+  color: #008;
+}
+#sidepanel h3 {
+  background-color: #fff;
+  background-image: none;
+  font-weight:normal;
+  font-size:1.1em;
+  color: #008;
+}
+
+ /*  Styles for Search Form at top of page */
+table#search_form {
+  border-collapse: collapse;
+  border: 0;
+  font-size: 0.9em;
+  padding: 0;
+  margin: 1em 0 1em 0;
+border-bottom:none;border-top:1px solid #ccc
+}
+table#search_form th {
+valign:top;background:transparent;color:#007;font-weight:bold;
+}
+table#search_form td {
+valign:top;background:transparent;color:#008
+}
+
+ /*  Styles for the Results table */
+ 
+table.resultstable { border-collapse: collapse;border: 0;font-size: 0.8em;padding: 0;margin: 1.5em 0 1em 0;
+border-bottom:none;border-top:1px solid #ccc}
+table.resultstable th {background:white;font-weight:bold;color:#008;width:20%}
+table.resultstable th.resource {background:#e9eff5;padding:0.3em}
+table.resultstable td {background:white;color:#006}
+table.resultstable td.resource {background:#e9eff5;padding:0.3em}

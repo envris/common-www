@@ -1,0 +1,525 @@
+/*-----------------------------------------------------------------------------------------|
+|  Styles to cascade from http://www.deh.gov.au/includes/default/css/default.css           |
+|-----------------------------------------------------------------------------------------*/
+body {
+  background-image: none;
+}
+h1 {
+  color: #1077ae;
+  padding-bottom: 0.5em;
+  padding-top: 0;
+}
+h1.main {
+  color: #999;
+  border-bottom:1px solid #000;
+  font-weight:540;
+  padding:0px;
+  font-size:1.6em
+}
+h2 {
+  color: #000;
+}
+h2.main {
+  color: #000;
+  font-size:1.4em;
+  font-weight:500;
+  padding-top:0;
+  padding-bottom:0.9em;
+  
+}
+h3 {
+  color: #157dae;
+}
+h4 {
+  color: #224469;
+}
+h5 {
+  color: #555; 
+}
+h3.news   {
+  font-size: 1.2em;
+  padding: 0.2em;
+  border-top:1px dotted #696;
+  border-bottom:1px dotted #696;
+  background:#f4f4f6;
+  font-weight:560;
+  margin-top:1.0em
+}
+p.heading {font-size:1.5em;padding:0;color:#157dae}
+table caption {
+  background-color: #1271ae;
+  color: white;
+}
+th {
+  background-color: #ca4d13;
+  border-bottom: 1px solid #ca4d13;
+  color: white;
+}
+th.subhead {
+  background-color: #1077AE;
+  border-bottom: 1px solid #1077AE;
+}
+td {
+  background-color: #fff;
+  border-bottom: 1px solid #999;
+}
+td.highlight {
+  background-color: #dae2ee;
+}
+div.highlight {
+background:#e8effc;
+border: 1px solid #9cc;}
+}
+div.highlightwhite {
+background:#fff;
+border: 3px solid #cdf;
+margin-top:1.0em;
+padding:0.2em 1.0em 0.5em 1.0em}
+}
+#news-item {
+  float: left;
+  margin-right: 0.75em;
+  margin-top: 0.5em;
+  border:none;
+}
+#global {
+  background: #ffca38 url(/includes/quality/images/bg-global.gif) repeat-x 180px 0;
+
+}
+#global a,
+#global a:link,
+#global a:visited {
+  background-color: transparent;
+  color: #252514;
+  text-decoration: none;
+}
+#global li {
+  background: transparent url(/includes/quality/images/bg-button.gif) no-repeat 0 50%;
+  
+}
+#header {
+  background: #d7b449 url(/includes/quality/images/bg-header.jpg) repeat-x 0 0;
+}
+#header img {
+  padding-left: 12px;
+  padding-top: 5px;
+}
+#header ul a,
+#header ul a:visited {
+  color: #fbf4de; color:#000
+}
+#header ul li {
+  background: transparent url(/includes/coasts/images/bg-access-repeat.gif) repeat-x 0 0;
+}
+#header ul li.left-link {
+  background: transparent url(/includes/coasts/images/bg-access-left.gif) no-repeat 0 0;
+}  
+
+/* Controls navigation for anchor links and related page links 
+----------------------------------------------------------------------------------------- */
+#pagenav, 
+#sectionnav {
+  background-image: none
+}
+#pagenav h2, #sectionnav h2 {
+  color: #800;
+  font-weight:bold
+}
+/* BEGIN LEFT NAVIGATION 
+----------------------------------------------------------------------------------------- */
+#navigation ul li a,
+#navigation ul li a:link,
+#navigation ul li a:visited {
+  background-color: #ebf4fa;
+  color: #5d482e;
+  text-decoration: none;
+}
+#navigation ul li a:hover {
+  text-decoration: underline;
+}
+#navigation ul li.selected a {
+  background-color: white !important;
+  border-top: 1px solid #ddd !important;
+  color: black !important;
+}
+#navigation ul li.selected li a {
+  background-color: #ffeaab !important;
+  background-color: #ebf4fa !important;
+  border-top: 1px solid white !important;
+  color: #5d482e !important;
+}
+/* Controls left nav lists
+--------------------------------------------------------- */
+#navigation li.level1 a,
+#navigation li.level1 a:link,
+#navigation li.level1 a:visited {
+  background: transparent url(/includes/quality/images/bg-nav-heading.gif) no-repeat 0 0;
+}
+#navigation li.level1 a:hover {
+  background-color: inherit;
+  color: white;
+  text-decoration: underline;
+}
+#navigation li.level1 li a,
+#navigation li.level1 li a:link,
+#navigation li.level1 li a:visited {
+  color: #336;
+  color: black;
+}
+#navigation li.level1 li a:hover {
+  background-color: inherit;
+  color: black;
+}
+#navigation li.level2 a,
+#navigation li.level2 a:link,
+#navigation li.level2 a:visited {
+  background-color: #ebf4fa;
+  background-image: none;
+  border-bottom: 1px solid #fff;
+}
+#navigation li.level3 a,
+#navigation li.level3 a:link,
+#navigation li.level3 a:visited {
+ background-color: #ebf4fa;
+  background-image: none;
+  border-bottom: 1px solid #9cc;
+}
+#navigation li.level4 a,
+#navigation li.level4 a:link,
+#navigation li.level4 a:visited {
+ background-color: #ebf4fa;
+ border-bottom: 1px solid #9cc;
+}
+#navigation li.level5 a,
+#navigation li.level5 a:link,
+#navigation li.level5 a:visited {
+  background-color: #ebf4fa;
+  border-bottom: 1px solid #9cc;
+}
+#navigation li.level5 a:hover {
+ text-decoration: underline;
+}
+#navigation li.level6 a,
+#navigation li.level6 a:link,
+#navigation li.level6 a:visited {
+  background-color: #ebf4fa;
+  border-bottom: 1px solid #9cc;
+}
+#navigation li.level6 a:hover {
+text-decoration: underline;
+}
+/* Flyout lists
+--------------------------------------------------------- */
+#navigation ul.nav-items {
+  background-color: #ebf4fa;
+  border-bottom: 1px solid #013d5f;
+  border-right: 1px solid #013d5f;
+  border-top: 1px solid #013d5f;
+} 
+#navigation ul.nav-items li a {
+  color: #5d482e !important;
+}
+#navigation ul.nav-items a:hover {
+  background-color: #003e5e !important;
+}
+/* Side navigation links down the right
+----------------------------------------------------------------------------------------- */
+#sidepanel div.sidebox {
+background-color:white !important;
+ border:none;  
+}
+#sidepanel h2 {
+background-image: url(/includes/quality/images/bg-panel-heading.jpg);
+color: white;
+font-size:1.2em;
+font-weight:bold;
+background-color:white;
+padding:0.4em;
+}
+#sidepanel h2.sidebox {
+  background-color: #fff;
+  background-image: none;
+  border-bottom:2px solid #8c420e;
+  font-weight:normal;
+  font-size:1.25em;
+  color: #933;
+  padding-bottom:.25em;
+}
+
+#sidepanel ul li {font-size:1.0em}
+
+.search {
+  background: transparent url(/erin/images/search.gif) no-repeat 1px 0.6em !important; 
+  list-style-type: none !important;
+  padding: 5px 0 5px 25px !important;
+}
+
+/* New styles
+----------------------------------------------------------------------------------------- */
+#maincontent {
+  margin: 0 0 0 210px;
+}
+body.wideright #sidepanel {
+  clear: both;
+  border-left: 1px solid #ddd;
+  font-size:.9em; /* changed from - font:90%/1.4em Arial,Geneva,sans-serif; - 8/12/08 */
+  margin: 0.5em 0 0 0;
+  right: 0;
+  width: 100%; /* resolution layout change */
+}
+body.wideright #sidepanel div.sidebox {
+  border:none;  
+  margin: 0 10px 0.5em 0;
+  padding: 0 0.5em 0.5em 1.3em;
+  width: auto; /* resolution layout change */
+}
+body.wideright #sidepanel h2 {
+  background-image: url(/includes/quality/images/bg-panel-heading.gif);
+   border:none;
+  color: black; 
+  font-size:1.2em;
+  padding-bottom:3px; 
+}
+body.wideright #sidepanel h2.sidebox {
+  background-color: #fff;
+  background-image: none;
+  border-bottom:2px solid #8c420e;
+  font-weight:normal;
+  font-size:1.25em;
+  color: #933;
+  padding-bottom:.25em;
+}
+body.wideright #sidepanel h2.newsandevents {
+  background: #fff url(/includes/default/images/bg-panel-heading-red.jpg);
+  color:#fff;
+}
+body.wideright #sidepanel h2.usability {
+  background: transparent;
+  background-image: none; 
+  border-bottom:1px solid #999; 
+  color: #555;
+  font-weight:bold
+}
+body.wideright #sidepanel h3 {
+  background-color: white;
+  color: #9a0838; 
+  font-size:1.1em;
+  font-weight:bold;
+  border-bottom:2px dotted #800;
+  padding-bottom:0px
+}
+
+#sidepanel div.side-news {
+padding:5px;
+clear:both;
+}
+
+#sidepanel div.side-news .news-pic {
+  float: left;
+  margin-right: 0.75em;
+  margin-top: 0.5em;
+  border:1px solid #CCCCCC;
+}
+#sidepanel div.side-news p {
+	overflow:hidden;
+}
+/* Images background colour
+----------------------------------------------------------------------------------------- */
+#maincontent .photo {background-color: #ebf4fa;}
+
+#title {
+  background: transparent;
+  width: 750px;
+  top: 25px;
+}  
+#title h1 {
+  color: white;
+  font-size: 170%;
+  padding: 4px 0 0 0;
+  margin-right: 150px;
+}
+#title h2 {
+  color: white;
+  font-size: 130%;
+  margin-right: 144px;
+}
+* Style for new header
+------------------------------------------------------- */
+#title {background-image:none;top:30px;}
+#title h1 {color:#fff;font-size: 1.5em;padding: 12px 0 0 0;margin-right: 30px;margin-bottom:0px;font-weight:normal;border:none;line-height:0.5em}
+#title label  {background:transparent;color:black;font-size:1.0em;padding:2px;border:none} 
+#title .searchbox {background:#f9eee4;color:black;font-size:1.2em;padding-top:0px;border-right:2px solid #999;border-bottom:2px solid #999}
+#title .button {background:#fc6;color:black;font-size:1.1em;padding:2px 4px}
+div#title form {padding-top:0px;float:right;}
+
+/* Wide footer
+----------------------------------------------------------------------------------------- */
+#footer2 p { border:none;color:#003;text-align:center;font-size:0.8em}
+#footer2 a { border:none;color:#003;text-align:center;font-size:0.9em;text-decoration:none}
+#footer2 a:hover { text-decoration:underline}
+#footer-wide {
+background:#fff;border-top:3px solid #cdf;clear:both;color:#008;overflow:hidden;padding:3px 0px;width:100%;height:32em;}
+#footer-wide p {font-size:0.9em}
+#footer-wide .cols5 h2 {font-size:1.0em;color:#008;}
+#footer-wide .cols5 h2 a {font-size:1.0em;color:#008;}
+#footer-wide .cols6 h2 {font-size:1.0em;color:#008;}
+#footer-wide .cols6 h2 a {font-size:1.0em;color:#008;}
+#footer-wide ul { list-style-type: none;}
+#footer-wide ul li {background: url(/includes/default/images/bullet.gif) no-repeat 0 0.6em; font-size: 0.9em;padding: 0 0 0 15px;}
+#footer-wide a {text-decoration:none;color:#008;font-size:0.8em}
+#footer-wide a:hover {text-decoration:underline;color:#800;}
+.cols5 {float:left;margin-top:0px;width:18%;}
+.cols6 {float:left;margin-top:0px;width:14%;}
+/* Tab colour
+----------------------------------------------------------------------------------------- */
+ul#tabnav a:hover {background-color: #cdf;text-decoration:underline;}
+
+/* Boxcontainer - used for all Box styles
+----------------------------------------------------------------------------------------- */
+div.boxcontainer {padding:0.5em;width:100%;clear:both;}
+div.boxcontainer h2 {color:#fff; background-image: none ;background:#014037;border:none;font-size:1.0em;font-weight:bold;padding:0.5em;}
+div.boxcontainer h2.red
+{color:#fff; background-image: none ;background:#800;}
+div.boxcontainer h3 {font-size:1.0em}
+
+/* Two columns without images
+----------------------------------------------------------------------------------------- */
+div.boxcontainer h2
+{
+color:#000; 
+background: url(/sustainability/includes/images/background1.gif) repeat-x ;
+border-top:1px solid #ccc;
+font-size:1.0em;
+font-weight:bold;
+padding:0.5em ;
+}
+div.boxcontainer h3 {font-size:1.1em}
+
+div.boxtwocols {
+float:left;
+border:1px solid #fff;
+width:48.0%;
+padding-right:6px
+}
+div.boxtwocols h2 a {
+text-decoration:none;
+color:#088
+}
+div.boxtwocols h2 a:hover {
+text-decoration:underline;
+color:#800
+}
+
+div.boxtwocols img {
+  clear: both;
+  float: left;
+  padding-bottom: 0.75em;
+  padding:0.2em;
+  border:1px solid #ddd
+}
+
+/* Box - Two columns without images
+----------------------------------------------------------------------------------------- */
+div.boxtwocols {float:left;border:1px solid #fff;width:48.0%;padding-right:6px}
+div.boxtwocols h2 {color:#000; background: url(/sustainability/includes/images/background1.gif) repeat-x ;;border-top:1px solid #ccc;font-size:1.0em;font-weight:bold;padding:0.5em ; }
+div.boxtwocols h2 a {text-decoration:none;color:#088}
+div.boxtwocols h2 a:hover {text-decoration:underline;color:#800}
+
+/* Box - Two columns with images
+----------------------------------------------------------------------------------------- */
+.videos {color:#800;border-bottom:1px solid #800}
+div.boxtwocolsimage {float:left;border:1px solid #ddd;width:49.5%;padding-top:6px}
+div.boxtwocolsimage img {clear: both;float: left;padding-bottom: 0.75em;}
+div.boxtwocolsimage h2 {color:#000; background: url(/biodiversity/images/background1.jpg) repeat-x ;border-top:1px solid #ccc;font-size:1.0em;font-weight:bold;padding:0.5em ;}
+div.boxtwocolsimage h2 a {text-decoration:none;color:#088}
+div.boxtwocolsimage h2 a:hover {text-decoration:underline;color:#800}
+div.boxtwocolsimage p {margin-left:180px;padding:0}
+div.boxtwocolsimage p.firstline {margin-top: 0.25em;padding-top:5px;}
+div.boxtwocolsimage ul {margin-left:130px;padding:0;}
+div.boxtwocolsimageclear {border:none;float:none;clear:both;}
+
+/* Box - One column with image
+----------------------------------------------------------------------------------------- */
+div.boxonecol {clear: both;margin: 0.5em 10px 0 0;}
+div.boxonecol img {clear: both;float: left;padding: 0px;}
+div.boxonecol h2 {font-size: 1.3em; padding: 0.2em; border-bottom:1px dotted #696; color:#1077ae;font-weight:540; }
+div.boxonecol p {margin-left: 150px;}
+
+/* Two columns fuel quality homepage
+----------------------------------------------------------------------------------------- */
+.columncontainer {
+float:left;
+}
+
+/* front page boxes
+--------------------------------------------------------- */
+.boxes {
+	float: left;
+	width:100%;
+}
+.boxes2 {
+	float: left;
+		width:100%;
+}
+.columntwo {
+	float: right;
+		width: 46%;
+	min-width:100px;
+	padding:5px;
+	margin-bottom:15px;
+		background-image: url(/atmosphere/fuelquality/redesign/includes/images/gradient.jpg);
+	background-repeat: repeat-x;
+	border-top: 1px solid #ccc;
+}
+.columnone {
+	float: left;
+	width: 46%;
+	min-width:100px;
+	padding:5px;
+	margin-bottom:15px;
+		background-image: url(/atmosphere/fuelquality/redesign/includes/images/gradient.jpg);
+	background-repeat: repeat-x;
+	border-top: 1px solid #ccc;
+}
+.frontbox-left p {
+	overflow:hidden;
+}
+.frontbox-right p {
+	overflow:hidden;
+}
+ul#tabnav li a { /* all tabs */
+  padding: 5px 12px !important;
+  border: 1px solid #aaa;
+  background-color: #fc3;
+  color: #000;
+  margin-right: 0;
+  text-decoration: none;
+  border-bottom: none;
+  -moz-border-radius-topright:6px;
+  -moz-border-radius-topleft:6px;
+  -webkit-border-top-right-radius:6px;
+  -webkit-border-top-left-radius:6px;
+}
+ul#tabnav li a:hover {
+  
+  text-decoration:underline;
+   background-color: #fff;
+  color: #000;
+}
+.tab-on a { /* selected tab */
+  background-color: white !important;
+  border-bottom: 2px solid white !important;
+  border-left: 1px solid #666 !important;
+  border-right: 1px solid #666 !important;
+  border-top: 1px solid #666 !important;
+  color: black !important;
+  padding-top: 6px !important;
+}
+li.subscribe {
+list-style:none;
+  background: url(/about/media/images/email-ico.gif) no-repeat 0 0.4em !important; 
+  list-style-type: none;
+  line-height: 25px !important;
+  padding: 0.2em 0 0.2em 30px !important;
+  margin: 0 10px 0 0px !important;
+}

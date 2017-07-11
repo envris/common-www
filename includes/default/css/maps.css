@@ -1,0 +1,164 @@
+#map-container {
+  background: white url(/includes/default/images/bg-map-thumbs.gif) repeat-y 0 0;
+  border-bottom: 1px solid #efefe1;
+  border-left: 1px solid #efefe1;
+/*  float: none;  was 'left', but didnt work in FF. side affect of 'none' is no mapthumb bg colour */
+  height: 1%;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+#map-container ul {
+  background: white url(/includes/default/images/bg-map-nav.gif) repeat-x 0 0; 
+  font-size: 118%;
+  height: 23px;
+  list-style-type: none;
+  padding: 0;
+}
+#map-container ul li {
+  background-color: white;
+  background-image: none;
+  border-bottom: 1px solid #efefe1;
+  border-right: 1px solid #efefe1;
+  border-top: 1px solid #efefe1;
+  color: #182d48;
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.1em 0.75em 0.4em 0.75em;
+  text-align: center;
+}
+#map-container li a:visited {
+  background-color: transparent;
+  color: #039;
+}
+#map-container li a:hover {
+  background-color: transparent;
+  color: black;
+}
+#map-container li.activepage {
+  border-bottom: 2px solid white;
+}
+#map-container li.all-map-list {
+  background: none; 
+  border: none;
+  float: right;
+}
+#map-image img {
+  float: left; 
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+#map-thumbs {
+  clear: both;
+  float: left;
+  margin-top: 1em;
+  padding: 0.5em 0 0.5em 5px;
+  width: 60px;
+}
+#map-thumbs img {
+  padding-bottom: 0.5em;
+}
+
+/* To place content in map column
+----------------------------------------------------------------------------------------- */
+#map-content {
+  /*float: left;*/
+  height: 100%;
+  margin: 1em 0 0 0;
+  padding: 0;
+  /*width: 85%;*/
+	margin-left:66px;
+}
+#map-content h2 {
+  margin: 0;
+  padding: 1;
+}
+#map-content ul {
+  background-image: none !important;
+  height: auto;
+}
+#map-content ul li {
+  background: transparent url(/includes/default/images/bullet.gif) no-repeat 0 0.7em !important; 
+  border: none !important;
+  font-size: 75% !important;
+  float: none !important;
+  margin: 0.5em 0.25em 0.5em 1em !important;
+  padding: 0 0.75em 0 1em !important;
+  text-align: left !important;
+}  
+#map-content ul li ul {
+  background: url(/includes/default/images/bullet.gif) no-repeat 0 0.8em; 
+  font-size: 130%;
+  padding: 0 0.75em 0 1em !important;
+}
+
+
+/* Controls UL list for map interface
+----------------------------------------------------------------------------------------- */
+#map-list {
+  background-color: #f7f7f0;
+  border: 1px solid #efefe1;
+  margin: 5px 0 0.5em 410px;
+  padding: 0 0 1em 0;
+}
+#map-list h2 {
+  background-color: #efefe1;
+  font: 100%/1.4em Arial, Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  padding: 0.25em 0.25em 0.5em 0.5em;
+  margin: 0;
+}
+#map-list ol {
+  padding: 0.5em 0.5em 0.5em 2em;
+  margin: 0 0 0 0.5em;
+}
+#map-list ol li {
+  background: none;
+  list-style-type: decimal;
+  padding: 0.2em 0 0.2em 0;
+}
+#map-list ul {
+  background: none; 
+  font-size: 100%;
+  height: 100%;
+  list-style-type: none;
+  padding: 0.5em 0.5em 0.5em 0;
+}
+#map-list ul li {
+  background: transparent url(/includes/default/images/bullet.gif) no-repeat 0 0.7em; 
+  border: none;
+  color: #182d48;
+  float: none;
+  list-style-type: none;
+  margin: 0.5em 0.25em 0.5em 1em;
+  padding: 0 0.75em 0 1em;
+  text-align: left;
+}
+#map-list ul li.map-search {
+  background: transparent url(/includes/default/images/ico-map-search.gif) no-repeat 0 0.7em;
+  padding-left: 15px;
+  padding-top: 3px;
+}  
+#map-list ol li.map-search {
+  background: transparent url(/includes/default/images/ico-map-search.gif) no-repeat 0 0.7em;
+  list-style-type: none;
+  padding-left: 20px;
+  padding-top: 3px;
+  margin-left: -20px;
+}
+
+/* Other classes
+----------------------------------------------------------------------------------------- */
+.intro {
+  padding: 0 0 1em 0;
+}
+
+/* -----------------------------------------------------------------------------------------
+  ACCESSIBILITY DESCENDANT SELECTOR RULES
+  --------------------------------------------------------------------------------------- */
+body.high #map-list *,
+body.high #map-container * {
+  background-image: none;
+  background-color: black !important;
+  color: #ff0 !important;
+}

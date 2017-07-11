@@ -1,0 +1,26 @@
+#maincontent {
+  margin-right: 205px;
+}
+#sidepanel {
+  position: absolute;
+  top: 130px;
+  height: 700px;
+  right: 0;
+  width: 200px;
+}
+#sidepanel img {
+  border: 1px solid #949494;
+  float: none; 
+  background-color: transparent; 
+  margin-right: 0;
+} 
+body.wideright #maincontent {
+    margin-right: 320px;
+}
+body.wideright #sidepanel {
+  position: absolute;
+  top: 130px;
+  height: 700px;
+  right: 0;
+  width: 280px;
+}
