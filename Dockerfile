@@ -1,4 +1,4 @@
-FROM httpd:2
+FROM httpd:2.4
 
 MAINTAINER Department of the Environment <devops@ris.environment.gov.au>
 
