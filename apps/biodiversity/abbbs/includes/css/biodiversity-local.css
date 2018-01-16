@@ -1,0 +1,745 @@
+/*----------------------------------------------------------------------------------------------|
+|  Styles to cascade from http://www.environment.gov.au/includes/default/css/default-xmlnav.css |
+|---------------------------------------------------------------------------------------------*/
+body { background: white url(/includes/biodiversity/images/bg-nav.gif) repeat-y left; }
+h1 {
+  color: #537924;
+  padding-bottom: 0.5em;
+  padding-top: 0;
+}
+h1.main {
+  padding-bottom:0px;
+}
+h2 {
+  color: #932507;
+}
+h2.main {
+  color: #932507;
+  padding-top:0px;
+  border-top:1px solid #800
+}
+h3 {
+  color: #537924;
+}
+h4 {
+  color: #000;
+}
+h5 {
+  color: #333;
+}
+caption {
+  background-color: #537924 !important;
+  color: white;
+}
+table {
+  border-bottom: 1px solid #c8c3b4;
+}
+th {
+  background-color: #f4dd9f;
+  border-bottom: 1px solid #f3f0e4;
+  color: black;
+}
+th.subhead {
+  background-color: #ecc676;
+  color: black;
+}
+td {
+  background-color: #fff;
+  border-bottom: 1px solid #c8c3b4;
+}
+td.highlight {
+  background-color: #f2e9d1;
+}
+#global {
+  background: #497136 url(/includes/biodiversity/images/bg-global.gif) repeat-x 180px 2px;
+}
+#global a,
+#global a:link,
+#global a:visited {
+  background-color: transparent;
+  color: #252514;
+  text-decoration: none;
+}
+#global li {
+  background: transparent url(/includes/biodiversity/images/bg-button.gif) no-repeat 0 50%;
+}
+#header {
+  background: #497136;
+  height: 100px!important;
+}
+#header ul a,
+#header ul a:visited {
+  color: black;
+}
+#header img {
+  padding-left: 12px!important;
+  padding-top: 4px!important;
+}
+#header ul li {
+  background: transparent url(/includes/biodiversity/images/bg-access-repeat.gif) repeat-x 0 0;
+}
+#header ul li.left-link {
+  background: transparent url(/includes/biodiversity/images/bg-access-left.gif) no-repeat 0 0;
+}
+div.highlighttrade {border:1px solid #800;padding:0 1.0em 1.0em 1.0em;margin:1.5em 0.3em}
+
+div.highlight-trade-contacts {border:1px solid #800;padding:0 1.0em 1.0em 1.0em;margin:1.5em 0.3em}
+div.highlight-trade-contacts ul {margin-top:1.0em}
+div.highlight-trade-contacts span {font-size:1.3em;}
+
+/* Controls navigation for anchor links and related page links
+----------------------------------------------------------------------------------------- */
+#pagenav,
+#sectionnav {
+  background-image: none;
+}
+#pagenav h2, #sectionnav h2 {
+  color: #562706; font-weight:bold
+}
+
+
+/* BEGIN LEFT NAVIGATION
+----------------------------------------------------------------------------------------- */
+#navigation ul li a,
+#navigation ul li a:link,
+#navigation ul li a:visited {
+  background-color: #e1e9cc;
+  color: #5d482e;
+}
+#navigation ul li.selected a {
+  border-top: 1px solid #ddd !important;
+  color: black !important;
+}
+#navigation ul li.selected li a {
+  background-color: #e1e9cc !important;
+  color: #5d482e !important;
+}
+
+/* Controls left nav lists
+--------------------------------------------------------- */
+#navigation li.level1 a,
+#navigation li.level1 a:link,
+#navigation li.level1 a:visited {
+  background: transparent url(/includes/biodiversity/images/bg-nav-heading.gif) no-repeat 0 0;
+  color: white;
+}
+#navigation li.level1 a:hover {
+  background-color: inherit;
+  color: white;
+}
+#navigation li.level1 li a,
+#navigation li.level1 li a:link,
+#navigation li.level1 li a:visited {
+  color: #5d482e;
+}
+#navigation li.level1 li a:hover {
+  background-color: inherit;
+  color: black;
+}
+#navigation li.level2 a,
+#navigation li.level2 a:link,
+#navigation li.level2 a:visited {
+  background-color: #e1e9cc;
+  border-bottom: 1px solid #bcc6a1;
+}
+#navigation li.level3 a,
+#navigation li.level3 a:link,
+#navigation li.level3 a:visited {
+  border-bottom: 1px solid #bcc6a1;
+}
+#navigation li.level4 a,
+#navigation li.level4 a:link,
+#navigation li.level4 a:visited {
+  background-color: #e1e9cc;
+  border-bottom: 1px solid #bcc6a1;
+}
+#navigation li.level5 a,
+#navigation li.level5 a:link,
+#navigation li.level5 a:visited {
+  background-color: #e1e9cc;
+  border-bottom: 1px solid #bcc6a1;
+}
+#navigation li.level6 a,
+#navigation li.level6 a:link,
+#navigation li.level6 a:visited {
+  background-color: #e1e9cc;
+  border-bottom: 1px solid #bcc6a1;
+}
+#navigation li.level7 a,
+#navigation li.level7 a:link,
+#navigation li.level7 a:visited {
+  background-color: #e1e9cc;
+  border-bottom: 1px solid #bcc6a1;
+}
+
+/* Flyout lists
+--------------------------------------------------------- */
+#navigation ul.nav-items {
+  background-color: #e1e9cc;
+  border-bottom: 1px solid #3f6a17;
+  border-right: 1px solid #3f6a17;
+  border-top: 1px solid #3f6a17;
+}
+#navigation ul.nav-items li a {
+  color: #5d482e !important;
+}
+#navigation ul.nav-items a:hover {
+  background-color: #3f6a17 !important;
+}
+
+/* Image under nav
+--------------------------------------------------------- */
+#navigation-image {
+  background: url(/includes/biodiversity/images/bg-navigation-image.jpg) no-repeat 0 0;
+  height: 200px;
+  margin-top: 0;
+}
+#navigation-image.migratory {
+  background: url(/includes/biodiversity/images/bg-navigation-image-migratory.jpg) no-repeat 0 0;
+  height: 170px;
+}
+#navigation-image.invasive {
+  background: url(/includes/biodiversity/images/bg-navigation-image-invasive.jpg) no-repeat 0 0;
+  height: 170px;
+}
+
+/* END LEFT NAVIGATION
+----------------------------------------------------------------------------------------- */
+
+
+/* Side navigation links down the right
+----------------------------------------------------------------------------------------- */
+#sidepanel a,
+#sidepanel a:link,
+#sidepanel a:visited {
+  background-color: transparent;
+  color: #515124;
+  text-decoration: underline;
+}
+#sidepanel a:hover {
+  background-color: transparent;
+  color: #800;
+}
+#sidepanel div.sidebox {
+background-color:white !important;
+border:none;
+margin-bottom:1em !important;
+}
+#sidepanel h2
+{
+background-image: url(/includes/biodiversity/images/bg-panel-heading.gif);border:none;
+color:white;font-size:1.2em;font-weight:bold;padding:0.4em 0.5em
+}
+#sidepanel h2.usability {
+ background-image: none;
+ background-color:white;
+  color: #333;
+  border:none;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  font-weight: bold;
+  padding-bottom: 0.2em;
+  margin: 0.5em 10px 0 0;
+  width: auto; /* resolution layout change */
+}
+#sidepanel h2.sidebox {
+  background-color: #fff;
+  background-image: none;
+  border-bottom:2px solid #8c420e;
+  font-weight:normal;
+  font-size:1.25em;
+  color: #933;
+  padding-bottom:.25em;
+}
+
+
+#publication #sidepanel img {padding:0 !important}
+
+#title {
+  background: transparent;
+  width: 750px;
+  top: 25px;
+}
+#title h1 {
+  color: white;
+  font-size: 170%;
+  padding: 4px 0 0 0;
+  margin-right: 150px;
+}
+#title h2 {
+  color: white;
+  font-size: 130%;
+  margin-right: 144px;
+}
+/* GRM addition styles
+---------------------------------------- */
+
+.textcenter {
+  text-align:center;
+}
+.right-arrow li {
+  background: url(/includes/default/images/ico-next.gif) no-repeat 0 6px !important;
+  list-style-type: none !important;
+  padding: 0.2em 0 0.2em 1.5em !important;
+}
+img.publication {
+  margin-left:11px;
+  margin-top:10px;
+}
+
+
+/* Controls layout of boxed content on home page
+------------------------------------------------------- */
+
+ /* Wraps individual box */
+.featurebox {
+  background: #f0f3e4 url(/includes/biodiversity/images/bg-featurebox.gif) no-repeat 0 0;
+}
+
+ /* Wraps featurebox heading */
+.featurebox-heading {
+  border-right: 1px solid #4c6c2d;
+}
+
+ /* Wraps featurebox body */
+.featurebox-body {
+  background-color: #f0f3e4;
+  border-bottom: 1px solid #4c6c2d;
+  border-left: 1px solid #4c6c2d;
+  border-right: 1px solid #4c6c2d;
+}
+
+/* ABRS additions
+------------------------------------------------------- */
+
+.abrs-administration {
+  margin: 0 15px 5px 0;
+  border: 1px solid #fff;
+}
+.abrs-administration h3{
+  background: #875261;
+  margin-top: 30px;
+  padding: 5px 0 5px 5px;
+  color: #fff;
+  font-size: 0.85em;
+}
+.abrs-administration h4{
+  background: #7b9160;
+  margin-top: 30px;
+  padding: 3px 0 3px 5px;
+  color: #fff;
+  font-size: 0.85em;
+}
+.abrs-administration h4.two-px {
+  margin-top:2px;
+}
+.abrs-administration p.bigspace {
+  margin-top: 1em;
+}
+.abrs-admin {
+  float: left;
+  width: 95%;
+  margin: 3px 0 8px 0;
+  padding: 0px;
+}
+.abrs-admin p{
+  margin: 2px 0 0 0;
+  padding:3px 0 0 0;
+  color: #000;
+  font-size: 0.8em;
+}
+.abrs-admin ul,.abrs-admin ol{
+  font-size: .9em;
+}
+.abrs-admin img {
+  float: left;
+  margin: 3px 25px 0 0;
+  padding: 0px;
+}
+.abrs-admin ul.indent,.abrs-admin  ol.indent {
+  margin-left: 85px;
+}
+
+
+/* general to all ABRS */
+
+.abrs-copyright {
+  border:#CCC 1px solid;
+  margin-top: 30px;
+  padding: 10px;
+  color:#666;
+  font-size: 0.9em;
+}
+p.pubdate {
+        color:#666
+}
+.abrs-leftbox {
+        float: left;
+        width: 48%;
+}
+.abrs-rightbox {
+        width: 48%;
+        margin-left: 51%;
+}
+.firstline {
+  border-top: 1px dashed #999;
+  margin-top: 2px;
+}
+
+/* ABRS online resources */
+.abrs-online-resources {
+  margin: 0 15px 5px 0;
+  border: 1px solid #fff;
+}
+.abrs-online-resources h3{
+  background: #CC6600;
+  margin-top: 30px;
+  padding: 5px 0 5px 5px;
+  color: #fff;
+  font-size: 0.85em;
+}
+.abrs-online-resources h4{
+  background: #EBE4D1;
+  margin-top: 30px;
+  padding: 3px 0 3px 5px;
+  color: #000;
+  font-size: 0.85em;
+}
+.abrs-online-resources h4.two-px {
+  margin-top:2px;
+}
+.abrs-online-resources p {
+  margin: 2px 0 0 0;
+  padding:3px 0 0 0;
+  color: #000;
+  font-size: 0.8em;
+  border:none;
+}
+.abrs-online-resources p.unindent {
+  margin-left: 0px;
+}
+.abrs-online-resources p.indent {
+  margin-left: 85px;
+}
+.abrs-online-resources p.bigspace {
+  margin-top: 1em;
+}
+.abrs-online-resources img {
+  float: left;
+  margin: 3px 25px 0 0;
+  padding: 0px;
+}
+.abrs-online-resources img.inline {
+  float:none;
+  margin: 5px 0 0 0;
+  padding: 0px;
+}
+.abrs-online-resources ul,.abrs-online-resources ol {
+  font-size: 0.9em;
+}
+.abrs-online-resources ul.indent,.abrs-online-resources ol.indent {
+  margin-left: 85px;
+}
+.abrs-resource {
+  float: left;
+  width: 95%;
+  margin: 3px 0 8px 0;
+  padding: 0px;
+}
+.abrs-resource p {
+  margin-left: 80px;
+}
+.abrs-resource img {
+  float: left;
+  clear: none;
+  margin: 3px 20px 20px 0;
+  padding: 0px;
+}
+.abrs-resource ul,.abrs-resource ol {
+  font-size: 0.9em;
+}
+/* ABRS publications */
+.abrs-publications {
+  margin: 0 15px 5px 0;
+  border: 1px solid #fff;
+}
+.abrs-publications h3{
+  background: #99001A;
+  margin-top: 30px;
+  padding: 5px 0 5px 5px;
+  color: #fff;
+  font-size: 0.85em;
+}
+.abrs-publications h4{
+  background: #E3DCC9;
+  margin-top: 30px;
+  padding: 3px 0 3px 5px;
+  color: #000;
+  font-size: 0.85em;
+}
+.abrs-publications h4.two-px {
+  margin-top: 2px;
+}
+.abrs-publications img {
+  float: left;
+  margin: 3px 25px 0 0;
+  padding: 0px;
+}
+.abrs-publications p.indent {
+  margin-left: 85px;
+}
+.abrs-pubs {
+  float: left;
+  width: 100%;
+  margin: 3px 0 8px 0;
+  padding:0px;
+}
+.abrs-pubs p {
+  margin-left:80px;
+  clear:right;
+}
+.abrs-pubs img {
+  float: left;
+  clear: none;
+  margin: 3px 20px 20px 0;
+  padding: 0px;
+}
+.abrs-publications p{
+  margin: 2px 0 0 0;
+  padding:3px 0 0 0;
+  color: #000;
+  font-size: 0.8em;
+  border:none;
+}
+.abrs-publications p.bigspace {
+  margin-top: 1em;
+}
+.abrs-publications ul,.abrs-publications ol {
+  font-size: 0.9em;
+}
+.abrs-publications ul.indent,.abrs-publications ol.indent {
+  margin-left: 85px;
+}
+/* International Year of Biodiversity */
+#navigation-image.iyb2010 {
+background:
+url(/includes/biodiversity/images/bg-navigation-image-iyb2010.gif)
+no-repeat 0 0;
+height: 180px;
+margin-top: 0;
+}
+select { font-size: 100% !important }
+
+/* New styles
+----------------------------------------------------------------------------------------- */
+body {
+  background: white url(/includes/biodiversity/images/science-bg-nav.gif) repeat-y left;
+}
+body.wideright #sidepanel {
+  clear: both;
+  border-left: 1px solid #ddd;
+  font-size:.9em; /* changed from - font:90%/1.4em Arial,Geneva,sans-serif; - 8/12/08 */
+  margin: 0.5em 0 0 0;
+  right: 0;
+  width: 100%; /* resolution layout change */
+}
+body.wideright #sidepanel div.sidebox {
+  border:none;
+  margin: 0 10px 0.5em 0;
+  padding: 0 0.5em 0.5em 1.3em;
+  width: auto; /* resolution layout change */
+}
+body.wideright #sidepanel h2 {
+  background-color: #c6cdd3;
+  background-image: url(/includes/biodiversity/images/bg-panel-heading.gif);
+  border:none;
+  color: black;
+  font-size:1.2em;
+  padding-bottom:3px;
+}
+body.wideright #sidepanel h2.sidebox {
+  background-color: #fff;
+  background-image: none;
+  border-bottom:2px solid #8c420e;
+  font-weight:normal;
+  font-size:1.25em;
+  color: #933;
+  padding-bottom:.25em;
+}
+body.wideright #sidepanel h2.newsred {
+  background-color: #800;
+  background-image: url(/includes/default/images/bg-panel-heading-red.jpg);
+  color: white;
+}
+body.wideright #sidepanel h2.usability {
+  background: transparent;
+  background-image: none;
+  border-bottom:1px solid #999;
+  color: #555;
+  font-weight:bold
+}
+body.wideright #sidepanel h3 {
+  background-color: white;
+  color: #9a0838;
+  font-size:1.1em;
+  font-weight:bold;
+  border-bottom:2px dotted #800;
+  padding-bottom:0px
+}
+/* Style for new header
+------------------------------------------------------- */
+#title {top:30px;}
+#title h1 {color:#fff;font-size: 1.5em;padding: 12px 0 0 0;margin-right: 30px;margin-bottom:0px;font-weight:normal;border:none;line-height:0.5em}
+#title label  {background:transparent;color:black;font-size:1.0em;padding:2px;border:none}
+#title .searchbox {background:#f9eee4;color:black;font-size:1.2em;padding-top:0px;border-right:2px solid #999;border-bottom:2px solid #999}
+#title .button {background:#fc6;color:black;font-size:1.1em;padding:2px 4px}
+div#title form {padding-top:0px;float:right;}
+#title h2 {padding-top: 10px; line-height:1.3em;margin-right: 15px;}
+
+/* Boxcontainer - used for all Box styles
+----------------------------------------------------------------------------------------- */
+div.boxcontainer {padding:0.5em;width:100%;clear:both;}
+div.boxcontainer h2 {color:#fff; background-image: none ;background:#014037;border:none;font-size:1.0em;font-weight:bold;padding:0.5em;}
+div.boxcontainer h2.red
+{color:#fff; background-image: none ;background:#800;}
+div.boxcontainer h3 {font-size:1.0em}
+
+/* Box - Two columns without images
+----------------------------------------------------------------------------------------- */
+div.boxtwocols {float:left;border:1px solid #fff;width:48.0%;padding-right:6px}
+div.boxtwocols h2 {color:#000; background: url(/biodiversity/images/background1.jpg) repeat-x ;border-top:1px solid #ccc;font-size:1.0em;font-weight:bold;padding:0.5em ; }
+div.boxtwocols h2 a {text-decoration:none;color:#088}
+div.boxtwocols h2 a:hover {text-decoration:underline;color:#800}
+
+/* Box - Two columns with images
+----------------------------------------------------------------------------------------- */
+.videos {color:#800;border-bottom:1px solid #800}
+div.boxtwocolsimage {float:left;border:1px solid #ddd;width:49.5%;padding-top:6px}
+div.boxtwocolsimage img {clear: both;float: left;padding-bottom: 0.75em;}
+div.boxtwocolsimage h2 {color:#000; background: url(/biodiversity/images/background1.jpg) repeat-x ;border-top:1px solid #ccc;font-size:1.0em;font-weight:bold;padding:0.5em ;}
+div.boxtwocolsimage h2 a {text-decoration:none;color:#088}
+div.boxtwocolsimage h2 a:hover {text-decoration:underline;color:#800}
+div.boxtwocolsimage p {margin-left:180px;padding:0}
+div.boxtwocolsimage p.firstline {margin-top: 0.25em;padding-top:5px;}
+div.boxtwocolsimage ul {margin-left:130px;padding:0;}
+div.boxtwocolsimageclear {border:none;float:none;clear:both;}
+
+/* Box - One column with image
+----------------------------------------------------------------------------------------- */
+div.boxonecol {clear: both;margin: 0.5em 10px 0 0;}
+div.boxonecol img {clear: both;float: left;padding: 0px;}
+div.boxonecol h2 {font-size: 1.3em; padding: 0.2em; border-bottom:1px dotted #696; color:#1077ae;font-weight:540; }
+div.boxonecol p {margin-left: 250px;}
+
+/* Wide footer
+----------------------------------------------------------------------------------------- */
+#footer2 p { border:none;color:#333;text-align:center;font-size:0.8em}
+#footer2 a { border:none;color:#333;text-align:center;font-size:0.9em;text-decoration:none}
+#footer2 a:hover { text-decoration:underline}
+#footer-wide {
+background:#004;border-top:3px solid #800;clear:both;color:#fff;overflow:hidden;padding:3px 0px;width:100%;height:350px;}
+#footer-wide p {font-size:0.9em}
+#footer-wide .cols5 h4 {font-size:1.0em;color:#7ead36;}
+#footer-wide .cols5 h4 a {font-size:1.0em;color:#7ead36;}
+#footer-wide .cols6 h4 {font-size:1.0em;color:#963}
+#footer-wide .cols6 h4 a {font-size:1.0em;color:#7ead36;}
+#footer-wide ul { list-style-type: none;}
+#footer-wide ul li {background: url(/includes/default/images/bullet.gif) no-repeat 0 0.6em; font-size: 0.9em;padding: 0 0 0 15px;}
+#footer-wide a {text-decoration:none;color:#fff;font-size:0.8em}
+#footer-wide a:hover {text-decoration:underline;color:#a4ba82;}
+.cols5 {float:left;margin-top:0px;width:18%;}
+.cols6 {float:left;margin-top:0px;width:14%;}
+
+/* Tab colour
+----------------------------------------------------------------------------------------- */
+ul#tabnav a:hover {background-color: #e9eff5;text-decoration:underline;}
+
+/* ABRS bush blitz
+------------------------------------------------------------------------------------------*/
+.abrs-bushblitz-main {
+margin: 0 15px 5px 0;
+border: 1px solid #fff;
+}
+.abrs-bushblitz-main h2{
+background: #73603e;
+margin-top: 30px;
+padding: 5px 0 5px 5px;
+color: #fff;
+font-size: 1em;
+}
+.abrs-bushblitz-main h3{
+background: #ffefc0;
+margin-top: 30px;
+padding: 3px 0 3px 5px;
+color: #000;
+font-size: 0.9em;
+}
+.abrs-bushblitz-main h3.two-px {
+margin-top:2px;
+}
+.abrs-bushblitz-main p {
+margin: 2px 0 0 0;
+padding:3px 0 0 0;
+color: #000;
+border:none;
+}
+.abrs-bushblitz-main p.unindent {
+margin-left: 0px;
+}
+.abrs-bushblitz-main p.indent {
+margin-left: 85px;
+}
+
+.abrs-bushblitz-main p.bigspace {
+margin-top: 1em;
+}
+.abrs-bushblitz-main ul.indent,.abrs-bushblitz ol.indent {
+margin-left: 85px;
+}
+.abrs-bushblitz-pubs {
+float: left;
+width: 95%;
+margin: 3px 0 8px 0;
+padding: 0px;
+}
+.abrs-bushblitz-pubs p {
+margin-left: 85px;
+}
+.abrs-bushblitz-pubs img {
+float: left;
+clear: none;
+margin: 3px 20px 20px 0;
+padding: 0px;
+}
+/* end ABRS bush blitz
+------------------------------------------------------------------------------------------*/
+/* style definition list content to appear inline
+------------------------------------------------------------------------------------------*/
+dl.tabular
+{
+        float: left;
+        margin: 1em 0;
+        padding: 0;
+
+}
+
+.tabular dt
+{
+        clear: left;
+        float: left;
+        width: 10%;
+        margin: 0;
+        padding:0.5em 0.2em;
+        font-weight: bold;
+}
+
+.tabular dd
+{
+        float: left;
+        width: 80%;
+        margin: 0;
+        padding: 0.5em 0.2em;
+        background-image:none;
+        }
+/*   end tabular dl styles
+--------------------------------------------------*/

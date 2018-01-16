@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>ABBBS - BirdBatMan Reports</title>
+<meta name="DC.Title" lang="en" content="ABBBS - BirdBatMan Reports" xml:lang="en" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Description" lang="en" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" xml:lang="en" />
+<meta name="DC.Publisher" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Date.created" scheme="ISO8601" content="<TMPL_VAR NAME=DATE_CREATED>" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth of Australia" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="Description" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" />
+<link rel="stylesheet" type="text/css" href="/apps/biodiversity/abbbs/css/abbbs.css" />
+<style type="text/css">
+/*<![CDATA[*/
+table#date_range { margin:0; padding:0; }
+table#date_range tr { vertical-align:middle; }
+table#date_range td { padding:3px; text-align:left; }
+table#date_range td.th { font-weight:bold; text-align:right; }
+
+table#speciestable { margin:0; padding:0; }
+table#speciestable tr { vertical-align:top; }
+table#speciestable td { padding:3px; text-align:left; }
+table#speciestable td.th { font-weight:bold; text-align:right; }
+
+/*]]>*/
+</style>
+<script type="text/javascript" src="/apps/biodiversity/abbbs/js/abbbs.js"></script>
+<script type="text/javascript" src="/apps/biodiversity/abbbs/js/checkform.js"></script>
+<script type="text/javascript" src="/apps/biodiversity/abbbs/js/filterlist.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+function append(f1, f2) {		// Append f1's value to f2
+  if (!f1.value) { return true; }
+  if (f2.value) { f2.value = f2.value + ', ' + f1.value; }
+  else { f2.value = f1.value; }
+  return true;
+}
+
+/*]]>*/
+</script>
+</head>
+<body>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/header-abbbs.html"-->
+<TMPL_INCLUDE NAME="/apps/biodiversity/abbbs/cgi-templates/login-out.tmpl">
+<div id="content">
+<h1>BirdBatMan Reports</h1>
+
+<div id="tocbox">
+<div id="toc" class="clearfix">
+<div id="toc-left">
+<ul>
+  <li><a href="#locode" tabindex="1">Bander's Locode Report</a></li>
+  <li><a href="#stock" tabindex="2">Bander's Stock Report</a></li>
+  <li><a href="#data" tabindex="3">Banding Data Report</a></li>
+</ul>
+</div>
+<div id="toc-right">
+<ul>
+  <li><a href="/cgi-bin/biodiversity/abbbs/birdbatman.pl" tabindex="4">Back to BirdBatMan Home</a></li>
+  <li><a href="/biodiversity/abbbs/validate.html" target="_service" tabindex="5">Data Validation Service</a> (<span class="small">New Window</span>)</li>
+  <li><a href="/cgi-bin/biodiversity/abbbs/abbbs-client.pl?proc=submit" target="_service" tabindex="6">Data Submission Service</a> (<span class="small">New Window</span>)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 class="option"><a name="locode">Bander's Locode Report</a></h2>
+
+<form id="locodeform" name="locodeform" class="styleform" method="post" action="/cgi-bin/biodiversity/abbbs/bbm-reports.pl" enctype="multipart/form-data" onsubmit="if (checkform(this)) { return Submit(this) } else { return false; }">
+  <fieldset><legend>Bander's Locode Report</legend>
+  <TMPL_IF LOCODE_MSG><p class="formerrormsg"><span>There's a problem...</span><br />
+  <TMPL_VAR NAME=LOCODE_MSG></p></TMPL_IF>
+  <table cellspacing="0">
+    <tr><td class="th bordered"><label for="locode_auth_no">Authority Number:</label></td>
+      <td><input type="text" id="locode_auth_no" name="auth_no" size="6" maxlength="4" tabindex="10" />
+    </td></tr>
+    <tr><td class="th">Report Format:</td>
+      <td><input type="radio" name="report_format" id="locode_report_html" value="html" checked="checked" tabindex="11" /><label for="locode_report_html"> Html</label>
+	<input type="radio" name="report_format" id="locode_report_excel" value="excel" tabindex="12" /><label for="locode_report_excel"> Excel</label>
+    </td></tr>
+    <tr><td colspan="2" class="buttonrow"><input type="submit" value="Submit" title="Generate Report" class="submitbutton" tabindex="13" />
+    </td></tr>
+  </table>
+  </fieldset>
+  <input type="hidden" name="proc" value="locode_report" />
+  <input type="hidden" id="locodeform_required" value="locode_auth_no" />
+</form>
+
+<h2 class="option"><a name="stock">Bander's Stock Report</a></h2>
+
+<form id="stockform" name="stockform" class="styleform" method="post" action="/cgi-bin/biodiversity/abbbs/bbm-reports.pl" enctype="multipart/form-data" onsubmit="if (checkform(this)) { return Submit(this) } else { return false; }">
+  <fieldset><legend>Bander's Stock Report</legend>
+  <TMPL_IF STOCK_MSG><p class="formerrormsg"><span>There's a problem...</span><br />
+  <TMPL_VAR NAME=STOCK_MSG></p></TMPL_IF>
+  <table cellspacing="0">
+    <tr><td class="th bordered"><label for="stock_auth_no">Authority Number:</label></td>
+      <td><input type="text" id="stock_auth_no" name="auth_no" size="6" maxlength="4" tabindex="15" /></td></tr>
+    <!-- CHANGE the script if this list changes -->
+    <tr><td class="th bordered"><label for="range">Date Range:</label></td>
+      <td><select id="range" name="range" tabindex="16" >
+        <option value="" selected="selected"> -- All -- </option>
+        <option value="12">Last 12 months</option>
+        <option value="24">Last 2 years</option>
+        <option value="36">Last 3 years</option>
+        <option value="48">Last 4 years</option>
+        <option value="60">Last 5 years</option>
+        </select>
+      </td></tr>
+    <tr><td class="th">Report Format:</td>
+      <td><input type="radio" name="report_format" id="stock_report_html" value="html" checked="checked" tabindex="17" /><label for="stock_report_html"> Html</label>
+	<input type="radio" name="report_format" id="stock_report_excel" value="excel" tabindex="18" /><label for="stock_report_excel"> Excel</label>
+      </td></tr>
+    <tr><td colspan="2" class="buttonrow"><input type="submit" value="Submit" title="Generate Report" class="submitbutton" tabindex="19" />
+    </td></tr>
+  </table>
+  </fieldset>
+  <input type="hidden" name="proc" value="stock_report" />
+  <input type="hidden" id="stockform_required" value="stock_auth_no" />
+</form>
+
+<h2 class="option"><a name="data">Banding Data Report (Excel)</a></h2>
+
+<form id="dataform" name="dataform" class="styleform" method="post" action="/cgi-bin/biodiversity/abbbs/bbm-reports.pl" enctype="multipart/form-data" onsubmit="if (checkform(this)) { return Submit(this) } else { return false; }">
+  <!-- <fieldset><legend>Banding Data Report</legend> -->
+  <TMPL_IF BANDING_DATA_MSG><p class="formerrormsg"><span>There's a problem...</span><br />
+  <TMPL_VAR NAME=BANDING_DATA_MSG></p></TMPL_IF>
+  <TMPL_IF BANDING_DATA_FEEDBACK><p><TMPL_VAR NAME=BANDING_DATA_FEEDBACK></p></TMPL_IF>
+  <table cellspacing="0">
+    <tr><td class="th bordered">Data Type</td>
+      <td><fieldset><legend>Banding Data Report - Data Type</legend>
+      <input type="radio" name="data_table" id="data_table_retrn" value="retrn" tabindex="20" /><label for="data_table_retrn">Returns only</label>
+	<input type="radio" name="data_table" id="data_table_recov" value="recov" style="padding-left:2em;" tabindex="21" /><label for="data_table_recov">Recoveries only</label>
+	<input type="radio" name="data_table" id="data_table_both" value="both" style="padding-left:2em;" checked="checked" tabindex="22" /><label for="data_table_both">Both</label>
+        </fieldset>
+    </td></tr>
+    <tr><td class="th bordered"><label for="data_bandid">Bandid:</label></td>
+      <td><input type="text" id="data_bandid" name="bandid" size="6" maxlength="6" tabindex="23" /> (Optional)
+      </td></tr>
+    <tr><td class="th bordered">Date Range:</td>
+      <td><fieldset><legend>Banding Data Report - Date Range</legend>
+        <table id="date_range" cellspacing="0">
+	  <tr><td class="th">From</td><td>
+	<label for="range_from_dd" class="visual-hide">Date Range: From Day</label>
+        <select id="range_from_dd" name="range_from_dd" tabindex="24"><TMPL_LOOP NAME=RANGE_FROM_DD_LOOP>
+          <option value="<TMPL_VAR NAME=VALUE ESCAPE=HTML>"<TMPL_IF NAME=IS_SELECTED> selected="selected"</TMPL_IF>><TMPL_VAR NAME=LABEL ESCAPE=HTML></option></TMPL_LOOP></select>
+	<label for="range_from_mm" class="visual-hide">Date Range: From Month</label>
+        <select id="range_from_mm" name="range_from_mm" tabindex="25"><TMPL_LOOP NAME=RANGE_FROM_MM_LOOP>
+          <option value="<TMPL_VAR NAME=VALUE ESCAPE=HTML>"<TMPL_IF NAME=IS_SELECTED> selected="selected"</TMPL_IF>><TMPL_VAR NAME=LABEL ESCAPE=HTML></option></TMPL_LOOP></select>
+	<label for="range_from_yyyy" class="visual-hide">Date Range: From Year</label>
+        <select id="range_from_yyyy" name="range_from_yyyy" tabindex="26"><TMPL_LOOP NAME=RANGE_FROM_YYYY_LOOP>
+          <option value="<TMPL_VAR NAME=VALUE ESCAPE=HTML>"<TMPL_IF NAME=IS_SELECTED> selected="selected"</TMPL_IF>><TMPL_VAR NAME=LABEL ESCAPE=HTML></option></TMPL_LOOP></select>
+	</td>
+	<td class="th">To</td><td>
+	<label for="range_to_dd" class="visual-hide">Date Range: To Day</label>
+        <select id="range_to_dd" name="range_to_dd" tabindex="27"><TMPL_LOOP NAME=RANGE_TO_DD_LOOP>
+          <option value="<TMPL_VAR NAME=VALUE ESCAPE=HTML>"<TMPL_IF NAME=IS_SELECTED> selected="selected"</TMPL_IF>><TMPL_VAR NAME=LABEL ESCAPE=HTML></option></TMPL_LOOP></select>
+	<label for="range_to_mm" class="visual-hide">Date Range: To Month</label>
+        <select id="range_to_mm" name="range_to_mm" tabindex="28"><TMPL_LOOP NAME=RANGE_TO_MM_LOOP>
+          <option value="<TMPL_VAR NAME=VALUE ESCAPE=HTML>"<TMPL_IF NAME=IS_SELECTED> selected="selected"</TMPL_IF>><TMPL_VAR NAME=LABEL ESCAPE=HTML></option></TMPL_LOOP></select>
+	<label for="range_to_yyyy" class="visual-hide">Date Range: To Year</label>
+        <select id="range_to_yyyy" name="range_to_yyyy" tabindex="29"><TMPL_LOOP NAME=RANGE_TO_YYYY_LOOP>
+          <option value="<TMPL_VAR NAME=VALUE ESCAPE=HTML>"<TMPL_IF NAME=IS_SELECTED> selected="selected"</TMPL_IF>><TMPL_VAR NAME=LABEL ESCAPE=HTML></option></TMPL_LOOP></select>
+        </td></tr></table>
+	</fieldset>
+      </td></tr>
+	<!-- The following gymnastics prevent IE from making the table full width. -->
+      <tr><td class="th bordered" style="vertical-align:top; padding-top:1em; white-space:nowrap;"><label for="species">Species</label>:<br /><br />
+	<span style="font-size:80%; font-weight:normal;">
+	Optionally specify one or more <br />
+	species by entering their speno values <br />
+	(comma separated) or by <br />
+	selecting from the search list by <br />
+	double-clicking on the species.</span>
+      </td><td>
+        <table id="speciestable" cellspacing="0">
+	<tr><td style="white-space:nowrap;"><input type="text" id="species" name="speno" size="40" tabindex="30" /> (By default, all species will be selected.)</td></tr>
+	<tr><td><select id="species_list" name="species_list" size="10" ondblclick="append(document.dataform.species_list.options[selectedIndex],document.dataform.speno);"><TMPL_LOOP NAME=SPECIES_LOOP>
+          <option value="<TMPL_VAR NAME=VALUE ESCAPE=HTML>"<TMPL_IF NAME=IS_SELECTED> selected="selected"</TMPL_IF>><TMPL_VAR NAME=LABEL ESCAPE=HTML></option></TMPL_LOOP></select>
+        </td></tr>
+        <tr><td>
+          <a href="javascript:select_species(document.dataform,'- A')" title="Show species starting with A">A</a>
+          <a href="javascript:select_species(document.dataform,'- B')" title="Show species starting with B">B</a>
+          <a href="javascript:select_species(document.dataform,'- C')" title="Show species starting with C">C</a>
+          <a href="javascript:select_species(document.dataform,'- D')" title="Show species starting with D">D</a>
+          <a href="javascript:select_species(document.dataform,'- E')" title="Show species starting with E">E</a>
+          <a href="javascript:select_species(document.dataform,'- F')" title="Show species starting with F">F</a>
+          <a href="javascript:select_species(document.dataform,'- G')" title="Show species starting with G">G</a>
+          <a href="javascript:select_species(document.dataform,'- H')" title="Show species starting with H">H</a>
+          <a href="javascript:select_species(document.dataform,'- I')" title="Show species starting with I">I</a>
+          <a href="javascript:select_species(document.dataform,'- J')" title="Show species starting with J">J</a>
+          <a href="javascript:select_species(document.dataform,'- K')" title="Show species starting with K">K</a>
+          <a href="javascript:select_species(document.dataform,'- L')" title="Show species starting with L">L</a>
+          <a href="javascript:select_species(document.dataform,'- M')" title="Show species starting with M">M</a>
+          <a href="javascript:select_species(document.dataform,'- N')" title="Show species starting with N">N</a>
+          <a href="javascript:select_species(document.dataform,'- O')" title="Show species starting with O">O</a>
+          <a href="javascript:select_species(document.dataform,'- P')" title="Show species starting with P">P</a>
+          <a href="javascript:select_species(document.dataform,'- Q')" title="Show species starting with Q">Q</a>
+          <a href="javascript:select_species(document.dataform,'- R')" title="Show species starting with R">R</a>
+          <a href="javascript:select_species(document.dataform,'- S')" title="Show species starting with S">S</a>
+          <a href="javascript:select_species(document.dataform,'- T')" title="Show species starting with T">T</a>
+          <a href="javascript:select_species(document.dataform,'- U')" title="Show species starting with U">U</a>
+          <a href="javascript:select_species(document.dataform,'- V')" title="Show species starting with V">V</a>
+          <a href="javascript:select_species(document.dataform,'- W')" title="Show species starting with W">W</a>
+          <a href="javascript:select_species(document.dataform,'- X')" title="Show species starting with X">X</a>
+          <a href="javascript:select_species(document.dataform,'- Y')" title="Show species starting with Y">Y</a>
+          <a href="javascript:select_species(document.dataform,'- Z')" title="Show species starting with Z">Z</a>
+          <input type="button" value="Show All Species" onclick="select_species(document.dataform,'');" style="margin-left:2em;" />
+        </td></tr>
+	<tr><td><span class="small">Search the species list:</span>
+          <input name="regexp" onkeyup="species_filter.set(this.value)" />
+        </td></tr>
+	</table>
+    </td></tr>
+    <tr><td class="th">Email Report?</td>
+      <td><fieldset><legend>Email Report?</legend>
+        <input type="radio" name="email" id="email_yes" value="Yes" checked="checked" tabindex="31" /><label for="email_yes">Yes</label>
+	<input type="radio" name="email" id="email_no" value="No" style="padding-left:2em;" tabindex="32" /><label for="email_no">No</label>
+	</fieldset>
+    </td></tr>
+    <tr><td colspan="2" class="buttonrow">
+      <input type="submit" value="Submit" title="Generate Report" class="submitbutton" tabindex="35" />
+      <input type="reset" value="Clear" title="Clear Form" class="resetbutton" tabindex="36" />
+    </td></tr>
+  </table>
+  <input type="hidden" name="proc" value="banding_data_report" />
+  <input type="hidden" id="dataform_required" value="" />
+
+<script type="text/javascript">
+/*<![CDATA[*/
+  var species_filter = new filterlist(document.dataform.species_list);
+
+  function select_species(form, pattern) {
+    species_filter.set(pattern);
+    form.regexp.value='';
+  }
+  function clear_form(form) {
+    form.reset(); species_filter.set('');
+  }
+/*]]>*/
+</script>
+</form>
+
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/contacts.html"-->
+
+</div>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/footer-abbbs.html"-->
+</body>
+</html>

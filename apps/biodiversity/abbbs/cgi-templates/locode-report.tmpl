@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Australian Bird and Bat Banding Scheme - Banding Locations (Locodes) Report</title>
+<meta name="DC.Title" lang="en" content="Australian Bird and Bat Banding Scheme - Locodes Report" xml:lang="en" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Description" lang="en" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" xml:lang="en" />
+<meta name="DC.Publisher" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Date.created" scheme="ISO8601" content="<TMPL_VAR NAME=DATE_CREATED>" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth of Australia" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="Description" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" />
+<link rel="stylesheet" type="text/css" href="/apps/biodiversity/abbbs/css/abbbs.css" />
+<style type="text/css">
+/*<![CDATA[*/
+div#toc #toc-left { float:left; margin:0; padding:0 0.5em; }
+div#toc #toc-right { float:right; margin:0; padding:0 0.5em; }
+@media print { div#toc-right { display:none; } }
+table#resultssummary th { background-color:#CCFFCC; }
+table#results td.heading { background-color:#CCFFCC; }
+/*]]>*/
+</style>
+</head>
+<body>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/header-abbbs.html"-->
+<TMPL_INCLUDE NAME="/apps/biodiversity/abbbs/cgi-templates/login-out.tmpl">
+<div id="content">
+<h1>Banding Locations (Locodes) Report for <TMPL_VAR NAME=BANDER_NAME></h1>
+
+<div id="tocbox">
+<div id="toc" class="clearfix">
+<div id="toc-left">
+<table id="resultssummary" summary="Locations Summary table" cellspacing="0">
+<tr><th>Bander's Authority Number</th><td><TMPL_VAR NAME=AUTH_NO></td></tr>
+<TMPL_IF NAME=PERSONAL><tr><th><a href="#personal">Locations Registered by Bander</a></th><td><TMPL_VAR NAME=PERSONAL></td></tr></TMPL_IF>
+<TMPL_IF NAME=MEMBER><tr><th><a href="#member">Locations Registered by Cooperative Site(s) of which Bander is a Member</a></th><td><TMPL_VAR NAME=MEMBER></td></tr></TMPL_IF>
+<TMPL_IF NAME=SUPERVISOR><tr><th><a href="#supervisor">Locations Registered by Cooperative Site(s) of which Bander is the Supervisor</a></th><td><TMPL_VAR NAME=SUPERVISOR></td></tr></TMPL_IF>
+</table>
+</div>
+<div id="toc-right">
+<a href="/cgi-bin/biodiversity/abbbs/birdbatman.pl">BirdBatMan Home</a><br />
+<a href="/cgi-bin/biodiversity/abbbs/bbm-reports.pl">BirdBatMan Reports</a><br />
+<a href="/cgi-bin/biodiversity/abbbs/bbm-reports.pl?proc=locode_report;report_format=excel;auth_no=<TMPL_VAR NAME=AUTH_NO>">Excel Report</a>
+</div>
+</div>
+</div>
+
+<TMPL_IF NAME=RESULTS_LOOP>
+<table id="results" summary="Locations table" cellspacing="0">
+<thead>
+<tr><th rowspan="2">Locode</th><th rowspan="2">Check Code</th><th rowspan="2">Location Name</th><th rowspan="2">State</th><th colspan="3" style="text-align:center;">Latitude<br /><span class="small">Latitudes south are negative</span></th><th colspan="3" style="text-align:center;">Longitude<br /><span class="small">Longitudes west are negative</span></th></tr>
+<tr><th class="bordernone">Deg.</th><th class="bordernone">Min.</th><th>Sec.</th><th class="bordernone">Deg.</th><th class="bordernone">Min.</th><th>Sec.</th></tr>
+</thead>
+<tbody><TMPL_LOOP NAME=RESULTS_LOOP>
+<TMPL_IF NAME=HEADING><tr <TMPL_IF __FIRST__>class="first"</TMPL_IF>><td colspan="3" class="heading">
+  <TMPL_IF EXPR="lc(HEADING) eq 'personal'"><a name="personal">Locations Registered by Bander</a><TMPL_ELSE><TMPL_IF EXPR="lc(HEADING) eq 'member'"><a name="member">Locations Registered by Cooperative Site(s) of which Bander is a Member</a><TMPL_ELSE><TMPL_IF EXPR="lc(HEADING) eq 'supervisor'"><a name="supervisor">Locations Registered by Cooperative Site(s) of which Bander is the Supervisor</a></TMPL_IF></TMPL_IF></TMPL_IF>
+</td><td colspan="7">&nbsp;</td></tr>
+<TMPL_ELSE>
+<tr class="<TMPL_IF __ODD__>odd<TMPL_ELSE>even</TMPL_IF>">
+<td><TMPL_VAR NAME=LOCODE></td>
+<td><TMPL_VAR NAME=LONAM1></td>
+<td><TMPL_VAR NAME=LONAM2></td>
+<td><TMPL_VAR NAME=STATE></td>
+<td class="right"><TMPL_VAR NAME=LAT_DEGREES></td>
+<td class="right"><TMPL_VAR NAME=LAT_MINUTES></td>
+<td class="right"><TMPL_VAR NAME=LAT_SECONDS></td>
+<td class="right"><TMPL_VAR NAME=LON_DEGREES></td>
+<td class="right"><TMPL_VAR NAME=LON_MINUTES></td>
+<td class="right"><TMPL_VAR NAME=LON_SECONDS></td>
+</tr>
+</TMPL_IF>
+</TMPL_LOOP>
+</tbody>
+</table>
+</TMPL_IF>
+
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/contacts.html"-->
+
+</div>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/footer-abbbs.html"-->
+</body>
+</html>

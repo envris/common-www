@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Australian Bird and Bat Banding Scheme - Banding Locations (Locodes) Report</title>
+<meta name="DC.Title" lang="en" content="Australian Bird and Bat Banding Scheme - Locodes Report" xml:lang="en" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Description" lang="en" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" xml:lang="en" />
+<meta name="DC.Publisher" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Date.created" scheme="ISO8601" content="<TMPL_VAR NAME=DATE_CREATED>" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth of Australia" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="Description" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" />
+<link rel="stylesheet" type="text/css" href="/apps/biodiversity/abbbs/css/abbbs.css" />
+<style type="text/css">
+/*<![CDATA[*/
+div#toc #toc-left { float:left; margin:0; padding:0 0.5em; }
+div#toc #toc-right { float:right; margin:0; padding:0 0.5em; }
+@media print { div#toc-right { display:none; } }
+table#resultssummary th { background-color:#CCFFCC; }
+table#results td.heading { background-color:#CCFFCC; }
+/*]]>*/
+</style>
+</head>
+<body>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/header-abbbs.html"-->
+<TMPL_INCLUDE NAME="/apps/biodiversity/abbbs/cgi-templates/login-out.tmpl">
+<div id="content">
+<h1>Stock Report for <TMPL_VAR NAME=BANDER_NAME></h1>
+
+<div id="tocbox">
+<div id="toc" class="clearfix">
+<div id="toc-left">
+<TMPL_IF NAME=RESULTS_LOOP>
+The following banding supplies have been issued to Banding Authority <TMPL_VAR NAME=AUTH_NO><TMPL_ELSE>No banding supplies have been issued to Banding Authority <TMPL_VAR NAME=AUTH_NO></TMPL_IF><TMPL_IF NAME=RANGE>
+<TMPL_IF EXPR="RANGE == 12"> in the last 12 months<TMPL_ELSE>
+<TMPL_IF EXPR="RANGE == 24"> in the last 2 years<TMPL_ELSE>
+<TMPL_IF EXPR="RANGE == 36"> in the last 3 years<TMPL_ELSE>
+<TMPL_IF EXPR="RANGE == 48"> in the last 4 years<TMPL_ELSE>
+<TMPL_IF EXPR="RANGE == 60"> in the last 5 years<TMPL_ELSE> in the last <TMPL_VAR NAME=RANGE> months</TMPL_IF></TMPL_IF></TMPL_IF></TMPL_IF></TMPL_IF></TMPL_IF>.
+</div>
+<div id="toc-right">
+<a href="/cgi-bin/biodiversity/abbbs/birdbatman.pl">BirdBatMan Home</a><br />
+<a href="/cgi-bin/biodiversity/abbbs/bbm-reports.pl">BirdBatMan Reports</a><br />
+<a href="/cgi-bin/biodiversity/abbbs/bbm-reports.pl?proc=stock_report;report_format=excel;auth_no=<TMPL_VAR NAME=AUTH_NO>;<TMPL_IF NAME=RANGE>range=<TMPL_VAR NAME=RANGE></TMPL_IF>">Excel Report</a>
+</div>
+</div>
+</div>
+
+<TMPL_IF NAME=RESULTS_LOOP>
+<table id="results" summary="Banding Supplies table" cellspacing="0">
+<thead>
+<tr><th>Date Issued<br /><span class="small">(yyyy/mm/dd)</span></th><th>Loband</th><th>Hiband</th><th>Metal</th></tr>
+</thead>
+<tbody><TMPL_LOOP NAME=RESULTS_LOOP>
+<tr class="<TMPL_IF __ODD__>odd<TMPL_ELSE>even</TMPL_IF><TMPL_IF __FIRST__> first</TMPL_IF>">
+<td><TMPL_IF NAME=DATE><TMPL_VAR NAME=DATE><TMPL_ELSE>&nbsp;</TMPL_IF></td>
+<td><TMPL_VAR NAME=LOBAND></td>
+<td><TMPL_VAR NAME=HIBAND></td>
+<td><TMPL_IF NAME=METAL><TMPL_VAR NAME=METAL><TMPL_ELSE>&nbsp;</TMPL_IF></td>
+</tr></TMPL_LOOP>
+</tbody>
+</table>
+</TMPL_IF>
+
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/contacts.html"-->
+
+</div>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/footer-abbbs.html"-->
+</body>
+</html>

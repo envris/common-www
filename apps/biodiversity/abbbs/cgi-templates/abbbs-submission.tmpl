@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>ABBBS - Data Submission Service</title>
+<meta name="DC.Title" lang="en" content="ABBBS - Data Submission Service" xml:lang="en" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Description" lang="en" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" xml:lang="en" />
+<meta name="DC.Publisher" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Date.created" scheme="ISO8601" content="<TMPL_VAR NAME=DATE_CREATED>" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth of Australia" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="Description" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" />
+<link rel="stylesheet" type="text/css" href="/apps/biodiversity/abbbs/css/abbbs.css" />
+<style type="text/css">
+/*<![CDATA[*/
+@import url("/apps/biodiversity/abbbs/css/abbbs-db.css");
+/*]]>*/
+</style>
+<script type="text/javascript" src="/apps/biodiversity/abbbs/js/abbbs.js"></script>
+<script type="text/javascript" src="/apps/biodiversity/abbbs/js/checkform.js"></script>
+</head>
+<body onload="document.uploadform.upload_file.focus();">
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/header-abbbs.html"-->
+<div id="content">
+
+<h1><a name="top" id="top"><acronym lang="en" title="Australian Bird and Bat Banding Scheme" xml:lang="en">ABBBS</acronym>: Data Submission Service</a></h1>
+This service will allow you to obtain reformatted copies of valid data files
+via email.  It does NOT store them in any database.
+
+<p> However, the data will not be accepted if the <a href="/biodiversity/abbbs/validate.html">DVS - Data Validation Service</a> found fatal errors in your file.<br />
+So please do use the DVS to check your file before using this service.
+</p>
+
+<fieldset id="submission">
+<p>To select the file to be submitted, click the <span class="form-ref">Browse</span> button.
+(In some browsers, this button may be labelled <span class="form-ref">Choose</span>.)<br />
+A window will appear in which you can pick the file to be checked.<br />
+Text files in comma-delimited or tab-delimited format and spreadsheets in
+Microsoft Excel format can be processed. (<strong>Only the first worksheet of a spreadsheet will be read!</strong>)
+You may also submit fixed-format text files in Avetech System or Data Bureau format.<br />
+Please select the format from the drop-down list. 
+(Comma-delimited will be assumed if you do not select a format.)<br />
+<!--
+<acronym lang="en" title="Data Submission Service" xml:lang="en">DSS</acronym> 
+needs your email address in order to send you the Data Despatch Summary 
+for your file. DSS will NOT store your email address.
+<br />
+-->
+You may enter comments about your data submission in the box, if you wish.
+</p>
+<p>If all the data in the file belongs (or should belong) to a single
+banding authority, enter the authority number in the field provided.
+Additional validation checks will then be performed.</p>
+<p>Finally, click the <span class="form-ref">Submit File</span> button. </p>
+
+<TMPL_IF NAME=MSG>
+<p><span class="error">A problem was encountered.</span><br />
+<TMPL_VAR NAME=MSG><br />
+Please follow the above instructions carefully.<br />
+The <a href="#hints">Hints</a> may indicate what went wrong. If not,
+please <a href="#contact">contact <acronym lang="en" title="Australian Bird and Bat Banding Scheme" xml:lang="en">ABBBS</acronym>
+</a> staff. </p></TMPL_IF>
+
+<form id="uploadform" name="uploadform" method="post" action="/cgi-bin/biodiversity/abbbs/abbbs-client.pl" enctype="multipart/form-data" 
+onsubmit="if (checkform(this)) { return Submit(this) } else { return false; }">
+
+<table id="uploadtbl" cellspacing="0">
+<tr><th><label for="uploadfile">Select the file:</label></th>
+  <td colspan="2"><input type="file" id="uploadfile" name="upload_file" size="60" maxlength="255" onkeypress="return noenter(event);" /></td>
+</tr>
+<tr><th><label for="filetype">File format?</label></th>
+  <td colspan="2"><select id="filetype" name="filetype">
+    <option value="csv" <TMPL_IF NAME=CSV_SET>selected="selected"</TMPL_IF>>Comma-Delimited</option>
+    <option value="tab" <TMPL_IF NAME=TAB_SET>selected="selected"</TMPL_IF>>Tab-Delimited</option>
+    <option value="xls" <TMPL_IF NAME=XLS_SET>selected="selected"</TMPL_IF>>Spreadsheet</option>
+    <option value="bureau" <TMPL_IF NAME=BUREAU_SET>selected="selected"</TMPL_IF>>Data Bureau Fixed Format</option>
+    <option value="avetech"<TMPL_IF NAME=AVETECH_SET>selected="selected"</TMPL_IF>>Avetech System</option>
+    </select></td>
+</tr>
+<tr><th><label for="auth_no">Bander's Authority Number:</label></th>
+  <td colspan="2"><input type="text" id="auth_no" name="auth_no" size="6" maxlength="4" <TMPL_IF NAME=AUTH_NO>value="<TMPL_VAR NAME=AUTH_NO>"</TMPL_IF> onkeypress="return noenter(event);" /></td>
+</tr>
+<tr class="alignmid"><th>Bander's Name:</th>
+  <td><label class="normal" for="bander_first_name">First Name</label><br />
+    <input type="text" id="bander_first_name" name="bander_first_name" size="16" maxlength="20" <TMPL_IF NAME=BANDER_FIRST_NAME>value="<TMPL_VAR NAME=BANDER_FIRST_NAME>"</TMPL_IF> onkeypress="return noenter(event);" /></td>
+  <td><label class="normal" for="bander_name">Surname</label><br />
+    <input type="text" id="bander_name" name="bander_name" size="30" maxlength="40" <TMPL_IF NAME=BANDER_NAME>value="<TMPL_VAR NAME=BANDER_NAME>"</TMPL_IF> onkeypress="return noenter(event);" /></td>
+</tr>
+<tr class="alignmid"><th><label for="bander_email">Your Email Address:</label></th>
+  <td colspan="2"><input type="text" id="bander_email" name="bander_email" size="40" maxlength="255" <TMPL_IF NAME=BANDER_EMAIL>value="<TMPL_VAR NAME=BANDER_EMAIL>"</TMPL_IF> onkeypress="return noenter(event);" />
+  </td>
+</tr>
+<tr class="alignmid"><th><label for="comments">Comments (optional)</label></th>
+  <td colspan="2"><textarea name="comments" id="comments" rows="5" cols="60"><TMPL_VAR NAME=COMMENTS ESCAPE=HTML></textarea></td>
+</tr>
+<tr><th><label for="data_owner">Authority Number<br />of Data Owner:</label></th>
+<td><span class="small">Bander or Cooperative Site to which data belongs (Optional)</span><br />
+  <input type="text" id="data_owner" name="data_owner" size="6" maxlength="4" onkeypress="return noenter(event);" /></td></tr>
+<tr><td colspan="3" class="buttonrow">
+  <input type="submit" name="sub_button" id="sub_button" value="Submit File" title="Submit File" class="submitbutton" />
+  <div id="wait_msg"><span>Please wait....</span></div> <!-- Hidden -->
+  </td>
+</tr>
+</table>
+<input type="hidden" name="required" id="required" value="uploadfile,auth_no,bander_name,bander_email" />
+<TMPL_VAR NAME=HIDDEN>
+</form>
+</fieldset>
+
+<h2><a name="hint">Hints</a></h2>
+
+<div class="hint">
+<ul style="margin-top:0;">
+<li>Did you enter the bander's authority number and name, and your email address?</li>
+<li>The surname you enter must match that stored in the ABBBS database for the
+authority.</li>
+<li>Did you select a file?</li>
+<li>Did you select the correct file format for your file?</li>
+<li>Files which have spaces anywhere in their full name may not load properly
+in some browsers; <br />eg. <code>C:\abbbs\2003 2004\band data.csv</code>.
+Try changing the name of the file to<br />
+<code>C:\abbbs\2003-2004\band-data.csv</code>. 
+(Notice that the name of the folder has also been changed!)</li>
+<li>Is your file in a supported format?  Only spreadsheets in Microsoft
+Excel format (.xls files) or text files in comma-delimited or tab-delimited
+format,
+or fixed-format text files ((Data Bureau or Avetech System)
+can be processed.
+<br />
+<strong>Note!</strong> For fixed-format text files, banding and
+recovery records MUST be in separate files. The filename of files
+containing banding records MUST end in <code>.TRN</code> or
+<code>.trn</code>. The filename of files containing recovery records
+MUST end in <code>.COV</code> or <code>.cov</code>.
+</li>
+<li>Do any of the fields contain double-quotes? These can cause hiccups in <acronym lang="en" title="Data Validation Service" xml:lang="en">DVS </acronym> and later in CODD when your file is loaded into the database.</li>
+<li>If your file has a header line containing the field names, the
+line will be ignored; you do not need to remove it before submitting
+the file.</li>
+<li>Lines in which the Band Number, Retrap and Authority Number columns are empty will be ignored.</li>
+<li>Dates must be in DDMMYYYY or DD/MM/YYYY format.
+For Avetech System and Data Bureau files, dates must be in YYYYMMDD format.
+The date column may be mis-read in spreadsheets if it is not properly
+formatted. You may need to explicitly format this column using the
+<strong>Format Cells</strong> function in Excel; select the
+<strong>Date</strong> Category and a <strong>Type</strong> such as
+<strong>13/03/2001</strong>.</li>
+</ul>
+</div>
+
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/contacts.html"-->
+
+</div>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/footer-abbbs.html"-->
+</body>
+</html>

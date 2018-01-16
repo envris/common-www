@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Australian Bird and Bat Banding Scheme - Data Validation Service Results</title>
+<link rel="schema.AGLS" href="http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2" />
+<meta name="DC.Title" lang="en" content="Australian Bird and Bat Banding Scheme - Data Validation Service Results" xml:lang="en" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Heritage" />
+<meta name="DC.Publisher" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Heritage" />
+<meta name="DC.Date.created" scheme="ISO8601" content="<TMPL_VAR NAME=DATE_CREATED>" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="DC.Rights" scheme="URI" content="http://www.environment.gov.au/about/copyright.html" />
+<style type="text/css">
+/*<![CDATA[*/
+body {background:white;color:black;margin:0;font-size:76%;font-family:Arial, Helvetica, sans-serif;padding:0;}
+html>body{margin:0;padding:0;width:100%;}
+ol, ul, dl, dt, dd {font-size:1.0em;padding:0 0 2px 0;}
+table, li, p, td, tr, th {font-size:1.0em}
+h1, h2, h3, h4, h5, h6 {margin:5px 0 3px 0;background:transparent;color:#000;text-align:left;}
+h1 {font-size:1.7em;margin:6px 0 5px 0}
+h2 {font-size:1.4em}
+h3 {font-size:1.3em}
+h4 {font-size:1.2em}
+h5 {font-size:1.1em}
+h6 {font-size:1.0em}
+p {margin:5px 0 10px 0;padding:0;}
+ul {padding:0;margin:5px 0 10px 30px;}
+li {margin:0;padding:0 0 1px 0;}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {color:black;}
+#body1column {margin-left:10px; margin-right:10px;}
+#body1column p {line-height:1.4}
+
+/* The 'instructions' section */
+div.instructions   { margin: 0; padding: 0.5em 0; }
+div.instructions .left     { float: left; width: 70%;
+        margin: 0;  padding: 0 2em 0 0; }
+div.instructions .right    { float: right; margin: 0; padding: 0; }
+div.instructions ul	{ margin-top: 0; margin-bottom: 0; }
+div.instructions p	{ margin: 0; }
+
+table#resultssummary    { margin: 0; padding: 0; border-collapse: collapse; }
+table#resultssummary caption {
+	text-align: left; padding: 0 0 0.25em 0; white-space: nowrap; }
+table#resultssummary th, 
+table#resultssummary td { padding: 5px; text-align: left; }
+table#resultssummary th { background-color: #A2D1A2; 
+	border-bottom: thin solid #ECF6EC; }
+table#resultssummary td { background-color: #ECF6EC; 
+	border-bottom: thin solid #A2D1A2; }
+
+table#val_results { margin: 0.5em 0; padding: 0; }
+table#val_results caption { text-align: left; padding: 0.5em 0; 
+	white-space: nowrap;  font-size: 1.2em; }
+table#val_results td { padding: 8px; }
+table#val_results th { padding: 10px 5px; }
+table#val_results th { vertical-align: middle; text-align: left; 
+	background-color: #A2D1A2; border-bottom: thin solid #ECF6EC; }
+table#val_results td { vertical-align: middle; text-align: left; 
+	border-bottom: thin solid #A2D1A2; }
+
+table#val_results tr.fatal_msg { background-color: #ffa8a8; }
+table#val_results tr.fatal_msg_odd { background-color: #ffa8a8; }
+table#val_results tr.fatal_msg_even { background-color: #ffd4d4; }
+table#val_results tr.warning_msg  { background-color: #ffffcc; }
+table#val_results tr.info_msg     { background-color: #eeeeee; }
+
+table.data_summary { margin: 0.5em 0; padding: 0; }
+table.data_summary thead { margin: 0; padding: 0; }
+table.data_summary caption { text-align: center; padding: 0.5em 0; white-space: nowrap;  font-size: 1.2em; }
+table.data_summary td { padding: 8px; }
+table.data_summary th { padding: 8px 5px; vertical-align: middle; 
+	text-align: center; background-color: #A2D1A2; 
+	border-left: thin solid #339933; border-top: thin solid #339933; }
+table.data_summary tr.lastth th, table.data_summary th.bottomth {
+	border-bottom: thin solid #339933; }
+table.data_summary th.last { border-right: thin solid #339933; }
+table.data_summary td { vertical-align: middle; text-align: left; 
+	border-left: thin solid #A2D1A2; border-bottom: thin solid #A2D1A2; }
+table.data_summary td.last { border-right: thin solid #A2D1A2; }
+table.data_summary td.center, table.data_summary th.center { 
+	text-align: center; }
+table.data_summary td.left, table.data_summary th.left { 
+	text-align: left; }
+table.data_summary tr.total { font-weight: bold; background-color: white; }
+table.data_summary tr.odd { background-color: #FFF6EC; }
+table.data_summary tr.even { background-color: #ECF6EC; }
+
+.right	{ text-align: right; }
+.italic	{ font-style: italic; }		/* for species names */
+.clearfix { overflow:auto; } * html .clearfix { height:1%; }
+/*]]>*/
+</style>
+</head>
+<body>
+<div id="body1column">
+<h1><a name="top" id="top"><acronym lang="English" title="Australian Bird and Bat Banding Scheme" xml:lang="English">ABBBS</acronym> Data Validation Service Results</a></h1>
+
+<div class="instructions clearfix">
+<div class="left">
+<table id="resultssummary" summary="Data Details" cellspacing="0">
+  <tr><th>Date</th><td><TMPL_VAR NAME=DATE_TIME></td></tr>
+  <TMPL_IF NAME=DATA_OWNER>
+  <tr><th>Authority Number<br />of Data Owner</th><td><TMPL_VAR NAME=DATA_OWNER></td></tr></TMPL_IF>
+  <tr><th>Data File</th><td><TMPL_VAR NAME=UPLOAD_FILE></td></tr>
+  <tr><th>Number of lines</th><td><TMPL_VAR NAME=LINE_COUNT></td></tr>
+  <tr><th>Number of records</th><td><TMPL_VAR NAME=RECORD_COUNT><TMPL_IF NAME=VALID_RECORD_COUNT> (<TMPL_VAR NAME=VALID_RECORD_COUNT> valid records)</TMPL_IF></td></tr>
+  <TMPL_IF NAME=INFO_COUNT>
+  <tr><th>Informational Messages</th><td><TMPL_VAR NAME=INFO_COUNT></td></tr></TMPL_IF>
+  <TMPL_IF NAME=WARNING_COUNT>
+  <tr><th>Warnings</th><td><TMPL_VAR NAME=WARNING_COUNT> <TMPL_IF WARNINGS_OFF>(Warnings were not reported.)</TMPL_IF></td></tr></TMPL_IF>
+  <TMPL_IF NAME=FATAL_COUNT>
+  <tr><th>Errors</th><td><TMPL_VAR NAME=FATAL_COUNT></td></tr></TMPL_IF>
+</table>
+</div>
+<div class="right">
+<a href="http://apps.internal.environment.gov.au/biodiversity/abbbs/validate.html">Data Validation Service</a>
+<TMPL_IF NAME=SUMMARY><br /><a href="#summary">Data Summary</a></TMPL_IF>
+<TMPL_IF NAME=RESULTS_LOOP><br /><a href="#notes">Validation Notes</a></TMPL_IF><br />
+<a href="#contacts">Contacts</a>
+</div>
+</div>
+
+<TMPL_IF NAME=RESULTS_LOOP>
+<table id="val_results" summary="Validation Results" cellspacing="0">
+<tr><th>Line</th><th>RETRAP Value</th><th>BAND NUMBER Value</th><TMPL_IF NAME=MSG_CODE_COL><th>Validation Code</th></TMPL_IF><th>Validation Type</th><th>Column (Field)</th><th>Value</th>
+<TMPL_IF NAME=FORMATTED_COL><th>'Formatted Value'</th></TMPL_IF>
+<th>Message</th></tr>
+<TMPL_LOOP NAME=RESULTS_LOOP>
+<tr <TMPL_IF NAME=FATAL><TMPL_IF __ODD__>class="fatal_msg_odd"<TMPL_ELSE>class="fatal_msg_even"</TMPL_IF></TMPL_IF><TMPL_IF NAME=WARNING>class="warning_msg"</TMPL_IF><TMPL_IF NAME=INFO>class="info_msg"</TMPL_IF>>
+  <td><TMPL_VAR NAME=LINENO></td>
+  <td><TMPL_IF NAME=RETRAP><TMPL_VAR NAME=RETRAP><TMPL_ELSE>&nbsp;</TMPL_IF></td>
+  <td><TMPL_IF NAME=BANDNO><TMPL_VAR NAME=BANDNO><TMPL_ELSE>&nbsp;</TMPL_IF></td>
+  <TMPL_IF NAME=MSG_CODE><td><TMPL_VAR NAME=MSG_CODE></td></TMPL_IF>
+  <td><TMPL_VAR NAME=TYPE></td>
+  <td><TMPL_IF NAME=COLUMN><TMPL_VAR NAME=COLUMN><TMPL_ELSE>&nbsp;</TMPL_IF> <TMPL_IF NAME=COLUMN_NAME>(<TMPL_VAR NAME=COLUMN_NAME ESCAPE=HTML>)</TMPL_IF></td>
+  <td><TMPL_IF NAME=VALUE><TMPL_VAR NAME=VALUE ESCAPE=HTML><TMPL_ELSE>&nbsp;</TMPL_IF></td>
+  <TMPL_IF NAME=FORMATTED_COL><td><code><TMPL_IF NAME=FORMATTED_VALUE><TMPL_VAR NAME=FORMATTED_VALUE ESCAPE=HTML><TMPL_ELSE>&nbsp;</TMPL_IF></code></td></TMPL_IF>
+  <td><TMPL_VAR NAME=MSG ESCAPE=HTML></td>
+</tr>
+</TMPL_LOOP>
+</table>
+
+<TMPL_ELSE>
+  <TMPL_IF NAME=RECORD_COUNT>
+  <p>Congratulations! The file had no errors.</p>
+  <TMPL_ELSE>
+  <p>Your file did not contain any data records which met the CODD guidelines!</p>
+  </TMPL_IF>
+</TMPL_IF>
+
+<TMPL_IF NAME=SUMMARY>
+<h2><a name="summary">Data Summary</a></h2>
+<TMPL_IF NAME=RESULTS_LOOP>
+<ul><li>Please note! Records which have fatal errors in the
+<strong>Band Number, Retrap, Species Number, or Authority
+Number</strong> fields are <strong>not</strong> included in this
+summary.</li></ul>
+</TMPL_IF>
+<TMPL_IF NAME=STAT_DATA>
+<ul>
+<TMPL_IF NAME=EARLIEST_BANDING_DATE><li>Date of earliest banding record: <TMPL_VAR NAME=EARLIEST_BANDING_DATE></li></TMPL_IF>
+<TMPL_IF NAME=EARLIEST_RECOVERY_DATE><li>Date of earliest recovery record: <TMPL_VAR NAME=EARLIEST_RECOVERY_DATE></li></TMPL_IF>
+<TMPL_IF NAME=LAST_BANDING_DATE><li>Date of latest banding record: <TMPL_VAR NAME=LAST_BANDING_DATE></li></TMPL_IF>
+<TMPL_IF NAME=LAST_RECOVERY_DATE><li>Date of latest recovery record: <TMPL_VAR NAME=LAST_RECOVERY_DATE></li></TMPL_IF>
+<TMPL_IF NAME=COOP_SITE><li>Cooperative Banding Site data <TMPL_IF NAME=COOP_SITE_YES>are <TMPL_ELSE>are not</TMPL_IF> included in this file.</li></TMPL_IF>
+</ul>
+</TMPL_IF>
+
+<TMPL_IF NAME=SUMMARY_LOOP>
+<table class="data_summary" summary="Data Summary" cellspacing="0">
+<thead>
+<tr><th colspan="3" rowspan="2">Species</th><th rowspan="3" class="bottomth">Banding<br /><br />Records</th><th colspan="4" class="last">RETRAP Records</th></tr>
+<tr><th colspan="2">Known</th><th colspan="2" class="last">Control</th></tr>
+<tr class="lastth"><th class="left">Number</th><th class="left">Scientific Name</th><th class="left">Common Name</th><th>Live</th><th>Dead</th><th>Live</th><th class="last">Dead</th></tr>
+</thead>
+<tbody>
+<TMPL_LOOP NAME=SUMMARY_LOOP>
+<tr <TMPL_IF __ODD__>class="odd"<TMPL_ELSE>class="even"</TMPL_IF>>
+  <td><TMPL_VAR NAME=SPENO></td><td class="italic"><TMPL_VAR NAME=NAME ESCAPE=HTML></td><td><TMPL_IF NAME=COMMON><TMPL_VAR NAME=COMMON ESCAPE=HTML><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center"><TMPL_IF NAME=BAND_COUNT><TMPL_VAR NAME=BAND_COUNT><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center"><TMPL_IF NAME=KNOWN_LIVE_COUNT><TMPL_VAR NAME=KNOWN_LIVE_COUNT><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center"><TMPL_IF NAME=KNOWN_DEAD_COUNT><TMPL_VAR NAME=KNOWN_DEAD_COUNT><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center"><TMPL_IF NAME=CONTROL_LIVE_COUNT><TMPL_VAR NAME=CONTROL_LIVE_COUNT><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center last"><TMPL_IF NAME=CONTROL_DEAD_COUNT><TMPL_VAR NAME=CONTROL_DEAD_COUNT><TMPL_ELSE>&nbsp;</TMPL_IF></td></tr>
+</TMPL_LOOP>
+<tr class="total"><td colspan="3" class="center">TOTALS</td><td class="center"><TMPL_IF NAME=BAND_TOTAL><TMPL_VAR NAME=BAND_TOTAL><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center"><TMPL_IF NAME=KNOWN_LIVE_TOTAL><TMPL_VAR NAME=KNOWN_LIVE_TOTAL><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center"><TMPL_IF NAME=KNOWN_DEAD_TOTAL><TMPL_VAR NAME=KNOWN_DEAD_TOTAL><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center"><TMPL_IF NAME=CONTROL_LIVE_TOTAL><TMPL_VAR NAME=CONTROL_LIVE_TOTAL><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center last"><TMPL_IF NAME=CONTROL_DEAD_TOTAL><TMPL_VAR NAME=CONTROL_DEAD_TOTAL><TMPL_ELSE>&nbsp;</TMPL_IF></td></tr>
+</tbody>
+</table>
+</TMPL_IF>
+
+<TMPL_IF NAME=MORTALITY_LOOP>
+<table class="data_summary" summary="Data Summary" cellspacing="0">
+<caption>Mortalities</caption>
+<tr class="lastth"><th class="left">Species</th><th class="left">Scientific Name</th><th class="left">Common Name</th><th>Number</th><th class="last">Cause</th></tr>
+<TMPL_LOOP NAME=MORTALITY_LOOP>
+<tr <TMPL_IF __ODD__>class="odd"<TMPL_ELSE>class="even"</TMPL_IF>>
+  <td><TMPL_VAR NAME=SPENO></td><td class="italic"><TMPL_VAR NAME=NAME ESCAPE=HTML></td><td><TMPL_IF NAME=COMMON><TMPL_VAR NAME=COMMON ESCAPE=HTML><TMPL_ELSE>&nbsp;</TMPL_IF></td><td class="center"><TMPL_VAR NAME=COUNT></td><td class="last"><TMPL_IF NAME=CAUSE><TMPL_VAR NAME=CAUSE><TMPL_ELSE>&nbsp;</TMPL_IF></td></tr>
+</TMPL_LOOP>
+<tr class="total"><td colspan="3" class="center">TOTAL</td><td class="center"><TMPL_VAR NAME=MORTALITY_TOTAL></td><td class="last">&nbsp;</td></tr>
+</table>
+</TMPL_IF>
+
+</TMPL_IF>
+
+<div class="right">
+<a href="http://apps.internal.environment.gov.au/biodiversity/abbbs/validate.html">Data Validation Service</a>
+</div>
+
+<TMPL_IF NAME=RESULTS_LOOP>
+<h2><a name="notes">Validation Notes</a></h2>
+<ul>
+<li>Records in which the Band Number, Retrap and Authority Number fields are blank or empty have been ignored.</li>
+
+<TMPL_IF NAME=FORMATTED_COL><li>The 'Formatted Value' column in the table
+contains the
+value as it would be loaded into the <acronym lang="English" title="Australian Bird and Bat Banding Scheme" xml:lang="English">ABBBS</acronym> database.
+</li></TMPL_IF>
+<li>If the <strong>RETRAP</strong> or <strong>Authority Number</strong>
+fields have errors, the remaining fields in the record are not
+validated. <br />You'll need to correct the record and re-validate the file
+to find any other possible errors in the record.</li>
+<li>The Data Validation Service does not have access to ALL banding
+data which have been submitted to the <acronym lang="English"
+title="Australian Bird and Bat Banding Scheme" xml:lang="English">ABBBS</acronym>.<br />
+You may receive a warning for recovery records that the band number
+hasn't yet been reported in a banding record even if you have sent the
+banding data<br />
+OR if your file contains the banding record and it
+occurs after the recovery record in the file.
+</li>
+<li>Records which have a FATAL error cannot be loaded into the ABBBS database. Please fix these records before sending the file to <acronym lang="English" title="Australian Bird and Bat Banding Scheme" xml:lang="English">ABBBS</acronym>.</li>
+<li>Records which have a WARNING can probably be loaded but may still have problems. Please double-check these before sending the file to <acronym lang="English" title="Australian Bird and Bat Banding Scheme" xml:lang="English">ABBBS</acronym>.</li>
+</ul>
+</TMPL_IF>
+
+<h2><a name="contacts">Contacts</a></h2>
+
+<p>Telephone: (02) 6274 2407<br />Facsimile: (02) 6274 2455<br />
+Email: <a href="mailto:abbbs@environment.gov.au">abbbs@environment.gov.au</a></p>
+<!--End Content-->
+</div>
+</body>
+</html>

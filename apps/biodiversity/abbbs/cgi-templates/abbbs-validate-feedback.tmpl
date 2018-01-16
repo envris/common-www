@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>ABBBS - Data Validation Service Feedback</title>
+<meta name="DC.Title" lang="en" content="ABBBS - Data Validation Service Feedback" xml:lang="en" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Description" lang="en" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" xml:lang="en" />
+<meta name="DC.Publisher" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Date.created" scheme="ISO8601" content="<TMPL_VAR NAME=DATE_CREATED>" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth of Australia" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="Description" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" />
+<link rel="stylesheet" type="text/css" href="/apps/biodiversity/abbbs/css/abbbs.css" />
+<style type="text/css">
+/*<![CDATA[*/
+@import url("/apps/biodiversity/abbbs/css/abbbs-db.css");
+/*]]>*/
+</style>
+<script type="text/javascript" src="/apps/biodiversity/abbbs/js/abbbs.js"></script>
+<script type="text/javascript" src="/apps/biodiversity/abbbs/js/checkform.js"></script>
+</head>
+<body>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/header-abbbs.html"-->
+<div id="content">
+<h1><a name="top" id="top"><acronym lang="English" title="Australian Bird and Bat Banding Scheme" xml:lang="English">ABBBS</acronym>: Data Validation Service</a></h1>
+
+<div class="instructions clearfix">
+<div class="left">
+<TMPL_IF NAME=MSG_FLAG><p><span class="error">
+A problem was encountered.</span><br />
+<TMPL_VAR NAME=MSG></p>
+<TMPL_ELSE>
+<p>The <acronym lang="English" title="Australian Bird and Bat Banding Scheme" xml:lang="English">ABBBS</acronym> Data Validation Service is currently processing your file (<TMPL_VAR NAME=FILENAME>).<br />
+An email containing the validation results will be sent to
+<TMPL_VAR NAME=EMAIL> shortly.
+</p>
+</TMPL_IF>
+</div>
+
+<div class="right">
+<a href="/biodiversity/abbbs/validate.html">Return to Data Validation Service</a><br />
+<a href="/cgi-bin/biodiversity/abbbs/birdbatman.pl">BirdBatMan Home</a>
+</div>
+</div>
+
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/contacts.html"-->
+
+</div>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/footer-abbbs.html"-->
+</body>
+</html>
