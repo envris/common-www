@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>ABBBS - BirdBatMan Home</title>
+<meta name="DC.Title" lang="en" content="ABBBS - BirdBatMan Home" xml:lang="en" />
+<meta name="DC.Creator" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Description" lang="en" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" xml:lang="en" />
+<meta name="DC.Publisher" scheme="AglsAgent" content="jurisdiction=Commonwealth of Australia; corporateName=Department of the Environment and Water Resources" />
+<meta name="DC.Date.created" scheme="ISO8601" content="<TMPL_VAR NAME=DATE_CREATED>" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Language" scheme="RFC1766" content="en" />
+<meta name="DC.Coverage.jurisdiction" scheme="AglsJuri" content="Commonwealth of Australia" />
+<meta name="DC.Coverage.spatial" lang="en" content="Australia" xml:lang="en" />
+<meta name="Description" content="Events, Ministerial Launch of the Bird Action Plan, Other links, EPBC Act, Threatened Birds Lists, Migratory Species Lists, Key Threatening Processes, State and Territory Internet sites" />
+<link rel="stylesheet" type="text/css" href="/apps/biodiversity/abbbs/css/abbbs.css" />
+<style type="text/css">
+/*<![CDATA[*/
+
+/*]]>*/
+</style>
+<script type="text/javascript" src="/apps/biodiversity/abbbs/js/abbbs.js"></script>
+<script type="text/javascript" src="/apps/biodiversity/abbbs/js/checkform.js"></script>
+</head>
+<body>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/header-abbbs.html"-->
+<TMPL_INCLUDE NAME="/apps/biodiversity/abbbs/cgi-templates/login-out.tmpl">
+<div id="content">
+<h1>Welcome to BirdBatMan - <acronym lang="English" xml:lang="English" title="Australian Bird and Bat Banding Scheme">ABBBS</acronym>' Data Management Tools
+</h1>
+
+<div id="tocbox">
+<div id="toc" class="clearfix">
+<div id="toc-left">
+<ul>
+  <li><a href="/cgi-bin/biodiversity/abbbs/bbm-reports.pl" tabindex="1">Reports</a>
+    <ul>
+      <li><a href="/cgi-bin/biodiversity/abbbs/bbm-reports.pl#locode" tabindex="2">Bander's Locode Report</a></li>
+      <li><a href="/cgi-bin/biodiversity/abbbs/bbm-reports.pl#stock" tabindex="3">Bander's Stock Report</a></li>
+      <li><a href="/cgi-bin/biodiversity/abbbs/bbm-reports.pl#data" tabindex="4">Banding Data Report</a></li>
+    </ul>
+  </li>
+  <li><a href="#reset" tabindex="5">Reset Web Client's Password</a></li>
+  <li><a href="#dove" tabindex="6">DOVE Loader Utility</a></li>
+</ul>
+</div>
+<div id="toc-right">
+<ul>
+  <li><a href="/biodiversity/abbbs/validate.html" target="_service" tabindex="7">Data Validation Service</a> (<span class="small">New Window</span>)</li>
+  <li><a href="/cgi-bin/biodiversity/abbbs/abbbs-client.pl?proc=submit" target="_service" tabindex="8">Data Submission Service</a> (<span class="small">New Window</span>)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 class="option"><a name="reset">Reset Web Client's Password</a></h2>
+
+<form id="passwordform" name="passwordform" class="styleform" method="post" action="/cgi-bin/biodiversity/abbbs/birdbatman.pl" enctype="multipart/form-data" onsubmit="if (checkform(this)) { return Submit(this) } else { return false; }">
+  <fieldset><legend>Reset Web Client's Password</legend>
+  <TMPL_IF NAME=PASSWORD_MSG><p class="formerrormsg"> <span>There's a problem...</span><br />
+  <TMPL_VAR NAME=PASSWORD_MSG></p></TMPL_IF>
+  <table cellspacing="0">
+    <tr><td class="th"><label for="password_auth_no">Authority Number:</label></td>
+      <td><input type="text" id="password_auth_no" name="auth_no" size="6" maxlength="4" tabindex="10" /></td>
+      <td class="buttonrow"><input type="submit" id="passwordform_sub_button" value="Submit" title="Submit" class="submitbutton" tabindex="11" />
+    </td></tr>
+  </table>
+  </fieldset>
+  <input type="hidden" name="proc" value="password" />
+  <input type="hidden" id="passwordform_required" value="password_auth_no" />
+</form>
+
+<h2 class="option"><a name="dove">DOVE Loader Utility</a></h2>
+<TMPL_IF NAME=DOVE_FEEDBACK>
+<p>You will receive an email when the loading is complete.</p><TMPL_ELSE>
+<p>The DOVE Loader utility loads valid DOVE_Recov and/or valid DOVE_Retrn
+  records into the production database.</p></TMPL_IF>
+<form id="doveform" name="doveform" class="styleform" method="post" action="/cgi-bin/biodiversity/abbbs/birdbatman.pl" enctype="multipart/form-data" onsubmit="if (checkform(this)) { return Submit(this) } else { return false; }">
+  <fieldset><legend>DOVE Loader Utility</legend>
+  <TMPL_IF NAME=DOVE_MSG><p class="formerrormsg"> <span>There's a problem...</span><br />
+  <TMPL_VAR NAME=DOVE_MSG></p></TMPL_IF>
+  <table cellspacing="0">
+    <tr><td class="th bordered"><label for="dove_table">Select the table(s) to process:</label></td>
+      <td><select id="dove_table" name="dove_table" tabindex="15">
+        <option value="" selected="selected"> -- None Selected -- </option>
+        <option value="dove_recov">Only DOVE_Recov</option>
+        <option value="dove_retrn">Only DOVE_Retrn</option>
+        <option value="dove_both">Both DOVE_Recov and DOVE_Retrn</option>
+        </select>
+    </td></tr>
+    <tr><td class="th bordered"><label for="birdbat_pswd">Database Password:</label></td>
+      <td><input type="password" id="birdbat_pswd" name="birdbat_pswd"  size="10" maxlength="10" tabindex="16" />
+    </td></tr>
+    <tr><td class="th">Update the database?</td>
+      <td><input type="radio" name="dry_run" id="dry_run_no" value="No" checked="checked" tabindex="17" /><label for="dry_run_no">Yes (Update the database for real!)</label><br />
+	<input type="radio" name="dry_run" id="dry_run_yes" value="Yes" tabindex="18" /><label for="dry_run_yes">No (Do a dry-run; just pretend to update the database.)</label>
+    </td></tr>
+    <tr><td colspan="2" class="buttonrow"><input type="submit" id="doveform_sub_button" value="Submit" title="Run the DOVE Loader" class="submitbutton" tabindex="19" />
+    </td></tr>
+  </table>
+  </fieldset>
+  <input type="hidden" name="proc" value="dove_loader" />
+  <input type="hidden" id="doveform_required" value="dove_table,birdbat_pswd" />
+</form>
+
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/contacts.html"-->
+
+</div>
+<!--#include virtual="/apps/biodiversity/abbbs/ssi/footer-abbbs.html"-->
+</body>
+</html>

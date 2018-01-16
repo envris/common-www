@@ -1,0 +1,202 @@
+/* Used by the ABBBS database pages */
+
+/* The 'instructions' section */
+
+div.instructions   { margin:0; padding:0.5em 0; }
+div.instructions .left     { float:left; width:70%;
+        margin:0;  padding:0 2em 0 0; }
+div.instructions .right    { float:right; margin:0; padding:0; }
+div.instructions ul	{ margin-top:0; margin-bottom:0; }
+div.instructions p	{ margin:0; }
+
+/* Shades of green from dark to light
+   #339933, #46A246, #58AC58, #6BB56B, #7DBE7D, 
+   #90C790, #A2D1A2, #B5DAB5, #C7E3C7, 
+   #DAECDA, #ECF6EC
+*/
+
+/* Data Validation and Submission */
+
+div.hint { padding:4px; width:auto; max-width:750px; margin-top:4px; }
+
+fieldset#submission, fieldset#validate { 
+  padding:4px; width:auto; max-width:750px;
+  margin:4px 0 4px 0; border:1px solid #339933;
+}
+
+fieldset#submission div#wait_msg, fieldset#validate div#wait_msg {
+	display:none; margin:1em; }
+fieldset#submission div#wait_msg span, fieldset#validate div#wait_msg span { 
+	background-color:#90C790; text-align:center; 
+	font:bold normal 0.9em verdana, arial, sans-serif;
+	border-bottom:1px outset #996633; border-right:1px outset #339933;
+	padding:0.5em;
+}
+fieldset#submission div#formerrormsg	{
+	text-align:center; border:2px solid #c00;
+	padding:0; margin:0 0 0.5em 0;
+}
+fieldset#submission div#formerrormsg p { padding:0.5em 1em; margin:0; }
+fieldset#submission .form_error	{ background-color:#fcc; }
+
+div#.int ul,
+fieldset#submission ul,
+fieldset#validate ul	{ margin-top:0; margin-bottom:0; }
+div.hint p,
+fieldset#submission p,
+fieldset#validate p	{ margin:0; padding:0.25em 0; }
+div.hint code,
+fieldset#submission code,
+fieldset#validate code	{ font-size:1.1em; font-weight:normal; 
+	font-family:monospace; background-color:#ECF6EC; }
+div.hint li		{ line-height:1.4; }
+
+form#uploadform		{ margin:0; padding:0; }
+
+table#uploadtbl	{ margin:1em 0 0; padding:0; background-color:#C7E3C7;}
+table#uploadtbl tr	{ vertical-align:bottom; }
+table#uploadtbl td, table#uploadtbl th	{ padding:4px; }
+table#uploadtbl td	{ text-align:left; }
+table#uploadtbl th	{ text-align:right; border-bottom:thin solid #ECF6EC; }
+table#uploadtbl td.buttonrow { vertical-align:middle; text-align:center; 
+	background-color:white; }
+
+table#uploadtbl td label,
+table#uploadtbl td span { font-size:0.9em; font-weight:normal; 
+	padding:0 0.5em 0 0; margin:0.5em 0 0 0; }
+table#uploadtbl tr.alignmid { vertical-align:middle; }
+table#uploadtbl td label.normal { font-size:1em; }
+
+table#uploadtbl textarea:focus, 
+table#uploadtbl input:focus	{ background-color:#ECF6EC; }
+table#uploadtbl input[type="reset"]:focus	{ background-color:white; }
+table#uploadtbl input[type="submit"]:focus	{ background-color:white; }
+table#uploadtbl input[type="button"]:focus	{ background-color:white; }
+
+table#uploadtbl input, 
+table#uploadtbl textarea, 
+table#uploadtbl select	{ margin:0 0 0 0; font-size:1em; font-weight:normal; }
+/*
+table#uploadtbl label span { display:none; }
+table#uploadtbl label:hover span {
+        display:block; overflow:visible;
+        position:absolute; left:20px; top:250px; width:auto;
+        padding:10px; margin:10px; z-index:1000;
+        color:black; background-color:white;
+        border:thin solid #339933;
+        font-size:1em; font-weight:normal; text-align:center;
+}
+*/
+
+/* Classes defined 'cause IE5+ doesn't support attribute selectors */
+
+table#uploadtbl .submitbutton	{
+	font:bold normal 0.9em verdana, arial, sans-serif;
+	background-color:#90C790; 
+	border-bottom:1px outset #996633; border-right:1px outset #339933;
+	padding:0.2em 0.2em; margin:1em 1em 0 0;
+}
+table#uploadtbl .resetbutton	{
+	font:bold normal 0.9em verdana, arial, sans-serif;
+	background-color:yellow;
+	border-bottom:1px outset #339933; border-right:1px outset #339933;
+	padding:0.1em 0.1em;  margin:0;
+}
+table#uploadtbl .submitbutton:focus	{ background-color:white; }
+table#uploadtbl .resetbutton:focus	{ background-color:white; }
+
+/* Results pages	*/
+
+p#rightlink	{ text-align:right; margin:0; padding:0; }
+
+table#resultssummary    { margin:0; padding:0; border-collapse:collapse; }
+table#resultssummary caption {
+	text-align:left; padding:0 0 0.25em 0; white-space:nowrap; }
+table#resultssummary th, 
+table#resultssummary td { padding:5px; text-align:left; }
+table#resultssummary th { background-color:#A2D1A2; 
+	border-bottom:thin solid #ECF6EC; }
+table#resultssummary td { background-color:#ECF6EC; 
+	border-bottom:thin solid #A2D1A2; }
+
+table.results { margin:0.5em 0; padding:0; }
+table.results caption { text-align:left; padding:0.5em 0; white-space:nowrap;  font-size:1.2em; }
+table.results td { padding:5px; }
+table.results th { padding:8px 5px; }
+table.results th { vertical-align:middle; text-align:left; 
+	background-color:#A2D1A2; }
+table.results td { vertical-align:middle; text-align:left; }
+table.results tr.even { background-color:#ECF6EC; }
+table.results tr.odd { background-color:#C7E3C7; }
+
+/* Validation Results page */
+
+table#val_results { margin:0.5em 0; padding:0; }
+table#val_results caption { text-align:left; padding:0.5em 0; 
+	white-space:nowrap;  font-size:1.2em; }
+table#val_results td { padding:8px; }
+table#val_results th { padding:10px 5px; }
+table#val_results th { vertical-align:middle; text-align:left; 
+	background-color:#A2D1A2; border-bottom:thin solid #ECF6EC; }
+table#val_results td { vertical-align:middle; text-align:left; 
+	border-bottom:thin solid #A2D1A2; }
+
+table#val_results tr.fatal_msg { background-color:#ffa8a8; }
+table#val_results tr.fatal_msg_odd { background-color:#ffa8a8; }
+table#val_results tr.fatal_msg_even { background-color:#ffd4d4; }
+table#val_results tr.warning_msg  { background-color:#ffffcc; }
+table#val_results tr.info_msg     { background-color:#eeeeee; }
+
+table.data_summary { margin:0.5em 0; padding:0; }
+table.data_summary thead { margin:0; padding:0; }
+table.data_summary caption { text-align:center; padding:0.5em 0; white-space:nowrap;  font-size:1.2em; }
+table.data_summary td { padding:8px; }
+table.data_summary th { padding:8px 5px; vertical-align:middle; 
+	text-align:center; background-color:#A2D1A2; 
+	border-left:thin solid #339933; border-top:thin solid #339933; }
+table.data_summary tr.lastth th, table.data_summary th.bottomth {
+	border-bottom:thin solid #339933; }
+table.data_summary th.last { border-right:thin solid #339933; }
+
+table.data_summary td { vertical-align:middle; text-align:left; 
+	border-left:thin solid #A2D1A2; border-bottom:thin solid #A2D1A2; }
+table.data_summary td.last { border-right:thin solid #A2D1A2; }
+
+table.data_summary td.center, table.data_summary th.center { 
+	text-align:center; }
+table.data_summary td.left, table.data_summary th.left { 
+	text-align:left; }
+
+table.data_summary tr.total { font-weight:bold; background-color:white; }
+
+table.data_summary tr.odd { background-color:#FFF6EC; }
+table.data_summary tr.even { background-color:#ECF6EC; }
+
+/*	Miscellaneous classes	*/
+
+.error		{ color:red; font-weight:bold; }
+.tiptext	{ font-size:0.8em; font-weight:normal; padding:0.25em; }
+.applink	{ font-weight:bold; font-size:0.9em;  }
+.clearboth      { margin:0; padding:0; 
+		  clear:both; font-size:0; } /* For IE */
+.small		{ font-size:0.8em !important; font-weight:normal; }
+.bold		{ font-weight:bold; }
+.normal		{ font-weight:normal; }
+.italic	{ font-style:italic; }		/* for species names */
+/* to highlight references to form buttons/options */
+.form-ref	{ font-size:1.1em; font-weight:normal; 
+	font-family:monospace; background-color:#ECF6EC; }
+.help-link	{ font-size:0.8em; font-weight:normal; }
+
+/* 'clearfix' hack */
+/*
+   See http://www.positioniseverything.net/easyclearing.html and
+   http://www.456bereastreet.com/archive/200603/new_clearing_method_needed_for_ie7/
+   For most recent 'fix'
+   See http://annevankesteren.nl/test/examples/css/clearing-floats/003
+*/
+/* For testing; add a bright background
+.clearfix { _height:1%; overflow:auto; background:lime }
+*/
+.clearfix { overflow:auto; } * html .clearfix { height:1%; }
+

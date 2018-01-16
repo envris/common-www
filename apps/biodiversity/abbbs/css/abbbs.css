@@ -1,0 +1,337 @@
+/*	StyleSheet for the ABBBS BirdBatMan application	*/
+/*	General		*/
+
+html	{ margin:0; padding:0; }
+body { background-color:white; margin:0; padding:0;
+	font-family:'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif; 
+	font-size:68%;
+}
+ul, dl, dt, dd, ol, table, li, p, td, tr, th	{ font-size:1.0em; }
+
+* { line-height:1.2 }
+
+h1 	{ font-size:1.3em; font-weight:bold; color:#339933;
+	margin:0.5em 0; padding:0;
+}
+h2 	{ font-size:1.2em; font-weight:bold; color:#339933; 
+	margin:0.5em 0; padding:0;
+}
+h3 	{ font-size:1.1em; font-weight:bold; margin:0; padding:0;
+	color:#339933;
+}
+h4 	{ font-size:1.1em; color:#339933; font-weight:normal; }
+h5 	{ font-size:1.1em; color:#339933; font-weight:normal; }
+h6 	{ font-size:1.0em; color:#339933; font-weight:normal; }
+
+/*
+
+a:hover { text-decoration:underline; }
+
+.backcolor	{ background-color:#CCFFCC; }
+.otherbackcolor	{ background-color:#FFFFCC; }
+
+dt	{ font-weight:bold; margin:0.5em 0; line-height:1.3em; }
+dd	{ margin:0.25em 0 0.75em 2em; line-height:1.3em; }
+ul,ol	{ margin-left:0; padding-left:1.5em; }
+li	{ margin:0.25em 0 0.25em; line-height:1.3em; }
+p	{ margin:0.5em 0 0.75em 0; line-height:1.3em; }
+caption	{ font-weight:bold; font-size:1.1em; margin:0; padding:0.25em 0;
+	text-align:center; color:#339933; white-space:nowrap;
+}
+
+*/
+
+code, pre, tt { font-family:monospace; font-size:1.2em; }
+abbr, acronym	{ cursor:help; }
+
+/*	Contents	*/
+
+#content	{ margin:0 2em 0 2em; padding:0; }
+#content pre	{ font-size:1.2em; font-family:monospace; margin:0 0 0 2em;
+	padding:0;
+}
+
+/*	Options in some pages	*/
+
+div#tocbox { 
+        width:95%; margin:0.5em 0 1em 0; padding:0.5em; 
+        font-size:1em;
+        border:1px solid #339933;
+        background-color:white;
+}
+div#toc { margin:0; padding:0; }        /* put class="clearfix" on this! */
+div#toc #toc-left { float:left; margin:0; padding:0; }
+div#toc #toc-right { float:right; margin:0; padding:0; }
+div#tocbox #toc-full { margin:0; padding:0.5em 2em; }
+div#tocbox ul { margin:0; padding:0.5em 2em; }
+div#tocbox li { font-size:1em; line-height:1.5;
+	list-style:url("/apps/biodiversity/abbbs/images/bullet.png") circle;
+	vertical-align:middle;
+}
+div#tocbox a { font-weight:bold; }
+div#tocbox ul ul { margin:0; padding:0 0 0 2em; }
+
+div#contacts { padding:0; width:auto; max-width:600px; margin-top:4px; }
+div#contacts ul { margin-top:0; margin-bottom:0; }
+div#contacts p { margin:0; padding:0.25em 0; }
+div#contacts code { font-size:1em; font-weight:normal; 
+	font-family:monospace; background-color:#ECF6EC; }
+
+/* Application Pages	*/
+
+div#wait_msg { display:none; margin:1em; }
+div#wait_msg span { 
+	background-color:#90C790; text-align:center; 
+	font:bold smaller Arial, sans-serif;
+	border-bottom:1px outset #996633; border-right:1px outset #339933;
+	padding:0.5em;
+}
+
+div#pageerror {
+	width:auto; max-width:600px;
+	text-align:left; margin:0; padding:4px 4px 4px 30px;
+	border:1px solid #FF0000; background-color:#FFFFCC; 
+	background-image:url("/apps/biodiversity/abbbs/images/alert.gif");
+	background-position:4px 4px;
+	background-repeat:no-repeat;
+}
+div#pageerror p { padding:0; margin:0; }
+div#pageerror p span { font-weight:bold; }
+
+form p.formerrormsg	{
+	width:500px;
+	text-align:left; margin:4px 0; padding:4px 4px 4px 30px;
+	border:1px dashed #FF0000; background-color:#FFFFCC; 
+	background-image:url("/apps/biodiversity/abbbs/images/alert.gif");
+	background-position:4px 4px;
+	background-repeat:no-repeat;
+}
+form p.formerrormsg span { font-weight:bold; }
+
+form.styleform {
+	padding:4px; width:auto; max-width:700px;
+	margin:0 0 15px 0; border:none;
+}
+form.styleform textarea:focus, 
+form.styleform input:focus	{ background-color:#ECF6EC; }
+form.styleform input[type="reset"]:focus	{ background-color:white; }
+form.styleform input[type="submit"]:focus	{ background-color:white; }
+form.styleform input[type="button"]:focus	{ background-color:white; }
+
+form.styleform input, 
+form.styleform textarea, 
+form.styleform select	{
+	margin:0.25em; padding:0;
+	font-size:1em; font-weight:normal; 
+	vertical-align:middle; }
+
+form.styleform .submitbutton	{
+	font:bold 0.8em Verdana, Arial, sans-serif;
+	background: url("/apps/biodiversity/abbbs/images/button.png") repeat;
+	background-color:#90C790; 
+	padding:0.2em 0.2em; margin:1em 1em 0 0;
+}
+form.styleform .resetbutton	{
+	font:bold 0.8em Verdana, Arial, sans-serif;
+	background-color:yellow;
+	border-bottom:1px outset #339933; border-right:1px outset #339933;
+	padding:0.1em 0.1em;  margin:1em;
+}
+form.styleform .submitbutton:focus	{ background-color:white; }
+form.styleform .resetbutton:focus	{ background-color:white; }
+
+/* To style layout tables used inside the form	*/
+/* Layout tables don't use <th> for accessibility	*/
+
+form.styleform table { margin:0; padding:0; background-color:#B9F1B9; }
+form.styleform table tr { vertical-align:middle; }
+form.styleform table td { padding:3px 6px; text-align:left; }
+form.styleform table td.bordered { border-bottom:1px dashed #339933; }
+form.styleform table td.th { font-weight:bold; text-align:right; }
+form.styleform table td.buttonrow {
+	text-align:center; 
+	background-color:white; }
+form.styleform .submitbutton	{ margin:0; }
+
+form.styleform fieldset { margin:0; padding:0; border:none; }
+
+/* To make the legend 'disappear' visually but remain accessible
+   (the 'visual-hide' trick doesn't work in FF )
+*/
+form.styleform fieldset legend { 
+	text-indent:-999px; margin:-50px; padding:0; overflow:hidden; }
+
+fieldset#login { 
+	padding:10px; width:400px;
+	margin-top:4px; border:1px solid #339933;
+}
+fieldset#login legend	{ 
+	margin:5px; padding:5px; text-indent:0em;
+	font-size:0.9em; font-weight:bold; color:#339933;
+}
+
+form#updateform { border:1px solid #339933; width:600px; }
+
+/*	Main Options pages	*/
+
+h2.option { font-size:1.1em; font-weight:bold; color:black;
+	background-color:#DDFFDD; /* border-bottom:1px dashed #339933; */
+        width:95%; margin:0.5em 0; padding:0.5em; 
+}
+
+/* Other pages	*/
+
+table#client_details { margin:0; padding:0; }
+table#client_details tr { vertical-align:middle; }
+table#client_details td,
+table#client_details th { padding:4px; }
+table#client_details td { text-align:left; }
+table#client_details th { text-align:right; border-bottom:thin solid #006600; }
+
+/*	Reporting pages		*/
+
+table#resultssummary {
+	margin:0; padding:0; border-spacing:0; border-collapse:collapse;
+	border:1px solid #AAAAAA; border-bottom:none;
+	background-color:#F9F9F9;
+	font-size:95%; }
+table#resultssummary caption {
+	text-align:left; padding:0 0 0.25em 0; white-space:nowrap; }
+table#resultssummary th, table#resultssummary td {
+	padding:0.5em; border-bottom:1px solid #AAAAAA; }
+table#resultssummary th { border-right:1px solid #AAAAAA; text-align:left; }
+table#resultssummary td { text-align:right; }
+table#results {
+	margin:0.5em 0; padding:0; border-spacing:0; border-collapse:collapse;
+	border:1px solid #AAAAAA; border-bottom:none;
+	background-color:#F9F9F9;
+	font-size:95%; }
+table#results caption {
+	text-align:left; padding:0.5em 0;
+	white-space:nowrap; font-size:1.2em; }
+table#results td.heading {
+	font-weight:bold; border-right:1px solid #AAAAAA; }
+table#results tr.odd { background-color:#F1F1F1; }
+table#results tr.even { background-color:white; }
+table#results td {
+	padding:0.5em;
+	vertical-align:middle; text-align:left;
+	border-bottom:1px solid #AAAAAA; }
+table#results td.right { text-align:right; }
+table#results tr.first td { border-top:1px solid #AAAAAA; }
+table#results th {
+	padding:0.5em;
+	vertical-align:middle; text-align:center;
+	background-color:white;
+	border-right:1px solid #AAAAAA; }
+table#results th.bordernone { border-right:none; }
+
+/*	Miscellaneous classes	*/
+
+.small		{ font-size:80%; }
+.success	{ font-weight:bold; color:green; }
+.error		{ font-weight:bold; color:red; }
+.warning	{ font-weight:normal; color:#ff6633; }
+.right		{ text-align:right; } 
+.left		{ text-align:left; } 
+.center		{ text-align:center; } 
+.selectlist	{ line-height:200%; 
+	font-size:110%; font-family:Arial, sans-serif;
+}
+.selectlist li	{ text-align:left; }
+.selectlist li span	{ padding-left:2em; }
+
+/* Mozilla 1.6 gets this wrong and IE6 doesn't understand the child selector! 
+.selectlist > li > a	{ float:left; padding-right:1em; width:20em; }
+*/
+
+/* 'clearfix' hack */
+/*
+   See http://www.positioniseverything.net/easyclearing.html and
+   http://www.456bereastreet.com/archive/200603/new_clearing_method_needed_for_ie7/
+   For most recent 'fix'
+   See http://annevankesteren.nl/test/examples/css/clearing-floats/003
+*/
+/* For testing; add a bright background
+.clearfix { _height:1%; overflow:auto; background:lime }
+*/
+.clearfix { overflow:auto; } * html .clearfix { height:1%; }
+
+/* To 'hide' elements visually but not from screen readers
+   See http://www.webaim.org/techniques/css/invisiblecontent/
+*/
+
+.visual-hide	{ 
+	position:absolute; left:0px; top:-500px; width:1px; height:1px; 
+	overflow:hidden; }
+
+/*	ABBBS Header	*/
+
+#pageheadercontainer	{ height:115px; margin:0; padding:0; 
+	background-color:#339933;
+}
+#pageheading	{ float:left; padding:20px 0 0 10px; margin:0 2px 0 0; }
+#pageheading p	{
+	margin:0; padding:0; color:#00CC00; font-size:1.3em; font-weight:bold;
+}
+#pageheadingimage	{ float:right; margin:0; padding:0 1px 0 0; }
+#pageheadingimage img { margin:0 0 0 0; padding:0; }
+
+#pageheadinglinks { 
+	margin:0; padding:0 1em; font-size:1.1em; font-weight:bold; }
+
+/*	Navigation Header		*/
+
+.navbarcontainer	{
+	margin:0;
+	padding:0.5em 0;
+	background-color:#003300;
+	font-size:0.85em; color:white; white-space:nowrap;
+}
+.navbar-left	{ float:left; margin:0; padding:0; }
+.navbar-right	{ float:right; margin:0; padding:0; }
+.navbarlist	{ margin:0; padding:0; }
+.navbarlist li	{
+	display:inline;
+	list-style-type:none;
+	border-left:thin solid white;
+	margin:0;
+	padding:0 3px 0 5px; /* To center the hover between the '|' */
+}
+.navbarlist li:first-child 	{
+	border-left:none;
+}
+ul.navbarlist .firstli	{	/* Since IE6 doesn't understand child selectors */
+	border-left:none;
+}
+.navbarlist a	{
+	color:white;
+	padding:1px 4px;
+}
+.navbarlist a:hover	{
+	color:#003300;
+	background-color:white;
+	text-decoration:none;
+}
+
+/* FOR printing	*/
+
+@media print {
+body { font-size:8pt; }
+ol, ul, li, dl, dt, dd {font-size:8pt; }
+table, p, td, tr, th {font-size:8pt; }
+h1 {font-size:14pt;}
+h2 {font-size:13pt;}
+h3 {font-size:12pt;}
+h4 {font-size:11pt;}
+h5 {font-size:10pt;}
+h6 {font-size:9pt;}
+tr {page-break-inside:avoid;}
+#pageheadercontainer	{ height:50px; background-color:white; }
+#pageheading	{ padding:0; margin:0; }
+#pageheadingimage { display:none; }
+.navbarcontainer { display:none; }
+#breadcrumbs { display:none; }
+#pageheadinglinks { display:none; }
+}
+
