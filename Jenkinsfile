@@ -1,20 +1,26 @@
-def context = config {
-    project = 'common'
-    application = 'www'
+/*
+
+Build image only.
+
+*/
+
+def context
+
+stage("Create app context") {
+	context = createApplicationContext()
 }
+
 
 stage("Build image") {
-    buildProject(context)
+	buildImage(context)
 }
 
-stage("Tag image") {
-    tagImageWithGitTagsAndBuildInfo(context) 
-}
 
-stage("Wait for input"){
-    input([message: 'Deploy to Test?'])
+/* TODO:
+stage("Unit tests") {
 }
+*/
 
-stage("Deploy to Test") {
-    copyImage(context, 'dev', 'test')
-}
+milestone 1
+
+

@@ -1,0 +1,9 @@
+---
+# Output images
+apiVersion: v1
+kind: ImageStream
+metadata:
+  labels:
+    build: www
+  name: www
+  namespace: common

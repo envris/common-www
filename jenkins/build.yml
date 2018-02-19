@@ -1,0 +1,26 @@
+---
+# Image build definitions
+kind: BuildConfig
+apiVersion: v1
+metadata:
+  name: www
+  namespace: common
+spec:
+  runPolicy: Serial
+  triggers: []
+  source:
+    type: Git
+    contextDir: .
+    git:
+      ref: master
+      uri: https://github.com/envris/common-www.git
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+  output:
+    to:
+      kind: ImageStreamTag
+      name: www:latest
+status:
+  lastVersion: 3
