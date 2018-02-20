@@ -1,0 +1,16 @@
+---
+version: '3.2'
+
+services:
+  www:
+    build:
+      context: .
+      args:
+        http_proxy: $http_proxy
+    image: common/www:latest
+    ports:
+      - 80:8080
+
+
+
+
