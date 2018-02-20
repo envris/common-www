@@ -7,7 +7,7 @@ services:
       context: .
       args:
         http_proxy: $http_proxy
-    image: common/www:latest
+    image: docker-registry-default.dev-apps.environment.gov.au/common/www:latest
     ports:
       - 80:8080
 
