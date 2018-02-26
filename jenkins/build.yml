@@ -1,26 +1,49 @@
 ---
-# Image build definitions
-kind: BuildConfig
+# Build configs appear in the OpenShift console at: <Project> / Builds / Builds
+
 apiVersion: v1
+kind: Template
 metadata:
-  name: www
-  namespace: common
-spec:
-  runPolicy: Serial
-  triggers: []
-  source:
-    type: Git
-    contextDir: .
-    git:
-      ref: master
-      uri: https://github.com/envris/common-www.git
-  strategy:
-    type: Docker
-    dockerStrategy:
-      dockerfilePath: Dockerfile
-  output:
-    to:
-      kind: ImageStreamTag
-      name: www:latest
-status:
-  lastVersion: 3
+  name: builds
+
+# The parameter are passed in by the Jenkins library: Openshift.groovy / deployToEnvironment()
+parameters:
+
+- name: PRODUCT
+  description: "The product value of the product-function naming convention"
+  
+- name: FUNCTION
+  description: "The function value of the product-function naming convention"
+
+- name: FROM_IMAGE
+  description: "The image referenced by the FROM line of the Dockerfile. Needed when images are pulled from the OpenShift registry."
+
+
+objects:
+
+# -------- Main application ----------------
+
+- kind: BuildConfig
+  apiVersion: v1
+  metadata:
+    name: ${FUNCTION}
+    namespace: ${PRODUCT}
+  spec:
+    runPolicy: Serial
+    triggers: []
+    source:
+      type: Git
+      contextDir: .
+      git:
+        ref: master
+        uri: https://github.com/envris/${PRODUCT}-${FUNCTION}.git
+    strategy:
+      type: Docker
+      dockerStrategy:
+        dockerfilePath: Dockerfile
+    output:
+      to:
+        kind: ImageStreamTag
+        name: ${FUNCTION}:latest
+
+# -------- Supporting applications ----------------

@@ -1,9 +1,28 @@
 ---
-# Output images
+# Images as appear in OpenShift: <Project> / Builds / Images
+
 apiVersion: v1
-kind: ImageStream
+kind: Template
 metadata:
-  labels:
-    build: www
-  name: www
-  namespace: common
+  name: images
+
+# The parameter are passed in by the Jenkins library: Openshift.groovy / deployToEnvironment() 
+parameters:
+
+- name: PRODUCT
+  description: "From the product-function naming convention"
+  
+- name: FUNCTION
+  description: "From the product-function naming convention"
+
+
+objects:
+
+# -------- Main application ----------------
+
+- kind: ImageStream
+  apiVersion: v1
+  metadata:
+    name: ${FUNCTION}
+    namespace: ${PRODUCT}
+  

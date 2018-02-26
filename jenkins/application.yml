@@ -1,13 +1,25 @@
 ---
 # This file is used to configure the project in OpenShift
 
+apiVersion: v1
+kind: Template
+metadata:
+  name: project
 
-# The description shows in the My Projects page in OpenShift.
-# It should be the full name of the business product, or it should describe what the project contains.
-openShiftProjectDescription: Common builds and services for all projects.
 
-# Applications in this project need to be able to pull images from other projects: 
-#imagePullAccess: 
-#  - base
-#  - common
-#  - s2i
+# The parameter are passed in by the Jenkins library: Openshift.groovy / deployToEnvironment() 
+parameters:
+
+- name: PRODUCT
+  description: "From the product-function naming convention"
+  
+- name: FUNCTION
+  description: "From the product-function naming convention"
+
+
+# -------- Main application ----------------
+
+# The description shows in the My Projects page in OpenShift. It should be the full name of the business product, or it should describe what the project contains.
+productDescription: Common builds and services for all projects.
+
+
