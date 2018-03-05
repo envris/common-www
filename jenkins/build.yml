@@ -9,14 +9,18 @@ metadata:
 # The parameter are passed in by the Jenkins library: Openshift.groovy / deployToEnvironment()
 parameters:
 
+- name: PROJECT
+  description: "The OpenShift project name, aka namespace."
+
 - name: PRODUCT
-  description: "The product value of the product-function naming convention"
+  description: "The product value of the product-function naming convention."
   
 - name: FUNCTION
-  description: "The function value of the product-function naming convention"
+  description: "The function value of the product-function naming convention."
 
 - name: FROM_IMAGE
   description: "The image referenced by the FROM line of the Dockerfile. Needed when images are pulled from the OpenShift registry."
+
 
 
 objects:
@@ -26,8 +30,8 @@ objects:
 - kind: BuildConfig
   apiVersion: v1
   metadata:
-    name: ${FUNCTION}
-    namespace: ${PRODUCT}
+    name: ${PRODUCT}-${FUNCTION}
+    namespace: ${PROJECT}
   spec:
     runPolicy: Serial
     triggers: []
@@ -44,6 +48,10 @@ objects:
     output:
       to:
         kind: ImageStreamTag
-        name: ${FUNCTION}:latest
+        name: ${PRODUCT}-${FUNCTION}:latest
 
-# -------- Supporting applications ----------------
+- kind: ImageStream
+  apiVersion: v1
+  metadata:
+    name: ${PRODUCT}-${FUNCTION}
+    namespace: ${PROJECT}
