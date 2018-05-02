@@ -1,12 +1,12 @@
 ---
-# Build configs appear in the OpenShift console at: <Project> / Builds / Builds
+# OpenShift Image Builds
 
 apiVersion: v1
 kind: Template
 metadata:
   name: builds
 
-# The parameter are passed in by the Jenkins library: Openshift.groovy / deployToEnvironment()
+# -------- Parameters (populated by lib-jenkins) -------
 parameters:
 
 - name: PROJECT
@@ -21,7 +21,8 @@ parameters:
 - name: FROM_IMAGE
   description: "The image referenced by the FROM line of the Dockerfile. Needed when images are pulled from the OpenShift registry."
 
-
+- name: SOURCE
+  description: "Url to the git source repository"
 
 objects:
 
@@ -40,7 +41,7 @@ objects:
       contextDir: .
       git:
         ref: master
-        uri: https://github.com/envris/${PRODUCT}-${FUNCTION}.git
+        uri: ${SOURCE}
     strategy:
       type: Docker
       dockerStrategy:
